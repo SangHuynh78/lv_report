@@ -1,0 +1,1693 @@
+\documentclass[a4paper,14pt]{report}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{caption}
+\usepackage{trivfloat}
+\usepackage{pgfplots}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pifont}
+\usepackage{enumerate}
+\usepackage{subcaption}
+\usepackage{pgf}
+\usepackage{lastpage}
+\usepackage{pgfpages}
+\usepackage{array}
+\usepackage{pdfscreen}
+\usepackage{multirow}
+\usepackage[left=3.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage{listings}
+\usepackage[utf8]{vietnam}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usetikzlibrary{calc}
+\trivfloat{image}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{paracol}
+\usepackage{listings}
+\setlength{\columnsep}{1.0cm}
+\usepackage[none]{hyphenat}
+
+\lstnewenvironment{systemverilog}
+{\lstset{%
+		language=Verilog,
+		basicstyle=\small\ttfamily,
+		frame=single,
+		breaklines=true,
+		keywordstyle=\color{blue},
+		commentstyle=\color{green!50!black},
+		identifierstyle=\color{black},
+		stringstyle=\color{purple},
+		showstringspaces=false,
+		captionpos=b
+}}
+{}
+
+\setlength{\parindent}{30pt}     
+\setlength{\parskip}{0.5em}
+\fontsize{13pt}{13pt}\selectfont 
+
+% ------------------ Header & Footer ------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\sectionmark}[1]{\markboth{#1}{#1} } 
+\fancyhf{}
+\fancyhead[L]{\textit{\leftmark}}
+\fancyhead[R]{\textit{GVHD: ThS Bùi Quốc Bảo}}
+\fancyfoot[L]{\textit{Đồ án tốt nghiệp}}
+\fancyfoot[R]{Trang $\mid$ \thepage}
+
+% ------------------ Custom Chapter Format ------------------
+\titleformat{\chapter}[block]
+{\normalfont\LARGE\bfseries\raggedright}
+{CHƯƠNG \thechapter}
+{1em}
+{\rule{\textwidth}{0.5pt}\vspace{0.4em}\\\raggedleft}
+[\rule{\textwidth}{0.5pt}]
+
+% ===== Giảm khoảng cách trên/dưới CHAPTER =====
+% Thu nhỏ khoảng cách trước tiêu đề chapter và khoảng cách đến section 1.1
+\titlespacing*{\chapter}
+{0pt}      % lề trái
+{-1.5em}   % khoảng cách phía trên CHƯƠNG 1 (kéo lên gần header)
+{0.8em}    % khoảng cách dưới CHƯƠNG 1 (kéo section 1.1 lên)
+
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.4em}
+
+% ============================================================
+% ===============  FIX PAGE NUMBERING (UPDATED) ==============
+% ============================================================
+
+% Ghi đè plain = fancy
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[L]{\textit{\leftmark}}
+	\fancyhead[R]{\textit{GVHD: ThS Bùi Quốc Bảo}}
+	\fancyfoot[L]{\textit{Đồ án tốt nghiệp}}
+	\fancyfoot[R]{Trang $\mid$ \thepage}
+}
+
+% ============================================================
+% =============  BẮT ĐẦU DOCUMENT ============================
+% ============================================================
+
+
+\begin{document}
+\begin{titlepage}
+	\noindent
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[blue!70!black,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+		
+	\end{tikzpicture}
+	\noindent
+	\begin{center}
+		\fontsize{16pt}{16pt}
+		\selectfont 
+		\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}
+		\\
+		\fontsize{16pt}{16pt}
+		\selectfont
+		TRƯỜNG ĐẠI HỌC BÁCH KHOA
+		\\
+		\fontsize{14pt}{14pt}
+		\selectfont
+		KHOA ĐIỆN - ĐIỆN TỬ
+		\\
+		\fontsize{14pt}{14pt}
+		\selectfont
+		--------\textopenbullet\textopenbullet\textopenbullet---------
+	\end{center}
+	\begin{center}
+		\includegraphics[scale=0.12]{logo}
+		\\\
+		\fontsize{18pt}{18pt}\selectfont 
+		\textbf{ĐỒ ÁN TỐT NGHIỆP}\\
+		\vspace{7pt}
+		\textbf{ĐỀ TÀI: HỆ THỐNG ĐIỀU KHIỂN VÀ GIÁM SÁT THÍ NGHIỆM MẪU VẬT SINH HÓA}
+	\end{center}
+	\begin{center} 
+		\begin{table}[h]
+			\centering
+			\fontsize{19pt}{19pt}\selectfont 
+			\label{tab:my-table}
+			\begin{tabular}{ll}
+				\textbf{GVHD:} & 	\textbf{ThS. BÙI QUỐC BẢO}    \\
+			\end{tabular}
+		\end{table}
+		\begin{table}[h]
+			\centering
+			\fontsize{16pt}{16pt}\selectfont
+			\begin{tabular}{ccc}
+				\textbf{Sinh viên} & \textbf{MSSV}   \\
+				Huỳnh Thanh Sang    & 2014347
+			\end{tabular}
+		\end{table}
+
+		\begin{center}
+			\vspace{200pt}
+			\fontsize{16pt}{16pt}\selectfont 
+			Thành phố Hồ Chí Minh, \today
+		\end{center}
+	\end{center}
+\end{titlepage}
+\fontsize{13pt}{13pt}\selectfont 
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\fontsize{13pt}{13pt}\selectfont 
+
+
+
+\newpage
+\setlength{\parindent}{30pt} % Thụt đầu dòng
+\thispagestyle{empty}        % Loại bỏ header/footer
+
+\begin{center}
+	{\fontsize{24pt}{24pt}\selectfont\textit{Lời cảm ơn}}
+\end{center}
+
+\begin{itshape}
+	Trong quá trình thực hiện đề tài, em sẽ không thể đạt được kết quả như ngày hôm nay nếu không có sự giúp đỡ và hướng dẫn tận tình của quý Thầy/Cô. Trước hết, em xin bày tỏ lòng biết ơn sâu sắc đến quý Thầy/Cô trường Đại học Bách Khoa Thành phố Hồ Chí Minh sau quá trình đào tạo tại trường. Chính nhờ sự tận tâm và kiến thức của quý Thầy/Cô đã trở thành hành trang quý báu giúp em vững bước trong tương lai. Ngoài các kiến thức chuyên ngành, quý Thầy/Cô còn khơi dậy trong em niềm đam mê nghiên cứu khoa học và phát triển bản thân.
+	
+	Đặc biệt, em xin bày tỏ lòng biết ơn chân thành đến Thầy ThS. Bùi Quốc Bảo vì đã kiên nhẫn hướng dẫn và động viên em trong suốt quá trình nghiên cứu, học tập tại trường. Thầy đã giúp em nhận ra khả năng của bản thân và định hướng em trong việc phát triển kĩ năng, kinh nghiệm và kiến thức cần thiết cho sự nghiệp sau này. Em xin chân thành cảm ơn Thầy vì sự hỗ trợ quý báu trong suốt thời gian vừa qua.
+	
+	Không chỉ nhận được sự hướng dẫn tận tình từ Thầy, em còn nhận được rất nhiều sự giúp đỡ từ bạn bè, anh chị. Em xin gửi lời cảm ơn đến anh Đoàn Ngọc Cẩm, bạn Cao Văn Hiếu, bạn Trần Thanh Bình và toàn bộ tập thể Phòng thí nghiệm 209B3 vì đã hỗ trợ em trong quá trình thực hiện luận văn.
+	
+	Cuối cùng, em xin gửi lời cảm ơn chân thành đến tất cả những người đã góp phần vào sự thành công của luận văn này. Sự hỗ trợ và động viên từ mọi người là điều vô cùng quý báu, và em sẽ luôn trân trọng điều đó. 
+	
+	Tuy luận văn đã hoàn thành, song do bản thân chưa có đủ kinh nghiệm, nên khó tránh khỏi những sai sót không đáng có. Em rất mong nhận được sự nhận xét và góp ý từ quý Thầy/Cô để luận văn này được hoàn thiện hơn.
+	
+	Em xin chân thành cảm ơn.
+\end{itshape}
+
+\setlength{\parindent}{30pt} % Thụt đầu dòng
+\chapter{Giới thiệu đề tài}
+\section{Tổng quan}
+	\subsection{Bối cảnh nghiên cứu}
+	Trong lĩnh vực sinh hóa, việc theo dõi và kiểm soát các điều kiện thí nghiệm như nhiệt độ, ánh sáng và môi trường xung quanh là yếu tố có tính quyết định đối với độ chính xác, độ tái lập và độ tin cậy của các phép đo. Hầu hết các phản ứng sinh hóa và sinh học phân tử đều phụ thuộc mạnh mẽ vào điều kiện vật lý của môi trường, do đó chỉ cần một sự thay đổi nhỏ về nhiệt độ hoặc cường độ chiếu sáng cũng có thể dẫn đến sai lệch đáng kể trong kết quả thí nghiệm. Các mẫu vật sinh hóa, đặc biệt là những mẫu liên quan đến protein, enzyme, tế bào hay hợp chất hữu cơ nhạy sáng, thường rất dễ bị ảnh hưởng bởi các tác nhân bên ngoài. Vì vậy, một hệ thống giám sát liên tục nhằm duy trì trạng thái ổn định của môi trường là hết sức cần thiết để đảm bảo chất lượng dữ liệu thu được.
+	
+	Bên cạnh yêu cầu kiểm soát môi trường, công nghệ quang học đóng vai trò trung tâm trong phân tích và đánh giá các mẫu vật sinh học. Trong đó, các nguyên lý hấp thụ và tán xạ ánh sáng (Optical Absorbance and Scattering) đã được ứng dụng rộng rãi trong nhiều thiết bị và phương pháp đo lường hiện đại. Dựa trên tương tác giữa ánh sáng và vật chất, các kỹ thuật này cho phép xác định nồng độ chất, đánh giá cấu trúc vi mô và theo dõi biến đổi động học của mẫu một cách nhanh chóng, độ phân giải cao và không gây tác động trực tiếp lên mẫu vật. Nhờ khả năng cung cấp thông tin định lượng và định tính trong thời gian thực, các phương pháp quang học đã trở thành công cụ quan trọng trong nghiên cứu sinh hóa, công nghệ sinh học và y sinh học.
+	
+	Sự kết hợp giữa nhu cầu kiểm soát điều kiện thí nghiệm và ứng dụng của công nghệ quang học tạo nên bối cảnh thúc đẩy phát triển các hệ thống giám sát thông minh. Những hệ thống này không chỉ đảm bảo môi trường ổn định cho các phản ứng sinh hóa mà còn hỗ trợ thu thập dữ liệu một cách tự động, chính xác và hiệu quả, góp phần nâng cao chất lượng nghiên cứu và tối ưu hóa quy trình thí nghiệm.
+	\subsection{Lý do chọn đề tài}
+	Cảm hứng cho đề tài bắt nguồn từ thực tế rằng các phòng thí nghiệm ngày nay đang hướng mạnh đến tự động hóa để giảm bớt sai số do con người và nâng cao hiệu quả trong quá trình nghiên cứu. Khi các thí nghiệm sinh hóa đòi hỏi sự chính xác gần như tuyệt đối, việc xây dựng một hệ thống có thể vừa điều khiển nhiệt độ ổn định vừa giám sát các biến đổi quang học của mẫu vật trở thành một nhu cầu thiết yếu. Sự kết hợp này không chỉ giúp theo dõi phản ứng một cách toàn diện hơn mà còn mở ra khả năng phân tích sâu hơn về bản chất của các quá trình sinh học. Bên cạnh đó, đề tài mang tính ứng dụng cao và có thể được đưa vào sử dụng thực tế trong các phòng thí nghiệm sinh học, y sinh hay dược phẩm, nơi luôn cần những công cụ hỗ trợ mạnh mẽ và tin cậy để đáp ứng nhu cầu nghiên cứu ngày càng phức tạp.
+	\subsection{Mục tiêu nghiên cứu}
+	Mục tiêu của nghiên cứu là xây dựng một hệ thống có khả năng hoạt động ổn định và chính xác trong môi trường thí nghiệm sinh hóa. Hệ thống được thiết kế để đọc và giám sát liên tục nhiệt độ bên trong buồng thí nghiệm, đồng thời truyền dữ liệu về máy tính nhằm hỗ trợ việc theo dõi theo thời gian thực. Bên cạnh khả năng quan sát, hệ thống còn phải tự động điều khiển nhiệt độ dựa trên các thông số đo được, giúp duy trì môi trường ổn định cho mẫu vật. Ngoài ra, đề tài hướng tới việc điều khiển nguồn laser với cường độ tùy chỉnh và đo được cường độ ánh sáng sau khi đi qua mẫu vật thông qua photo diode. Những dữ liệu thu được sẽ được khai thác dựa trên các nguyên lý hấp thụ và tán xạ ánh sáng (Optical Absorbance and Scattering), từ đó hỗ trợ phân tích các đặc tính của mẫu vật sinh hóa một cách chính xác và hiệu quả.
+	\subsection{Ý nghĩa khoa học và thực tiễn}
+	Đề tài mang lại ý nghĩa cả về mặt khoa học lẫn thực tiễn. Về phương diện khoa học, hệ thống góp phần mở rộng và hoàn thiện các phương pháp đo lường, giám sát hiện đại trong nghiên cứu sinh hóa, đặc biệt là những kỹ thuật dựa trên tương tác giữa ánh sáng và mẫu vật. Việc kết hợp đo nhiệt độ, điều khiển laser và phân tích quang học trong cùng một nền tảng giúp tạo ra những hướng tiếp cận mới, hỗ trợ nghiên cứu sâu hơn về các phản ứng và đặc tính của mẫu sinh học. \\
+	Về mặt thực tiễn, hệ thống có khả năng ứng dụng cao trong nhiều lĩnh vực liên quan đến sinh học và y sinh. Nó có thể trở thành công cụ hỗ trợ đắc lực trong chẩn đoán y học, kiểm nghiệm dược phẩm, hay phân tích mẫu trong công nghệ sinh học. Nhờ khả năng giám sát tự động, chính xác và ổn định, hệ thống giúp tiết kiệm thời gian, giảm sai số và nâng cao hiệu quả làm việc trong các phòng thí nghiệm hiện đại.
+
+\newpage
+\section{Hiện trạng nghiên cứu}
+	\subsection{Các hệ thống giám sát và điều khiển nhiệt độ}
+	Trong nhiều phòng thí nghiệm sinh hóa hiện nay, các buồng thí nghiệm thường được trang bị những hệ thống điều khiển nhiệt độ tự động nhằm đảm bảo môi trường ổn định cho các phản ứng và mẫu vật nhạy cảm. Các hệ thống này sử dụng các loại cảm biến nhiệt độ như thermocouple hoặc RTD, kết hợp với bộ điều khiển PID để duy trì nhiệt độ chính xác trong một khoảng sai số rất nhỏ. Tuy nhiên, mặc dù khả năng giữ ổn định nhiệt độ đã được cải thiện đáng kể, nhiều thiết bị truyền thống vẫn còn hạn chế trong việc giám sát dữ liệu theo thời gian thực và khả năng tích hợp trực tiếp với máy tính. Điều này khiến quá trình theo dõi, ghi nhận và phân tích dữ liệu trở nên kém linh hoạt, đặc biệt trong các nghiên cứu yêu cầu sự liên tục và độ chính xác cao.
+	\subsection{Ứng dụng quang học trong phân tích mẫu vật}
+	Các kỹ thuật quang học, đặc biệt là quang phổ hấp thụ UV-Vis và tán xạ ánh sáng, đã trở thành công cụ quan trọng trong nghiên cứu sinh hóa nhờ khả năng xác định nồng độ, cấu trúc và các đặc tính quang học của mẫu vật một cách chính xác. Các thiết bị thương mại như spectrophotometer có thể đo chính xác cường độ ánh sáng sau khi truyền qua mẫu, nhưng chi phí thường rất cao và thiết bị lại ít linh hoạt khi cần tùy biến cho các thí nghiệm đặc thù hoặc nghiên cứu theo hướng mới. Trong những năm gần đây, nhiều nghiên cứu đã hướng đến việc sử dụng laser diode kết hợp với photo diode để xây dựng các hệ thống đo quang học đơn giản, chi phí thấp nhưng vẫn đảm bảo độ nhạy và độ chính xác cần thiết. Những hệ thống này vừa đáp ứng được yêu cầu nghiên cứu cơ bản, vừa phù hợp cho các mô hình thử nghiệm cần tính linh hoạt và khả năng mở rộng.
+	\subsection{Xu hướng tích hợp hệ thống}
+	Trên thế giới, xu hướng nghiên cứu hiện nay tập trung vào việc tích hợp nhiều chức năng trong cùng một hệ thống, cho phép vừa điều khiển môi trường thí nghiệm như nhiệt độ và độ ẩm, vừa giám sát mẫu vật thông qua cảm biến quang học, đồng thời truyền dữ liệu trực tiếp về máy tính hoặc các nền tảng IoT. Nhờ đó, dữ liệu có thể được lưu trữ, phân tích bằng phần mềm chuyên dụng, thậm chí áp dụng các thuật toán machine learning để dự đoán hành vi hoặc biến đổi của mẫu vật. Tại Việt Nam, các nghiên cứu về hệ thống tích hợp như vậy vẫn còn hạn chế và chủ yếu phụ thuộc vào thiết bị nhập khẩu. Do đó, việc phát triển một hệ thống tự thiết kế và tùy biến theo nhu cầu nghiên cứu trong nước sẽ mang lại lợi thế lớn, cả về chi phí lẫn khả năng mở rộng trong tương lai.
+
+\newpage
+\section{Phạm vi nghiên cứu và nhiệm vụ}
+	\subsection{Phạm vi nghiên cứu}
+	\begin{itemize}
+		\item Phạm vi kĩ thuật:
+			\begin{itemize}
+				\item Tập trung vào việc điều khiển nhiệt độ trong chamber và đo quang học bằng laser – photo diode.
+				\item Đọc về áp suất trong chamber, không điều khiển áp suất, độ ẩm...
+			\end{itemize}
+		\item Phạm vi ứng dụng:
+			\begin{itemize}
+				\item Áp dụng cho các thí nghiệm sinh hóa trong phòng thí nghiệm.
+				\item Chưa triển khai ở quy mô công nghiệp hoặc y tế lâm sàng
+			\end{itemize}
+		\item Phạm vi thời gian:
+			\begin{itemize}
+				\item Nghiên cứu, thiết kế và thử nghiệm trong khuôn khổ dự án học thuật.
+			\end{itemize}
+	\end{itemize}
+	
+	\subsection{Nhiệm vụ}
+	\textbf{Các nhiệm vụ chính của đề tài:}
+	\begin{itemize}
+		\item Nghiên cứu cơ sở lý thuyết.
+			\begin{itemize}
+				\item Tìm hiểu nguyên lý truyền nhiệt và phương pháp điều khiển nhiệt độ trong buồng thí nghiệm.
+				\item Nghiên cứu nguyên lý hấp thụ và tán xạ ánh sáng; tham khảo các mô hình mẫu vật sinh hóa.
+				\item Khảo sát các phương pháp đo quang học bằng laser diode và photo diode trong các hệ thống thương mại hiện có.
+			\end{itemize}
+		\item Từ các tính năng trên, tổng hợp, thiết kế, thử nghiệm phần cứng.
+			\begin{itemize}
+				\item Thiết kế sơ đồ khối, sơ đồ nguyên lý, lựa chọn linh kiện.
+				\item Thiết kế hệ thống cảm biến nhiệt độ và bộ điều khiển phù hợp với yêu cầu ổn định và an toàn cho mẫu.
+				\item Xây dựng module laser với khả năng điều chỉnh cường độ.
+				\item Thiết kế mạch thu photo diode, khuếch đại tín hiệu và lọc nhiễu.
+			\end{itemize}
+		\item Tiến hành thi công, lắp ráp hoàn chỉnh, thử nghiệm tính năng từng khối chức năng.
+		\item Phát triển phần mềm, thiết kế giao diện người dùng.
+			\begin{itemize}
+				\item Lập trình bộ điều khiển vi xử lý để thu thập dữ liệu nhiệt độ. Điều khiển nhiệt độ và cường độ laser, thu thập cường độ ở photo. Lưu trữ và truyền tải thông tin tốc độ cao về mạch chủ
+				\item Thiết kế giao diện trực quan cho người dùng giám sát và điều khiển từ máy tính.
+			\end{itemize}
+		\item Thử nghiệm toàn bộ hệ thống sau cùng để đảm bảo tính ổn định, hiệu suất, độ chính xác.
+			\begin{itemize}
+				\item Thu thập, lưu trữ dữ liệu (nhiệt độ, kết quả thí nghiệm, lịch sử hành vi...)
+				\item Đối chiếu nhiệt độ với hành vi thực thi, phân tích kết quả thí nghiệm.
+			\end{itemize}
+	\end{itemize}
+	
+\chapter{Cơ sở lý thuyết}
+\section{Nguyên lý điều khiển nhiệt độ trong buồng thí nghiệm}
+Nhiệt độ là một tham số quan trọng ảnh hưởng trực tiếp đến tốc độ, hiệu suất và độ ổn định của các phản ứng sinh học – hóa học trong buồng thí nghiệm. Việc duy trì nhiệt độ ổn định giúp các mẫu vật thực hiện phản ứng trong điều kiện chính xác và có tính lặp lại, từ đó nâng cao độ tin cậy của kết quả thí nghiệm.
+
+Trong hệ thống này, nhiệt độ được đo bằng cảm biến NTC (Negative Temperature Coefficient). Đây là loại cảm biến có đặc tính điện trở giảm khi nhiệt độ tăng. NTC được mắc trong mạch phân áp để tạo ra tín hiệu điện áp tỷ lệ với nhiệt độ. Vi điều khiển đọc giá trị điện áp này thông qua bộ ADC và tính toán ra giá trị nhiệt độ của buồng thí nghiệm.
+
+\textbf{Phương trình NTC}
+\begin{equation} \label{3}
+	R_{T} = R_{0} \cdot e^{\beta \left( \frac{1}{T} - \frac{1}{T_{0}} \right)}
+\end{equation}
+
+\hspace{0.5cm}
+\noindent{Trong đó:}
+\hspace{0.5cm}
+\begin{minipage}{0.9\linewidth}
+	\begin{itemize}
+		\item $R_T$: điện trở tại nhiệt độ $T$
+		\item $R_0$: điện trở tại nhiệt độ chuẩn $T_0$
+		\item $\beta$: hằng số Beta (lấy từ datasheet)
+		\item $T, T_0$: nhiệt độ tính bằng Kelvin (K)
+	\end{itemize}
+\end{minipage}
+
+Dựa trên nhiệt độ đo được, hệ thống thực hiện điều khiển bằng phương pháp ON/OFF. Đây là phương pháp điều khiển đơn giản, trong đó phần tử gia nhiệt hoặc làm lạnh sẽ được bật khi nhiệt độ vượt ra khỏi phạm vi cho phép và tắt khi đã trở về giá trị mong muốn. Để tránh việc bật/tắt liên tục, hệ thống có thể áp dụng một khoảng sai lệch nhỏ (hysteresis) quanh ngưỡng đặt. Phương pháp này tuy tạo ra một mức dao động nhỏ quanh nhiệt độ đặt, nhưng vẫn đáp ứng tốt cho các ứng dụng không đòi hỏi độ chính xác vi sai cao.
+
+Việc điều chỉnh nhiệt độ được thực hiện bằng hai cơ cấu chấp hành: tấm điện trở nhiệt (heater) để tăng nhiệt và bộ TEC (Thermoelectric Cooler) để làm lạnh. Heater tạo ra nhiệt lượng thông qua sự tỏa nhiệt của điện trở, trong khi TEC hoạt động dựa trên hiệu ứng Peltier, cho phép dịch chuyển nhiệt khi có dòng điện chạy qua. Sự kết hợp giữa cảm biến NTC, điều khiển ON/OFF và hai phần tử chấp hành giúp hệ thống duy trì nhiệt độ trong buồng thí nghiệm trong phạm vi mong muốn.
+
+\section{Nguyên lý hoạt động của laser diode và photo diode}
+Laser diode là nguồn sáng bán dẫn có khả năng phát ra ánh sáng đơn sắc với độ định hướng và mật độ năng lượng cao. Khi các hạt mang thiểu số được tiêm vào tiếp giáp P-N làm các electron và hole kết hợp lại, giải phóng photon, chúng sẽ phát ra ánh sáng nhìn thấy, ánh sáng cực tím hoặc ánh sáng cận hồng ngoại. Đặc tính nổi bật của laser diode là cường độ phát xạ có thể được điều chỉnh thông qua dòng điện cấp, cho phép kiểm soát ổn định mức công suất chiếu vào mẫu vật. Nhờ khả năng hội tụ và ổn định bước sóng tốt, laser diode thường được sử dụng trong các hệ thống quang học yêu cầu độ chính xác cao.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lv_laser_operating_principle.png}
+	\caption{Nguyên lý hoạt động của laser diode}
+	\label{fig:enter-label}
+\end{figure}
+
+Trong khi đó, photo diode là cảm biến ánh sáng hoạt động dựa trên hiệu ứng quang điện. Khi ánh sáng chiếu vào vùng tiếp giáp P-N của photo diode với một photon đủ năng lượng, nó sẽ tạo ra một cặp electron-hole trong vùng bán dẫn. Nếu sự hấp tụ photon xảy ra ngay tại vùng nghèo điện tích của tiếp giáp P-N, thì vặp electron-hole này sẽ nhanh chóng bị điện trường bên trong của vùng nghèo tách ra. Kết quả là một dòng quang điện được tạo ra. Đặc tính tuyến tính theo cường độ sáng giúp photo diode trở thành cảm biến lý tưởng để đo và biến đổi tín hiệu quang học thành tín hiệu điện.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lv_photo_operating_principle.png}
+	\caption{Nguyên lý hoạt động của photo diode}
+	\label{fig:enter-label}
+\end{figure}
+
+Trong hệ thống thí nghiệm của đề tài, laser diode được sử dụng để chiếu chùm sáng xuyên qua mẫu vật. Phía đối diện, photo diode thu nhận lượng ánh sáng truyền qua hoặc bị giảm đi do hiện tượng hấp thụ và tán xạ của mẫu. Thông qua việc phân tích tín hiệu quang thu được, hệ thống có thể đánh giá các đặc tính quang học của mẫu vật, phục vụ cho các phép đo và xử lý tiếp theo.
+
+\section{Nguyên lý hấp thụ và tán xạ ánh sáng}
+Khi một chùm ánh sáng đi qua mẫu vật sinh hóa, hai hiện tượng quang học cơ bản có thể xảy ra: hấp thụ ánh sáng và tán xạ ánh sáng. Đây là các cơ chế quan trọng giúp đánh giá tính chất quang học và đặc trưng sinh hóa của mẫu.
+
+Hấp thụ ánh sáng (Absorbance) là hiện tượng trong đó một phần năng lượng ánh sáng bị mẫu vật hấp thụ. Mức độ hấp thụ phụ thuộc vào bản chất hóa học của mẫu, nồng độ các chất có khả năng hấp thụ và bước sóng ánh sáng sử dụng. Khi ánh sáng truyền qua, cường độ của nó giảm đi tương ứng với lượng ánh sáng mà mẫu giữ lại. Giá trị hấp thụ này cung cấp thông tin về nồng độ hoặc thành phần hóa học của mẫu, nên thường được ứng dụng trong các phép đo phân tích sinh hóa.
+
+Tán xạ ánh sáng (Scattering) xảy ra khi ánh sáng bị lệch hướng do gặp các hạt hoặc cấu trúc vi mô trong mẫu. Mức độ tán xạ phụ thuộc vào kích thước, hình dạng và mật độ của các hạt. Với các mẫu có cấu trúc không đồng nhất, ánh sáng có thể bị phân tán theo nhiều hướng khác nhau. Hiện tượng này phản ánh đặc tính vật lý của mẫu và thường được sử dụng để đánh giá kích thước hạt, độ đục hoặc trạng thái phân tán của vật liệu sinh học.
+
+Trong hệ thống thí nghiệm của đề tài, laser diode cung cấp nguồn sáng ổn định chiếu xuyên qua mẫu, trong khi photo diode thu nhận lượng ánh sáng còn lại sau khi đã bị hấp thụ và tán xạ. Thông qua việc phân tích cường độ sáng thu được, hệ thống có thể suy ra các đặc tính quang học của mẫu vật, hỗ trợ cho quá trình giám sát và đánh giá trong thí nghiệm sinh hóa.
+
+
+\chapter{Thiết kế và thực hiện phần cứng}
+Hệ thống điều khiển và giám sát thí nghiệm được đề cập trong luận văn này được thiết kế với nhiều bo mạch khác nhau đảm nhận các nhiệm vụ riêng biệt, kết hợp lại tạo nên một hệ thống hoàn chỉnh, đáp ứng được các yêu cầu đặt ra được đề ra ở nhiệm vụ nghiên cứu đề tài.
+
+Chi tiết thiết kế phần cứng hệ thống sẽ được giới thiệu ở các phần sau.
+
+\section{Yêu cầu thiết kế}
+Từ việc tìm hiểu, nắm được ưu nhược điểm các máy có sẵn trên thị trường, các yêu cầu tính năng chưa được phát triển. Các tính năng cần có và nâng cấp như sau:
+\begin{itemize}
+	\item Hệ thống phải được thiết kế để kết nối với nhau thành một khối thống nhất. Đồng bộ với nhau vị trí của từng cặp laser-photo trên 2 bo riêng biệt là bo Laser và bo Photo.
+	
+	\item Hệ thống lưu trữ được hành vi thí nghiệm và dữ liệu mẫu vật. Truyền những thông tin, dữ liệu đó về máy tính của người giám sát.
+	
+	\item Độ an toàn và độ bền:
+	\begin{itemize}
+		\item Mạch bảo vệ quá dòng, quá áp đầu vào cho cả hệ thống và bảo vệ quá dòng, quá áp cho những bộ phận có công suất cao.
+		\item Độ chắc chắn của hệ thống để đảm bảo hoạt động ổn định trong thời gian dài, chịu được điều kiện môi trường phòng thí nghiệm.
+	\end{itemize}
+	
+	\item Bộ phận điều khiển trung tâm:
+	\begin{itemize}
+		\item Hỗ hợ giao tiếp không dây từ máy tính đến hệ thống.
+		\item Tự động hóa việc hoạt động theo chu trình thời gian.
+		\item Hỗ trợ giao tiếp UART/I2C/SPI cho các module ngoại vi phục vụ các chức năng như gia nhiệt, đọc nhiệt độ ...
+		\item Hệ thống phải duy trì nhiệt độ trong buồng thí nghiệm theo giá trị đặt trước.
+		\item Tần số lấy mẫu cao và đường truyền tính hiệu tốc độ cao.
+	\end{itemize}
+	
+	\item Bộ phận giám sát và điều khiển nhiệt độ:
+	\begin{itemize}
+		\item Mạch đọc cảm biến NTC độ nhạy cao để đo nhiệt độ theo thời gian thực.
+		\item Bộ phần gia nhiệt là Heater và TEC (Thermoelectric Cooler) có khả năng đáp ứng nhanh và bền bỉ.
+	\end{itemize}
+	
+	\item Bộ phận phát sáng (laser diode):
+	\begin{itemize}
+		\item Công suất laser diode, cường độ laser diode có thể điều chỉnh được để phù hợp với các loại mẫu, từng thời điểm thí nghiệm khác nhau.
+		\item Laser hoạt động ổn định.
+	\end{itemize}
+	
+	\item Bộ phận thu thập ánh sáng (photo diode):
+	\begin{itemize}
+		\item Photo diode có độ nhạy cao.
+		\item Mạch khuếch đại và lọc tín hiệu photo diode được thiết kế để giảm nhiễu.
+		\item Thu nhận chính xác cường độ ánh sáng sau khi truyền qua mẫu vật.
+		\item Tích hợp ADC độ phân giải cao để đọc tín hiệu photo diode.
+		\item Độ tuyến tính tốt và thời gian đáp ứng nhanh
+		\item Tốc độ đọc dữ liệu nhanh tối thiếu (100kHz)
+	\end{itemize}
+\end{itemize}
+
+\section{Phân tích yêu cầu thiết kế}
+	Từ các yêu cầu trên, hệ thống sẽ được chia thành 4 bo riêng biệt, kết hợp với nhau thành một hệ thống hoàn chỉnh, gồm:
+	\begin{itemize}
+		\item Bo điều khiển trung tâm - OBC (On-Board Computer)
+		\item Bo điều khiển thí nghiệm - EXP (Experiment board)
+		\item Bo Laser
+		\item Bo Photo
+	\end{itemize}
+	
+\section{Sơ đồ khối tổng quát}
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_block_overview.png}
+	\caption{Sơ đồ khối tổng quát}
+	\label{fig:enter-label}
+	\end{figure}
+	\textbf{Bo điều khiển trung tâm - OBC}
+	
+	Để hỗ trợ việc kết nối không dây lên máy tính của người thực hiện thí nghiệm, bo điều khiển trung tâm được thiết kế với socket để có thể gắn một Module CM4 (Raspberry Pi Compute Module 4) và một MCU (STM32H745) trên bo. OBC là master điều khiển cả hệ thống, nhận dữ liệu từ phía dưới và cũng là nơi lưu trữ toàn bộ thông tin thí nghiệm quan trọng thu thập được.
+	
+	\textbf{Bo điều khiển thí nghiệm - EXP}
+	
+	Bo điều khiển thí nghiệm có nhiệm vụ thu thập dữ liệu nhiệt độ từ cảm biến nhiệt NTC và trực tiếp điều khiển nhiệt độ trong buồng thí nghiệm bằng việc điều khiển Heater và TEC. Song song, bo còn có chức năng quản lý thí nghiệm, trực tiếp điều khiển bo Laser và đọc dữ liệu từ bo Photo khi nhận lệnh từ bo OBC. Và sẽ truyền dữ liệu lên OBC sau khi thu thập xong dữ liệu mỗi lần tiến hành lấy mẫu.
+	
+	\textbf{Bo Laser}
+	
+	Bo Laser được thiết kế mạng lới 6x6 laser diodes và bộ 36 switch sử dụng IC ADG1414 cho phép bật tắt từng kênh độc lập. Quan trọng không kém, bo Laser trang bị mạch DAC nhằm điều khiển cường độ ánh sáng, công suất laser diode tùy vào ứng dụng thí nghiệm.
+	
+	\textbf{Bo Photo}
+	
+	Bo photo cũng được thiết kế với mạng lưới 6x6 photo diode. Vị trí từng photo diode tương tứng với vị trí từng photo diode ở bo Laser. Trên bo còn trang bị một bộ ADC 16bits tốc độ cao. Và tương tự bo Laser, có bộ 36 switch để bật tắt từng kênh photo diode.
+	
+\section{Sơ đồ khối chi tiết}
+\subsection{Bo điều khiển trung tâm - OBC}
+Bo OBC là tầng đầu tiên trong kiến trúc hệ thống và đóng vai trò trung tâm trong toàn bộ kiến trúc phần cứng. Đây là bo chịu trách nhiệm tiếp nhận và phân phối nguồn cho các bo còn lại, đồng thời thực hiện chức năng giao tiếp không dây với máy tính điều khiển, và thực thi tác vụ từ người sử dụng.
+
+Hệ thống được cấp nguồn từ nguồn DC hoặc pin, với hai mức điện áp yêu cầu: 5V – 2A và 12V – 3A, đảm bảo đáp ứng năng lượng cho cả khối xử lý và các mạch ngoại vi công suất cao.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_block_obc.png}
+	\caption{Sơ đồ khối OBC}
+	\label{fig:enter-label}
+\end{figure}
+Bo OBC tích hợp một số khối chức năng chính như sau:
+\begin{itemize}
+	\setlength{\parindent}{1cm}
+	\item Compute Module 4 (CM4)
+	
+	Raspberry Pi Compute Module 4 được kết nối trực tiếp trên bo OBC thông qua hai hàng header, CM4 đảm nhiệm vai trò giao tiếp mạng, tương tác với giao diện người dụng trên máy tính điều khiển, lưu trữ dữ liệu, chạy chương trình giám sát và thực hiện các tác vụ nhận được từ người sử dụng.
+	
+	\item Khối vi xử lý (MCU - STM32H7)
+	
+	MCU - STM32H7 đóng vai trò lõi điều khiển của hệ thống. Vi điều khiển giao tiếp với Raspberry Pi Compute Module 4 (CM4) qua hai đường tín hiệu cách ly là UART và SPI, MCU chịu trách nhiệm nhận lệnh từ CM4 và điều khiển các bo ngoại vi.
+	
+	\item Khối Watchdog
+	
+	Đảo đảm hệ thống luôn hoạt động ổn định thông qua cơ chế đánh thức an toàn. Bằng cách cứ mỗi một khoảng thời gian thì Watchdog hỏi xem MCU có đang còn hoạt động bình thường hay không và nếu không thấy phản hồi thì reset MCU.
+	
+	\item Khối  SPI Flash và khối SPI FRAM
+	
+	Chức năng lưu trữ thông số điều khiển nhận được từ CM4, ví dụ như thông số khiển nhiệt, thông số lấy mẫu, thời gian lấy mẫu cố định... Ngoài ra, khi nhận được dữ liệu thí nghiệm, dữ liệu hành vi thí nghiệm (log) từ bo EXP, chúng sẽ được lưu trữ tạm tại đây.
+	
+	\item Khối I2C RTC
+	
+	RTC (Real-Time Clock) cung cấp thời gian thực phục vụ đồng bộ hóa hệ thống, phục vụ cho mục đích giám sát logging và tự động hóa theo lịch trình cấu hình sẵn.
+
+	\item Các khối cách ly tín hiệu
+	
+	Để đảm bảo an toàn điện và chống nhiễu giữa các bo công suất và khối xử lý, OBC sử dụng các khối cách ly cho những tín hiệu cần dùng:
+		
+		\begin{itemize}
+			\item Khối UART ISO: Cách ly tính hiệu UART
+			\item Khối GPIO ISO: Cách ly tính hiệu GPIO
+			\item Khối SPI ISO: Cách ly tính hiệu SPI
+		\end{itemize}
+	
+	\item Khối USB VCP và khối CONSOLE
+	
+	Là 2 kênh giao tiếp serial phục vụ theo dõi log, lệnh điều khiển. Đây là 2 khối khá quan trọng trong quá trình phát triển phần mềm, hỗ trợ gỡ lỗi và thử nghiệm thủ công các chức năng trên bo một cách dễ dàng và hiệu quả.
+\end{itemize}
+
+\subsection{Bo điều khiển thí nghiệm - EXP}
+Bo EXP là tầng phần cứng chuyên trách phục vụ cho quá trình điều khiển và thực thi thí nghiệm. Bo này được thiết kế để giao tiếp trực tiếp với các phần tử gia nhiệt, làm mát, cảm biến và các đường giao tiếp cách ly với OBC, đóng vai trò quản lý thực thi chính trong hệ thống.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_block_exp.png}
+	\caption{Sơ đồ khối bo EXP}
+	\label{fig:block-exp}
+\end{figure}
+
+Các khối chức năng chính của bo EXP:
+
+\begin{itemize}
+	\setlength{\parindent}{1cm}
+	\item Khối eFUSE
+	
+	Nhằm mục đích bảo vệ quá dòng, quá áp. Khối này được thiết kế để ngắt nguồn điện cấp vào cho cả bo khi có sự cố xảy ra giúp hạn chế hư hại đáng tiếc.
+	
+	\item Khối BUCK và khối LDO
+	
+	Hạ mức điện áp cấp vào đến ngưỡng phù hợp với chức năng của những khối ngoại vi trên bo.
+	
+	\item Khối MCU - STM32F7
+	
+	MCU là bộ xử lý trung tâm của bo EXP, bắt tay và truyền thông với OBC qua các kênh tín hiệu đã được cách ly UART, SPI, GPIO và thực thi những yêu cầu mà OBC gửi xuống.
+	
+	STM32F7 thực hiện các nhiệm vụ đọc cảm biến nhiệt, cảm biến áp suất, điều khiển PWM gia nhiệt Heater và giao tiếp SPI với TEC Diver để làm lạnh buồng thí nghiệm. Ngoài ra, MCU còn giao tiếp với các ngoại vi khác qua I2C, SPI, UART...
+	
+	Quan trọng nhất, MCU trên EXP trực tiếp điều khiển bo Laser và bo Photo qua 2 kênh SPI ra connector. Điều khiển quy trình lấy mẫu thí nghiệm và thu thập dữ liệu từ bo Photo diode về lưu trữ tạm ở FRAM và truyền dữ liệu đó lên OBC.
+	
+	\item Khối Watchdog
+	
+	Tương tự như ở OBC, khối Watchdog nhằm đảo đảm hệ thống luôn hoạt động ổn định thông qua cơ chế đánh thức an toàn. Bằng cách cứ mỗi một khoảng thời gian thì Watchdog hỏi xem MCU có đang còn hoạt động bình thường hay không và nếu không thấy phản hồi thì reset MCU.
+	
+	\item Khối FRAM
+	
+	Khối này cung cấp một nơi lưu trữ thông tin lớn hơn đủ để lưu trữ dữ liệu lấy mẫu MCU thu thập được từ bo Photo.
+	
+	\item Khối I2C ISO
+	
+	Cách ly một kênh tín hiệu I2C điều khiển từ MCU đến Module cảm biến áp suất trong buồng thí nghiệm.
+	
+	\item Khối Amplifier
+	
+	Khuếch đại tín hiệu ADC từ 8 cảm biến nhiệt độ NTC nhằm tăng độ chính xác khi MCU đọc.
+	
+	\item Khối Heater Driver
+	
+	Nhận tín hiệu PWM từ MCU để điều khiển 4 Heater.
+	
+	\item Khối TEC Driver
+	
+	Được MCU giao tiếp bằng giao thức SPI để khiển 4 TEC.
+	
+\end{itemize}
+
+\subsection{Bo Laser}
+Bo Laser là mạch điện thụ động, có chức năng chính là điều khiển cường độ laser diode sử dụng trong hệ thống thí nghiệm và bật tắt từng kênh laser diode độc lập.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_block_laser.png}
+	\caption{Sơ đồ khối bo Laser}
+	\label{fig:enter-label}
+\end{figure}
+
+Các khối chức năng chính của bo Laser:
+\begin{itemize}
+	\setlength{\parindent}{1cm}
+	\item Khối BUCK và khối LDO
+	
+	Hạ áp 12V xuống 5V, từ điện áp 5V, LDO tạo ra điện áp sạch 3.3V để nuôi khối điều khiển analog. Nguồn 3.3V đảm bảo sai số thấp cho DAC và mạch nguồn dòng.
+	
+	\item Khối DAC
+	
+	Được điều khiển bởi bo EXP qua giao tiếp SPI. DAC tạo ra điện áp điều khiển (control voltage) tương ứng với mức công suất laser mong muốn. Điện áp DAC được dùng làm tín hiệu tham chiếu cho nguồn dòng.
+	
+	\item Khối LASER
+	
+	Khối này bao gồm 36 laser diode được sắp xếp thành ma trận 6x6, mắc nối với nhau theo kiểu Cathode chung.
+	
+	Laser diode nhận nguồn công suất trực tiếp từ nguồn đầu vào 12V. Cường độ phát sẽ phụ thuộc vào dòng kích do nguồn dòng cung cấp.
+	
+	\item Khối SWITCH
+	
+	Là mạch cho phép bật/tắt đường cấp công suất 12V đến laser. Switch cũng được điều khiển từ bo EXP thông qua giao tiếp SPI, giúp việc bật/tắt laser đa dạng hơn.
+	
+	\item Khối CURREN SOURCE (Nguồn dòng)
+	
+	Khối nhận hai tín hiệu đầu vào là điện áp điều khiển từ DAC và nguồn công suất từ 12V qua laser diode thông qua Switch.
+	
+	Khối này tạo ra và ổn định dòng điện để điều khiển công suất phát của laser theo giá trị mong muốn của thí nghiệm.
+\end{itemize}
+
+\subsection{Bo Photo}
+Bo Photo cũng là một mạch thụ động, chức năng chính thu nhận tín hiệu quang học từ photo diode và chuyển đổi thành tín hiệu điện áp và đọc, chuyển sang tín hiệu số để bo EXP có thể đọc và xử lý. Bo này đóng vai trò đo cường độ ánh sáng sau khi đi qua mẫu thí nghiệm, là một phần quan trọng trong hệ thống đo hấp thụ và tán xạ.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_block_photo.png}
+	\caption{Sơ đồ khối bo Photo}
+	\label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+\newpage
+Các khối chức năng chính của bo Photo:
+\begin{itemize}
+	\setlength{\parindent}{1cm}
+	\item Khối BUCK và khối LDO
+	
+	Hạ áp 12V xuống 5V, từ điện áp 5V, LDO tạo ra điện áp sạch 3.3V để nuôi khối điều khiển analog. Nguồn 3.3V tiếp tục cấp vào khối VREF.
+	\item Khối VREF
+	
+	Khối này đơn giản là tạo ra một điện áp tham chiếu chuẩn, ổn định.
+	
+	
+	
+	\item Khối Photo
+	
+	Là cảm biến chính, chuyển đổi ánh sáng thu được thành dòng điện tỉ lệ với cường độ chiếu sáng. Photo diode hoạt động ở chế độ nghịch (reverse bias) để tăng độ tuyến tính và tốc độ đáp ứng.
+	
+	\item Khối Switch
+	
+	Là mạch cho phép bật/tắt đường tín hiệu điện từ Photo đến mạch khuếch đại... Switch cũng được điều khiển từ bo EXP thông qua giao tiếp SPI, để chọn vị trí đọc photo diode.
+	
+	\item Khối Transimpedance Amplifier (TIA)
+	
+	Do dòng tín hiệu từ photo diode thường rất nhỏ (µA hoặc nA), khối TIA chuyển đổi dòng này thành điện áp và khuếch đại lên mức có thể đo được.
+	
+	\item Khối Anti-aliasing Filter (AAF)
+	
+	Sau TIA, tín hiệu đi qua bộ lọc chống lấy mẫu sai (Anti-aliasing Filter). Chức năng của khối này là để loại bỏ các thành phần tần số cao vượt quá tần số Nyquist, đảm bảo ADC nhận tín hiệu sạch không gây méo phổ.
+	
+	\item Khối ADC
+	
+	Tại đây, tín hiệu điện được lấy mẫu, chuyển đổi tín hiệu tương tự này thành tín hiệu số. Khối ADC cho phép EXP đọc dữ liệu số về qua giao thức SPI.
+\end{itemize}
+
+\newpage
+\section{Sơ đồ nguyên lý}
+\subsection{Bo điều khiển trung tâm - OBC}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_obc_top.png}
+		\caption{Mặt trên}
+		\label{fig:obc-top}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_obc_bottom.png}
+		\caption{Mặt dưới}
+		\label{fig:obc-bottom}
+	\end{subfigure}
+	\caption{PCB điều khiển trung tâm - OBC}
+	\label{fig:obc}
+\end{figure}
+
+Trên đây là hình ảnh PCB hoàn thiện của bo OBC. Như đã thấy, bo được thiết kế xoay quanh vi điều khiển STM32H745ZIT3 và tích hợp Compute Module 4 (CM4).
+
+\textbf{Khối nguồn}
+
+	Bo OBC nhận 2 kênh điện áp là 12V - 3A và 5V - 2A. Kênh điện áp 12V không được sử dụng ở OBC mà chỉ đi qua bo và truyền cho những bo ở tầng trên của hệ thống. Kênh điện áp 5V sẽ chia ra hai nhánh chính là cấp nguồn cho CM4 và cấp nguồn cho MCU - STM32.
+	
+	Do cả máy tính nhùng và vi điều khiển đều hoạt động ở điện áp 3.3V nên cần có mạch hạ áp. Để ổn định nguồn và sạch để cấp cho CM4 và STM32H7 nên sử dụng mạch LDO như sau:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_pwr.png}
+		\caption{Sơ đồ nguyên lý khối nguồn trên OBC}
+		\label{fig:sche-pow-obc}
+	\end{figure}
+
+\textbf{Khối bộ nhớ}
+
+	Trên OBC, hai bộ nhớ là FRAM và Flash ROM được kết nối với vi điều khiển thông qua giao tiếp SPI. Mỗi IC nhớ có đặc tính khác nhau, do đó đảm nhiệm một vai trò lưu trữ khác nhau và được thiết kế tách biệt thành hai khối phần cứng riểng biệt.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_fram_rom.png}
+		\caption{Sơ đồ nguyên lý khối Flash và khối Fram trên OBC}
+		\label{fig:sche-memory-obc}
+	\end{figure}
+	
+	\begin{paracol}{2}
+		\switchcolumn[0]
+		IC FRAM là MB85RS2MT có dung lượng 2Mbit, giao tiếp SPI với tốc độ cao lên đến 40MHz, hoạt động ở mức điện áp 3.3V.
+		
+		\switchcolumn
+		IC Flash ROM là MX25L8006EM1 có dung lượng 8Mbit, giao tiếp SPI tốc độ cao lên đến 86MHz, điện áp hoạt động 3.3V.
+	\end{paracol}
+
+\textbf{Khối cách ly tín hiệu}
+	
+	Sử dụng IC MAX14431CAEE+ để cách ly tín hiệu SPI giữa MCU trên OBC với EXP và cả MCU với CM4, IC hỗ trợ tốc độ đến 200Mbps, đảm bảo tốc độ cao để truyền dữ liệu thí nghiệm nhanh chóng.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_spi_iso.png}
+		\caption{Sơ đồ nguyên lý mạch cách ly SPI trên OBC}
+		\label{fig:sche-spi-iso-obc}
+	\end{figure}
+	
+	Cách ly UART sử dụng IC ISO7721 là bộ cách ly số hai kênh, phù hợp để cách ly hai kênh tín hiệu TX và RX. Bo OBC sử dụng nó để cách ly các đường giao tiếp giữa MCU trên OBC đến EXP và đến cả CM4.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_uart_iso.png}
+		\caption{Sơ đồ nguyên lý mạch cách ly UART trên OBC}
+		\label{fig:sche-uart-iso-obc}
+	\end{figure}
+	
+	IC ADUM1250 được dùng để cách ly hai đường SDA và SCL theo chuẩn I2C nhưng ở đây, IC được sử dụng để cách ly tín hiệu GPIO đơn thuần. IC hỗ trợ truyền hai chiều, tương thích mức logic open-drain. Các điện trở kéo lên bố trí ở cả hai bên nhằm đảm bảo tín hiệu mặc định của đường tín hiệu.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_io_iso.png}
+		\caption{Sơ đồ nguyên lý mạch cách ly GPIO trên OBC}
+		\label{fig:sche-io-iso-obc}
+	\end{figure}
+	
+\textbf{Khối RTC}
+
+	Khối thời gian thực sử dụng IC RV-3129-C3, một RTC tích hợp sẵn thạch anh 32.768 kHz, hoạt động ở điện áp 3.3V và giao tiếp qua I2C. Việc dùng thạch anh tích hợp giúp giảm sai số, đơn giản hóa thiết kế và tăng độ ổn định thời gian.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_rtc.png}
+		\caption{Sơ đồ nguyên lý mạch RTC trên OBC}
+		\label{fig:sche-rtc-obc}
+	\end{figure}
+
+\textbf{Khối Watchdog}
+	
+	Khối này sử dụng IC TPL5010QDDCTQ1, một watchdog siêu tiết kiệm năng lượng. IC tạo xung giám sát định kỳ và yêu cầu MCU phản hồi bằng tín hiệu DONE; nếu không, TPL5010 sẽ kích hoạt chân RESET để khởi động lại hệ thống.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_obc_wdog.png}
+		\caption{Sơ đồ nguyên lý mạch Watchdog trên OBC}
+		\label{fig:sche-wdog-obc}
+	\end{figure}
+	
+	Mạch thiết kế có jumper (SB2) để chọn trở đơn 16.5k$\Omega$ hoặc cặp trở song song để thiết lập chu kì giám sát. Thời gian và giá trị điện trở ngoài có tương quan theo công thức:
+	
+	\begin{equation}
+		R_{EXT} = 100 \cdot \frac{-b + \sqrt{b^{2} - 4a(c - 100T)}}{2a}
+	\end{equation}
+	
+	\hspace{0.5cm}
+	\noindent{Trong đó:}
+	\hspace{0.5cm}
+	\begin{minipage}{0.9\linewidth}
+		\begin{itemize}
+			\item $T$ là khoảng thời gian mong muốn (đơn vị giây);
+			\item $R_{EXT}$ là giá trị điện trở cần sử dụng (đơn vị $\Omega$);
+			\item $a, b, c$ là các hệ số phụ thuộc vào dải thời gian.
+		\end{itemize}
+	\end{minipage}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_wdog_table.png}
+		\caption{Bảng hệ số tính thời gian giám sát}
+		\label{fig:wdog-table}
+	\end{figure}
+	
+	Khi đó, hệ thống sẽ được giám sát mỗi 30s hoặc 4s tùy vào trạng thái jumper sẽ được chọn.
+
+
+\subsection{Bo điều khiển thí nghiệm - EXP}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_exp_top.png}
+		\caption{Mặt trên}
+		\label{fig:exp-top}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_exp_bottom.png}
+		\caption{Mặt dưới}
+		\label{fig:exp-bottom}
+	\end{subfigure}
+	\caption{PCB điều khiển thí nghiệm - EXP}
+	\label{fig:exp}
+\end{figure}
+
+Những khối chức năng chính trên EXP được thiết kế chi tiết như sau:
+
+\textbf{Khối nguồn}
+
+	EXP nhận điện áp 12V từ OBC, để đảm bảo an toàn cần có một cầu chì giới hạn tự động kiểm tra và ngắt điện nếu quá dòng, quá áp. Mạch eFuse có một diode TVS lọc điện áp gai ngõ vào và sử dụng IC TPS259470A có dòng chịu đựng tối đa 5.5A. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_efuse.png}
+		\caption{Sơ đồ nguyên lý mạch eFuse trên EXP}
+		\label{fig:sche-efuse-exp}
+	\end{figure}
+	
+	Với công thức tính giới hạn tầm điện áp trên và dưới như sau:
+	
+	\begin{equation}
+		V_{\text{IN(UV)}} =  V_{\text{UVLO(R)}} \cdot \frac{R_1 + R_2 + R_3}{R_2 + R_3}
+	\end{equation}
+	
+	\begin{equation}
+		V_{\text{IN(OV)}} =  V_{\text{OV(R)}} \cdot \frac{R_1 + R_2 + R_3}{R_3}
+	\end{equation}
+	
+	\hspace{0.5cm}
+	\noindent{Trong đó:}
+	\hspace{0.5cm}
+	\begin{minipage}{0.9\linewidth}
+		\begin{itemize}
+			\item $V_{IN(UV)}$ là điện áp ngõ vào tối thiểu (đơn vị V);
+			\item $V_{UVLO(R)}$ là điện áp giảm tối đa (đơn vị V);
+			\item $V_{IN(OV)}$ là điện áp ngõ vào tối đa (đơn vị V);
+			\item $V_{OV(R)}$ là điện áp tăng tối đa (đơn vị V);
+			\item $R1, R2, R3$ là giá trị điện trở trên mạch (đơn vị $\Omega$);
+		\end{itemize}
+	\end{minipage}
+	
+	Trên EXP có điện áp ngõ vào là 12V và mong muốn điện áp $V_{UVLO(R)}$=1.2V, $V_{OV(R)}$=1.2V. Ta chọn giá trị điện trở R1 là 470k$\Omega$ và tính dựa trên công thức ta được R2=11k$\Omega$, R3=47k$\Omega$.
+	
+	Công thức tính giới hạn dòng:
+	
+	\begin{equation}
+		R_{\text{7}} = \frac{3334}{I_{LIM}}
+	\end{equation}
+	
+	Giới hạn dòng tối đa cho EXP là $I_{LIM}$=3A, do đó R7=1k$\Omega$
+	
+	Mạch nguồn Buck sử dụng IC TPS5430DDAR để hạ áp từ 12V xuống 5V ổn định. TPS5430 là bộ chuyển đổi hạ áp (buck converter) có dòng tải tối đa 3A, hoạt động ở tần số cố định 570kHz.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_buck.png}
+		\caption{Sơ đồ nguyên lý mạch nguồn Buck trên EXP}
+		\label{fig:sche-buck-exp}
+	\end{figure}
+	
+	Để nguồn điện sạch hơn mịn hơn, EXP dùng một mạch LDO đơn giản để hạ áp sau nguồn switching xuống 3,3V để cấp cho bo mạch. Nguồn LDO sử dụng IC TPS7A4533DCQR.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_ldo.png}
+		\caption{Sơ đồ nguyên lý mạch nguồn LDO trên EXP}
+		\label{fig:sche-ldo-exp}
+	\end{figure}
+	
+\textbf{Khối giám sát nhiệt độ}
+	
+	Với mục đích đo nhiệt độ trong buồng thí nghiệm, khối sử dụng cảm biến nhiệt điện trở NTC nối thành cầu phân áp với điện trở cố định 10k$\Omega$ (R71), tạo ra điện áp tương ứng với nhiệt độ tại điểm đo. Tín hiệu điện áp từ cầu phân áp được lọc qua mạch lọc thông thấp RC đơn giản (R68 và C89) để giảm nhiễu cao tần. Sau đó, tín hiệu được đưa vào IC op-amp OPA2340 (U13A) hoạt động như mạch đệm (buffer amplifier) nhằm cách ly và ổn định tín hiệu trước khi vào ADC của MCU. Ngõ ra của op-amp tiếp tục được lọc bằng R66 và C92 để đảm bảo tín hiệu đo sạch và ít nhiễu hơn khi đưa vào chân ADC\_TEMP1 trên MCU.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_ntc.png}
+		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\label{fig:sche-ntc-exp}
+	\end{figure}
+	
+	Sử dụng NTC có điện trở ở 25$\circ$C là 10k$\Omega$ mắc nối tiếp với điện trở chuẩn 10k$\Omega$ (pull down) tạo ra cầu phân áp. Điện áp tại nút chia sẽ thay đổi phụ thuộc điện trở của NTC theo công thức:
+	
+	\begin{equation}
+		V_{div} = VDD \cdot \frac{R_{pull-down}}{R_{NTC} + R_{pull-down}}
+		        = 3.3 \cdot \frac{10000}{R_{NTC} + 10000}
+	\end{equation}
+	
+	Khi nhiệt độ tăng, $R_{NTC}$ giảm, lúc này $V_{dic}$ sẽ tăng và ngược lại, khi nhiệt độ giảm $R_{NTC}$ tăng, làm cho $V_{dic}$ sẽ giảm. Điều này tạo ra tín hiệu analog liên tục để MCU đọc ADC.
+	
+	
+\textbf{Khối điều khiển nhiệt độ}
+	
+	Mạch điều khiển TEC sử dụng IC LT8722AV có thể điều khiển dòng hai chiều, cho phép làm lạnh hoặc làm nóng. IC cho phép giao tiếp qua giao thức SPI để điều khiển hoạt động với điện áp giao tiếp là 3.3V và điện áp cung cấp là 5V. Ngõ ra LDR và BST của IC cần được mắc tụ đúng theo yêu cầu thiết kế trong datasheet để đảm bảo đúng chế độ hoạt động.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_lt8722_ldr_cap.png}
+			\caption{Chân LDR}
+			\label{fig:lt8722-ldr}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_lt8722_bst_cap.png}
+			\caption{Chân BST}
+			\label{fig:lt8722-bst}
+		\end{subfigure}
+		\caption{Yêu cầu thiết kế của IC LT8722}
+		\label{fig:lt8722_req}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_tec_drv.png}
+		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\label{fig:sche-tec-exp}
+	\end{figure}
+	
+	Mạch điều khiển Heater chỉ đơn giản sử dụng Mosfet AO3400A để bật/tắt dòng qua trở nhiệt. Heater được cấp nguồn 5V và hoạt động theo tín hiệu điều khiển từ PWM từ MCU.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{lv_sch_exp_heater_drv.png}
+		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\label{fig:sche-heater-exp}
+	\end{figure}
+	
+	
+\textbf{Khối bộ nhớ}
+	
+	Để lưu trữ lượng lớn dữ liệu khi lấy mẫu thí nghiệm, EXP cần có một bộ nhớ ngoài, MB85RS2MTAPNF-G-BDERE1 là IC FRAM có dung lượng lưu trữ lên đến 2Mbit, giao tiếp SPI tốc độ cao lên đến 40MHz.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_sch_exp_fram.png}
+		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\label{fig:sche-fram-exp}
+	\end{figure}
+	
+\textbf{Khối Watchdog}
+
+	Khối này sử dụng IC TPL5010DDCR có chức năng giám sát và đánh thức MCU khi không nhận được phản hồi, sơ đồ tương tự đã được sử dụng ở bo OBC.
+
+
+\subsection{Bo Laser}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_laser_top.png}
+		\caption{Mặt trên}
+		\label{fig:laser-top}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_laser_bottom.png}
+		\caption{Mặt dưới}
+		\label{fig:laser-bottom}
+	\end{subfigure}
+	\caption{PCB Laser}
+	\label{fig:laser}
+\end{figure}
+
+Trên bo Laser có những khối chức năng chính sau đây:
+
+\textbf{Khối nguồn}
+
+	Tương tự những khối nguồn khác ở 2 bo trên, bo Laser nhận 12V từ EXP và có mạch Buck và mạch LDO để hạ áp 12V xuống 5V và 3.3V để cấp cho những khối chức năng khác trên bo.
+
+\textbf{Khối DAC}
+
+	Sử dụng IC MCP4902, là IC DAC hai kênh, độ phân giải 8-bit, giao tiếp qua chuẩn SPI mode 0. Nhận tín hiệu digital từ EXP qua bus SPI, IC tạo tín hiệu điện analog ổn định để cấp cho khối nguồn dòng phía sau.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_dac.png}
+		\caption{Sơ đồ nguyên lý mạch DAC trên bo Laser}
+		\label{fig:sche-dac-laser}
+	\end{figure}
+	
+	Điện áp tham chiếu của IC MCP4902 được đi vào từ mạch lọc LC dạng Pi. Mạch lọc giúp làm sạch điện áp tham chiếu quan trọng cho IC, loại bỏ nhiễu cao tần, nhiễu xung...
+
+\textbf{Khối nguồn dòng}
+
+	Mạch này tạo ra dòng điều khiển chính xác cho laser diode bằng cách sử dụng tín hiệu điều khiển từ DAC.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_current_src.png}
+		\caption{Sơ đồ nguyên lý mạch nguồn dòng trên bo Laser}
+		\label{fig:sche-current-src-laser}
+	\end{figure}
+	
+	Nhận tín hiệu analog từ khối DAC, tín hiệu đi qua mạch lọc RC đơn giản R5(50$\Omega$) và C13(470pF) để giảm nhiễu cao tần. Sau đó tín hiệu đi đến chân V+ của op-amp U3A (OPA4340). U3A sẽ điều khiển Mosfet Q1 (AO3400) để tạo dòng cho laser diode, dòng này sẽ đi qua điện trở cảm biến dòng R9. Điện áp rơi trên R9 sẽ đi qua R7(1k$\Omega$) giúp hạn dòng tín hiệu và tạo mạch bù pha với C14(0.22$\mu$F) bù tần số nhằm chống dao động vòng kín và đưa về chân V- của op-amp để tham chiếu phản hồi. Op-amp sẽ điều khiển sao cho điện áp rơi trên R9 bằng đúng điện áp $V_{DAC}$
+	
+	Do đó dòng qua laser diode được xác định theo công thức:
+	
+	\begin{equation}
+		I_{\text{LD}} = \frac{V_{\text{DAC}}}{R9}
+	\end{equation}
+	
+	\hspace{0.01cm}
+	\noindent{Trong đó:}
+	\hspace{0.5cm}
+	\begin{minipage}{0.9\linewidth}
+		\begin{itemize}
+			\item $I_{LD}$ là dòng đi qua laser diode (đơn vị A);
+			\item $V_{DAC}$ là điện áp giảm tối đa (đơn vị V);
+			\item $R9$ là giá trị điện trở cảm biến dòng (đơn vị $\Omega$);
+		\end{itemize}
+	\end{minipage}
+
+	\vspace{0.5cm}
+	Trên bo Laser được thiết kế:
+	\begin{itemize}
+		\setlength{\itemindent}{3.8cm}
+		\item Dòng tối đa yêu cầu: $I_{LDmax} = 12\,\text{mA}$
+		\item Điện áp DAC tối đa: $V_{DACmax} = 3\,\text{V}$
+		\item Từ đó chọn $R9$:
+	\end{itemize}
+	
+		\begin{equation}
+			R9 = \frac{V_{DACmax}}{I_{LDmax}} = \frac{3}{0.012} = 250\Omega
+		\end{equation}
+	
+	Khối nguồn dòng có thêm mạch đo dòng phản hồi, điện áp rơi trên R9 được đi qua op-amp U3B cấu hình như bộ khuếch đại đệm và mạch lọc thông thấp R8 C15 rồi đưa ra đường tín hiệu điện về EXP để giám sát.
+
+	
+\textbf{Khối switch}
+	
+	Khối switch trên bo Laser sử dụng tổng cộng 6 IC ADG1414, mỗi IC cung cấp 8 kênh switch analog độc lập, nhưng ở đây chỉ sử dụng 6 kênh cho tổng 36 kênh laser diode.
+	
+	IC ADG1414 giao tiếp SPI, có điện áp điều khiển logic 1.8V - 5V phù hợp với STM32 trên EXP. Điện áp chịu đựng của kênh analog switch là ±15V. IC sở hữu điện trở dẫn rất thấp, chỉ khoảng 1,6$\Omega$, giúp giảm tối đa hiện tượng sụt áp khi cấp dòng cho diode laser và đảm bảo công suất phát ổn định. Thời gian đóng cắt nhanh, dưới 120 ns, cho phép chuyển đổi trạng thái tức thời và đáp ứng tốt các yêu cầu quét laser tốc độ cao.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_sch_laser_switch.png}
+		\caption{Sơ đồ nguyên lý mạch switch trên bo Laser}
+		\label{fig:sche-switch-laser}
+	\end{figure}
+
+
+\subsection{Bo Photo}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_photo_top.png}
+		\caption{Mặt trên}
+		\label{fig:photo-top}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_pcb_photo_bottom.png}
+		\caption{Mặt dưới}
+		\label{fig:photo-bottom}
+	\end{subfigure}
+	\caption{PCB Photo}
+	\label{fig:photo}
+\end{figure}
+
+Trên bo Photo có những khối chức năng chính sau đây:
+	
+\textbf{Khối nguồn}
+	
+	Bo Photo nhận 12V từ bo EXP và có mạch Buck mạch LDO để hạ áp 12V xuống 5V xuống 3.3V để cấp cho những khối chức năng khác trên bo.
+	
+	Bo cần có một mạch nguồn tham chiếu chuẩn, ổn định để lấy mẫu dữ liệu chính xác. Mạch điện áp tham chiếu dùng IC REF1930 tạo ra điện VREF$\_$ADC=3.3V. Một cầu chia áp để được VREF=0.55V cho mục đích sử dụng ở khối Transimpedace.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{lv_sch_photo_ref.png}
+		\caption{Sơ đồ nguyên lý mạch điện áp tham chiếu trên bo Photo}
+		\label{fig:sche-ref-pow-photo}
+	\end{figure}
+	
+	Khối tạo nguồn âm trên bo Photo sử dụng IC ICL7660 nhằm tạo ra đường nguồn –5V\_Photo từ nguồn dương 5V tạo ra từ mạch Buck. ICL7660 là IC charge pump chuyển đổi điện áp kiểu đảo (voltage inverter), hoạt động không cần cuộn cảm, nhờ đó mạch rất gọn và ít nhiễu hơn so với các bộ nguồn chuyển mạch thông thường.
+	
+	Nguồn âm –5V\_Photo này được dùng để làm nguồn cho các kênh analog switch ADG1414. Việc cung cấp mức âm –5V cho VSS của ADG1414 là cần thiết để các tín hiệu từ photo diode (vốn có thể xuống thấp hơn mức 0V) không bị kẹp hoặc gây hỏng IC, đồng thời đảm bảo biên độ tín hiệu đưa về ADC được giữ nguyên vẹn.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{lv_sch_photo_negative_pow.png}
+		\caption{Sơ đồ nguyên lý mạch nguồn âm trên bo Photo}
+		\label{fig:sche-negative-pow-photo}
+	\end{figure}
+	
+\textbf{Khối switch}
+
+	Khối switch trên bo Photo sử dụng tổng cộng 6 IC ADG1414, mỗi IC cung cấp 8 kênh chuyển mạch analog độc lập, nhưng hệ thống chỉ cần 6 kênh trên mỗi IC để tạo thành 36 kênh đọc photo diode, tương ứng với 36 kênh laser diode trên bo Laser.
+	
+	ADG1414 sử dụng giao tiếp SPI để điều khiển đóng/mở từng kênh S1–S8. IC có điện áp điều khiển logic từ 1.8V đến 5V, hoàn toàn tương thích với STM32 (3.3V) trên bo EXP. Mỗi kênh của ADG1414 chịu được điện áp analog ±15V, với điện trở dẫn rất thấp chỉ khoảng 1.6$\Omega$, giúp suy hao điện áp qua switch là tối thiểu, đảm bảo tín hiệu quang từ photo diode được truyền về ADC mà không bị méo dạng. IC cũng có tốc độ đóng cắt rất nhanh (<120 ns), đáp ứng tốt yêu cầu quét laser tốc độ cao.
+	
+	Một điểm quan trọng trong thiết kế là ADG1414 được cung cấp nguồn analog dạng đối xứng, với VDD = +12V và VSS = –5V thay vì nối VSS về GND. Cách cấp nguồn này cho phép dải tín hiệu analog đi qua switch nằm trong khoảng –5 V đến +12 V. Điều này là cần thiết vì photo diode trong mạch được phân cực nghịch: cực anode nối GND, cực cathode được kéo về mức âm –5V\_Photo để tạo điện áp phân cực ngược. Khi ánh sáng chiếu vào, photo diode tạo ra dòng quang làm xuất hiện một tín hiệu điện áp nhỏ hơn điện áp bias, thường là điện áp âm so với GND. Nếu VSS chỉ bằng GND, tín hiệu âm từ photo diode sẽ bị kẹp bởi diode bảo vệ nội bộ của ADG1414, dẫn đến đo sai và có thể gây hỏng IC. Việc sử dụng VSS = –5V giúp switch xử lý chính xác các tín hiệu âm, duy trì sự toàn vẹn tín hiệu quang và đảm bảo photo diode hoạt động đúng trong chế độ phân cực nghịch.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_sch_photo_switch.png}
+		\caption{Sơ đồ nguyên lý mạch switch trên bo Photo}
+		\label{fig:sche-abc-photo}
+	\end{figure}
+	
+		
+\textbf{Khối transimpedance và anti-aliasing}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_transimpedance_antialias.png}
+		\caption{Sơ đồ nguyên lý mạch transimpedance và mạch anti-aliasing filter trên bo Photo}
+		\label{fig:sche-transimpedance-antialias-photo}
+	\end{figure}
+		
+	Mạch transimpedance (TIA) có công dụng biến dòng quang từ photo diode từ chân V- của op-amp U3A thành điện áp có tỉ lệ:
+	
+	\begin{equation}
+		V_{\text{out}} \approx V_{ref(PD)} - I_{photo} \cdot R1
+	\end{equation}
+	
+	Trong mạch thiết kế, R1=330k$\Omega$ đóng vai trò là điện trở phản hồi, quyết định độ lợi của mạch. Tụ C1=470pF được mắc song song R1 để ổn định mạch và giới hạn băng thông.
+	Băng thông tạo ra bởi R1 và C1:
+	
+	\begin{equation}
+		f_{\text{TIA}} \approx \frac{1}{2\Pi \cdot R1 \cdot C1} = \frac{1}{2\Pi \cdot 330000 \cdot 470 \cdot 10^{-12}} = 1.03kHz
+	\end{equation}
+	
+	Anti-aliasing có nhiệm vụ lọc các thành phần tần số trên để tránh aliasing khi ADC mẫu. Điện áp ngõ ra của mạch transimpedance đi qua hai mạch lọc thông thấp RC đơn giản rồi đến một mạch khuếch đại đệm sử dụng op-amp U3C. Sau đó tín hiệu đi qua mạch lọc khử răng cưa (anti-aliasing filter) trước khi đi vào khối ADC.
+	
+	Mạch lọc thông thấp RC có tần số cắt khoảng:
+	
+	\begin{equation}
+		f_{c} \approx \frac{1}{2\Pi \cdot R6 \cdot C19} = \frac{1}{2\Pi \cdot 10000 \cdot 10 \cdot 10^{-9}} \approx 1.6kHz
+	\end{equation}
+	
+	Mạch anti-aliasing filter được thiết kế là bộ lọc chủ động bậc cao. Tần số cắt -3dB bằng chính xác tần số Nyquisst, bằng một nửa tần số lấy mẫu mong muốn. Trên bo Photo, khối ADC sẽ có tần số lấy mẫu $f_{s}=500kHz$ do đó, $f_{Nyquist}=250kHz$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_anti_aliasing_filter.png}
+		\caption{Mạch lọc khử răng cưa tham khảo}
+		\label{fig:abc}
+	\end{figure}
+	
+	Để có được $f_{3dB}=250kHz$, ta chọn R4=R2=1k$\Omega$ và C3=C4=4nF.
+	
+\textbf{Khối ADC}
+	
+	Mạch có nhiệm vụ đo điện áp analog và truyền dữ liệu số về vi điều khiển trên EXP thông qua giao tiếp SPI. Dòng ADS8327 là ADC độ phân giải 16-bit, tốc độ chuyển đổi 500kSPS, đảm bảo độ chính xác cao và độ trễ thấp phù hợp với yêu cầu lấy mẫu của hệ thống.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_sch_photo_adc.png}
+		\caption{Sơ đồ nguyên lý mạch ADC trên bo Photo}
+		\label{fig:sche-adc-photo}
+	\end{figure}
+
+\newpage
+\chapter{Thiết kế và thực hiện firmware}
+\section{Yêu cầu chung cho firmware}
+
+Hệ thống thí nghiệm bao gồm bốn bo: OBC(CM4), EXP, Laser và Photo, hoạt động phối hợp để thực hiện quy trình đo – điều khiển – thu nhận dữ liệu. Do các bo ghép nối thành một hệ thống thống nhất, firmware phải đảm bảo giao tiếp đồng bộ, chính xác và an toàn giữa các khối chức năng. Các thuật toán điều khiển, luồng dữ liệu và phản hồi trạng thái phải tuân theo giao thức chung để tránh xung đột và đảm bảo hệ thống vận hành ổn định. Ngoài ra, hệ thống cần đáp ứng các yêu cầu sau:
+
+\begin{itemize}
+	\item Đảm bảo giao tiếp thống nhất giữa các bo thông qua chuẩn UART/SPI/I2C, sử dụng cấu trúc frame và mã lệnh chung, tránh sai lệch dữ liệu trong điều kiện nhiễu hoặc tốc độ cao.
+	
+	\item Luồng điều khiển tuần tự: PC thông qua giao diện người dùng (GUI) kết nối đến CM4 và gửi lệnh xuống CM4, CM4 gửi lệnh đến MCU-OBC, OBC gửi lệnh xuống EXP, EXP xử lý và điều khiển trực tiếp Laser và Photo theo đúng quy trình. Các bo phải gửi trạng thái phản hồi đầy đủ để đảm bảo hệ thống biết rõ tiến trình đang thực hiện.
+	
+	\item Đảm bảo tính ổn định chức năng điều khiển trên OBC, bao gồm:
+	\begin{itemize}
+		\item CM4 cập nhật liên tục giá trị trạng thái lên GUI.
+		\item Đáp ứng nhanh những yêu cầu từ người dùng gửi xuống.
+	\end{itemize}
+	
+	\item EXP đóng vai trò trung tâm điều phối, cần đảm bảo:
+	\begin{itemize}
+		\item Thực thi các tác vụ theo lịch SST0, không được để tác vụ bị treo hoặc block.
+		\item Đáp ứng nhanh trước các lệnh điều khiển từ OBC.
+	\end{itemize}
+	
+	\item Thu nhận dữ liệu từ bo Photo phải được thực hiện với tần số lấy mẫu cao để phục vụ quá trình nghiên cứu chi tiết kết quả đo đạc. Các gói dữ liệu cần được đóng gói, đảm bảo tính toàn vẹn khi gửi ngược về OBC.
+	
+	\item Đảm bảo lưu trữ trạng thái, nguyên nhân nếu hệ thống có sự cố bất ngờ.
+	
+	\item Ngoài ra, CM4 và MCU trên OBC, bo EXP phải có khả năng hoạt động độc lập, console riêng biệt xuất ra ngoài để thuận tiện trong quá trình gỡ lỗi, phát triển firmware và hoàn thiện hệ thống.
+\end{itemize}
+
+\section{Lưu đồ giải thuật}
+\subsection{Bo điều khiển trung tâm - OBC}
+
+\subsubsection{Lưu đồ giải thuật cho CM4 trên OBC}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{lv_flow_cm4.png}
+	\caption{Lưu đồ giải thuật của CM4}
+	\label{fig:flow-cm4-obc}
+\end{figure}
+
+Chương trình chạy trên bo CM4 được phát triển bằng Python, đóng vai trò là một client TCP, giao tiếp với máy chủ PC; là trung gian giữa hệ thống thí nghiệm (OBC/EXP) và phần mềm giám sát trên PC. Firmware này được thiết kế dạng đa luồng (multi-threading), cho phép xử lý song song các tác vụ giao tiếp TCP, UART, SPI và truyền dữ liệu theo thời gian thực. Hệ thống gồm ba thread chính, chức năng chi tiết như sau:
+
+\begin{itemize}
+	\item Main thread: luồng xử lý chính của chương trình, giao tiếp với PC
+	\begin{itemize}
+		\item Thiết lập và duy trì kết nối TCP Socket: Kết nối đến ứng dụng server trên PC.
+		\item Thực hiện quá trình bắt tay (handshake) để đảm bảo kết nối.
+		\item Cảnh báo nếu mất kết nối và tự động kết nối lại.
+		\item Main thread liên tục chờ và đọc dữ liệu từ socket.
+		\item Kiểm tra định dạng gói tin và với mã lệnh hợp lệ sẽ gọi đến hàm xử lý tương ứng.
+		\item Những mã lệnh quan trọng như: "auto\_ctrl\_temp\_start", \\ "auto\_ctrl\_temp\_stop", "laser\_man\_turn\_on", "laser\_man\_turn\_off"...
+	\end{itemize}
+	
+	\item TCP send thread: gửi dữ liệu lên server theo chu kỳ
+	\begin{itemize}
+		\item Dữ liệu nhiệt độ, áp suất từ EXP (đã được cập nhật bằng thread khác) sẽ được đóng thành gói đúng định dạng.
+		\item Gửi dữ liệu đã đóng gói lên server qua socket đã được thiết lập trong main thread.
+	\end{itemize}
+	
+	\item UART receive thread: giao tiếp với OBC
+	\begin{itemize}
+		\item Liên tục chờ và nhận dữ liệu UART từ OBC.
+		\item Kiểm tra định dạng gói tin, nếu hợp lệ thì gọi đến hàm xử lý mã lệnh đó.
+		\item Những mã lệnh quan trọng: "update\_ntc\_press", "experiment\_done"... 
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Lưu đồ giải thuật cho MCU trên OBC}
+Chương trình trên vi xử lý của bo OBC được xây dựng dựa trên hệ điều hành thời gian thực FreeRTOS. Bo đảm nhiệm chức năng điều phối toàn bộ hoạt động của hệ thống, bao gồm giao tiếp với CM4, giao tiếp với EXP và các module gắn trên bo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{lv_flow_obc.png}
+	\caption{Lưu đồ giải thuật của MCU trên OBC}
+	\label{fig:flow-mcu-obc}
+\end{figure}
+Trong đó:
+\begin{itemize}
+	\item Init Hardware: khởi tạo phần cứng bao gồm Clock, GPIO, TIMER, UART, SPI, I2C, ISR,...
+	\item Init FreeRTOS: chương trình khởi tạo các task với stack và mức độ ưu tiên riêng và khỏi tạo queue, semaphore ...
+	\item Start OS: Khởi chạy Scheduler cho FreeRTOS.
+	\item FreeRTOS handle task: tại đây chương trình sẽ tiến vào giai đoạn hoạt động trong vòng lặp vô hạn của FreeRTOS. Các task được luân phiên chạy theo mức độ ưu tiên.
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{5cm}|p{10cm}|}
+		\hline
+		\textbf{Tên Task} & \textbf{Chức năng chính} \\ \hline
+		
+		CLI\_Handle\_Task & Xử lý lệnh từ giao diện dòng lệnh (CLI), phục vụ debug và cấu hình hệ thống. \\ \hline
+		
+		MIN\_Process\_Task & Xử lý giao thức MIN, nhận/gửi khung dữ liệu giữa OBC và EXP. \\ \hline
+		
+		UART\_CM4\_DMA\_Rx\_Task & Nhận dữ liệu UART từ CM4 thông qua DMA và xử lý. \\ \hline
+		
+		UART\_Debug\_DMA\_Rx\_Task & Nhận dữ liệu UART Debug từ Console qua DMA và xử lý. \\ \hline
+		
+		NTC\_Temp\_Update\_Task & Cập nhật nhiệt độ NTC (nhận từ EXP) và gửi định kỳ lên CM4. \\ \hline
+		
+		Experiment\_Handle\_Task & Điều khiển luồng chạy thí nghiệm, xử lý logic chính của MCU. Quản lý nhận dữ liệu từ EXP và truyền lên CM4. \\ \hline
+		
+		... & ... \\ \hline
+	\end{tabular}
+	\caption{Danh sách các task chính trên MCU OBC}
+\end{table}
+
+\subsubsection{Chi tiết firmware}
+\begin{itemize}
+	\item CLI\_Handle\_Task
+	
+	Task chịu trách nhiệm cung cấp giao diện dòng lệnh (console) cho OBC, cho phép người lập trình tương tác với bo trong quá trình phát triển chương trình nhúng.
+	
+	Task này sử dụng thư viện EmbeddedCLI, một thư viện gọn nhẹ tối ưu cho hệ thống nhúng, hỗ trợ phân tích cú pháp lệnh, quản lý tham số và xử lý callback tương ứng.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{lv_cli_obc.png}
+		\caption{Console của MCU trên OBC}
+		\label{fig:console-obc}
+	\end{figure}
+	
+	\item MIN\_Process\_Task
+	
+	Task có chức năng giao tiếp với EXP thông qua giao thức MIN Protocol. MIN (Microcontroller Interconnect Network) là giao thức truyền thông nhẹ, đáng tin cậy, hỗ trợ cơ chế truyền dữ liệu mã hóa có kiểm soát lỗi.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_flow_obc_mintask.png}
+		\caption{Lưu đồ giải thuật min\_shell\_task}
+		\label{fig:flow-obc-MIN-Process-Task}
+	\end{figure}
+	
+	Việc giao tiếp MIN trong quá trình tiến hành lấy mẫu sẽ được quy định ở phần \ref{sec:handshake-obc-exp}.
+	
+	\item UART\_CM4\_DMA\_Rx\_Task
+	
+	Task này chịu trách nhiệm nhận dữ liệu UART từ CM4 gửi xuống.
+	Việc nhận dữ liệu được thực hiện qua DMA, giúp giảm tải CPU và đảm bảo hệ thống vận hành ổn định ngay cả khi MCU đang thực thi tác vụ khác. Task theo dõi DMA Buffer RX, lọc khung dữ liệu hợp lệ và tiến hành xử lý dữ liệu đó.
+	
+	\newpage
+	\item UART\_Debug\_DMA\_Rx\_Task
+	
+	Task này xử lý việc nhận dữ liệu từ cổng UART Debug, console được kết nối và sử dụng trong quá trình phát triển chương trình trên MCU. Giúp việc gỡ lỗi, cấu hình thủ công, thử nghiệm... trở nên thuận tiện hơn cho người lập trình. Task có thể được lượt bỏ sau khi đã hoàn thiện hệ thống.
+	
+	\item NTC\_Temp\_Update\_Task
+	
+	Task chịu trách nhiệm gửi giá trị nhiệt độ NTC, áp suất đã nhận được từ bo EXP tuần tự mỗi 1 giây lên CM4 để CM4 gửi lên server cập nhật cho giao diện người dùng.
+	
+	\item Experiment\_Handle\_Task
+	
+	Task này nhận thông tin điều khiển thí nghiệm trên Laser-Photo từ CM4, task điều phối hoạt động thí nghiệm thông qua việc gửi lệnh MIN xuống EXP theo thứ tự chuẩn và thông tin từ CM4.	
+\end{itemize}
+
+\subsection{Bo điều khiển thí nghiệm – EXP}
+Firmware của bo điều khiển thí nghiệm (EXP) được xây dựng theo kiến trúc Super-Simple Tasker (SST0) – một trình lập lịch tối giản, hợp tác (cooperative scheduler) sử dụng mô hình state machine và task posting. Cách tiếp cận này giúp firmware hoạt động ổn định, dễ mở rộng, hạn chế lỗi blocking và đảm bảo các tác vụ được xử lý tuần tự theo mức độ ưu tiên.
+
+Bộ điều khiển EXP đóng vai trò trung tâm trong hệ thống, nhận lệnh từ bo OBC trên giao thức truyền thông MIN qua lớp vật lý UART, xử lý dữ liệu đo, điều khiển tín hiệu lên bo Laser, bo Photo phía trên, đồng thời thực thi vòng lặp điều khiển nhiệt độ tự động.
+
+\subsubsection{Lưu đồ giải thuật tổng quan của EXP}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\linewidth]{lv_flow_exp.png}
+	\caption{Lưu đồ giải thuật tổng quan của bo điều khiển thí nghiệm - EXP}
+	\label{fig:flow-exp}
+\end{figure}
+
+Cấu trúc hoạt động chính của firmware được tổ chức thành các khối chức năng như sau:
+
+\begin{itemize}
+	\item Init Hardware: Khởi tạo toàn bộ phần cứng vi điều khiển gồm Clock, DMA, GPIO, TIMER, UART, SPI, I2C, ADC, PWM và các ngắt ISR cần thiết.
+	
+	\item Init Task:
+	Khởi tạo hệ thống lập lịch SST0, khởi tạo các task cần thiết. Mỗi task được cấu trúc theo dạng state machine nhằm đảm bảo quá trình xử lý không bị block.
+	
+	\item Start Task:
+	Đăng ký mức độ ưu tiên và kích hoạt task để bắt đầu chu trình xử lý của hệ thống. Tại đây, các task được gọi trong task khác phải được kích hoạt trước, nếu không sẽ gây ra lỗi chương trình.
+	
+	\item Is Event?:
+	Firmware gọi liên tục hàm kiểm tra sự kiện để phát hiện sự kiện hoặc tác vụ nào đang chờ trong hàng đợi hay không. Các sự kiện có thể bao gồm tín hiệu timer, dữ liệu từ cảm biến, trạng thái phần cứng hoặc các task tự kích hoạt.
+	
+	\item Handle Event:
+	Nếu có sự kiện, hệ thống sẽ gọi task tương ứng để xử lý. Mỗi task thực thi một phần nhỏ của thuật toán (non-blocking) và có thể tự post lại chính nó hoặc post task khác để tiếp tục xử lý trong chu kỳ kế tiếp.
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{14cm}|}
+		\hline
+		\begin{lstlisting}[language=C]
+	void app_init(void)
+	{
+		experiment_task_singleton_ctor();
+		shell_task_singleton_ctor();
+		temperature_control_task_singleton_ctor();
+		tec_ovr_control_task_singleton_ctor();
+		min_shell_task_singleton_ctor();
+		system_log_task_singleton_ctor();
+		spi_transmit_task_singleton_ctor();
+		wdg_task_singleton_ctor();
+	}
+	
+	void app_start(void)
+	{
+		experiment_task_start(1);
+		shell_task_start(4);
+		temperature_control_task_start(2);
+		tec_ovr_control_task_start(5);
+		system_log_task_start(6);
+		min_shell_task_start(7);
+		spi_transmit_task_start(8);
+		wdg_task_start(10);
+	}
+	
+	void app_run(void)
+	{
+		SST_Task_run();
+	}
+		\end{lstlisting}
+		\\ \hline
+		
+	\end{tabular}
+	\caption{Danh sách task trên bo EXP}
+\end{table}
+
+\subsubsection{Chi tiết firmware}
+\begin{itemize}
+	\item experiment\_task
+	
+	Task đóng vai trò quan trọng nhất của bo EXP nói riêng và cả hệ thống nói chung. Task quản lý việc thực hiện thí nghiệm laser, lấy mẫu photo khi có sự kiện gọi đến. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\linewidth]{lv_flow_exp_exptask.png}
+		\caption{Lưu đồ giải thuật experiment\_task}
+		\label{fig:flow-exp-exptask}
+	\end{figure}
+	
+	Thí nghiệm sẽ được lấy mẫu với 3 giai đoạn; giai đoạn đầu lấy mẫu khi laser diode đang tắt, giai đoạn 2 lấy mẫu khi laser diode bật đúng với cường độ người dùng cấu hình, giai đoạn cuối tắt laser và lấy mẫu nền lần nữa. Do đó, việc cấu hình thông số thí nghiệm sẽ đi kèm cầu hình 2 timer, một timer độ phân giải cao dùng cho việc lấy mẫu photo diode tần số cao, một timer dùng cho việc định thì thời gian bật tắt laser diode.
+
+	\item shell\_task
+	
+	Task chịu trách nhiệm cung cấp giao diện dòng lệnh (console) cho bo EXP, cho phép người lập trình cấu hình trực tiếp lên bo, giám sát trạng thái, thử nghiệm thí nghiệm trong quá trình phát triển firmware một cách độc lập.
+	
+	Task này sử dụng thư viện EmbeddedCLI, một thư viện gọn nhẹ tối ưu cho hệ thống nhúng, hỗ trợ phân tích cú pháp lệnh, quản lý tham số và xử lý callback tương ứng.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.55\linewidth]{lv_cli_exp.png}
+		\caption{Console với chức năng gợi ý}
+		\label{fig:console-exp}
+	\end{figure}
+	
+	\item temperature\_control\_task
+	
+	Task chịu trách nhiệm giám sát và điều khiển nhiệt độ của buồng thí nghiệm, sử dụng hai cảm biến NTC (primary và secondary) làm tham chiếu để phối hợp cùng TEC và Heater. Nếu nhiệt độ trên hai cảm biến NTC tham chiếu có độ chênh lệch quá lớn, thông báo hệ thống có lỗi. Hai hoạt động làm lạnh và gia nhiệt được thực thi khi nhiệt độ trên cảm biến chính chênh lệnh một khoảng $\delta$T lập trình được trong firmware.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\linewidth]{lv_flow_exp_temptask.png}
+		\caption{Lưu đồ giải thuật temperature\_control\_task}
+		\label{fig:flow-exp-temptask}
+	\end{figure}
+	
+	\item tec\_over\_control\_task
+	
+	Task có nhiệm vụ tản nhiệt, làm mát cho bo Photo. Điều này giúp cảm biến ánh sáng photo diode hoạt động chính xác và ổn định hơn. Một auto reload timer được tạo ra và gắn sự kiện ngắt timer cho lần lượt là tắt sò nhiệt và bật sò nhiệt ở chế độ làm lạnh.
+	
+	\item min\_shell\_task
+	
+	Task có chức năng giao tiếp với OBC thông qua giao thức MIN Protocol. MIN (Microcontroller Interconnect Network) là giao thức truyền thông nhẹ, đáng tin cậy, hỗ trợ cơ chế truyền dữ liệu mã hóa có kiểm soát lỗi.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{lv_flow_exp_mintask.png}
+		\caption{Lưu đồ giải thuật min\_shell\_task}
+		\label{fig:flow-exp-minshelltask}
+	\end{figure}
+	
+	\item spi\_transmit\_task
+	
+	Task quản lý việc bắt tay với OBC mỗi lần truyền dữ liệu lấy mẫu.
+	Chi tiết nguyên lý bắt tay, trình bày ở phần \ref{sec:handshake-obc-exp}.
+	
+	\item wdg\_task
+	
+	Task tạo xung vuông mỗi 3s để xác nhận với Watchdog ngoài, đồng thời task "feed" cho soft watchdog bên trong STM32.
+\end{itemize}
+
+\subsection{Bắt tay giữa OBC và EXP khi truyền SPI}
+\label{sec:handshake-obc-exp}
+
+Mỗi khi tiến hành thí nghiện laser-photo, hai bo OBC và EXP phải bắt tay nhau để tránh xung đột tiến trình gây lỗi. Quá trình bắt sử dụng ba tín hiệu GPIO (MIN\_Busy, Data\_Ready, Read\_Done) để đồng bộ.
+
+Dưới đây là sơ đồ mô tả phần đầu của quá trình bắt đầu thí nghiệm và lấy mẫu:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{lv_flow_handshake_obc_exp.png}
+	\caption{Sơ đồ bắt tay giữa OBC và EXP}
+	\label{fig:flow-handshake-obc-exp}
+\end{figure}
+
+
+
+
+
+\newpage
+\chapter{Thiết kế phần mềm - Giao diện người dùng (GUI)}
+
+\section{Giới thiệu}
+Phần mềm giám sát và điều khiển hệ thống thí nghiệm được phát triển bằng Python, cho phép quan sát dữ liệu thời gian thực, điều khiển laser, điều khiển nhiệt độ và vận hành thí nghiệm ở chế độ thủ công hoặc tự động. Giao tiếp giữa phần mềm và hệ thống nhúng được thực hiện qua giao thức TCP/IP.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{lv_app.png}
+	\caption{Giao diện phần mềm giám sát và điều khiển thí nghiệm}
+	\label{fig:gui-overview}
+\end{figure}
+
+\section{Tổng quan giao diện và chức năng phần mềm}
+
+Giao diện người dùng được thiết kế theo cấu trúc module độc lập, chia thành các khu vực chức năng nhằm hỗ trợ vận hành thí nghiệm một cách trực quan và hiệu quả. Hình~\ref{fig:gui-overview} minh họa bố cục tổng thể của phần mềm, bao gồm các khối chức năng sau:
+
+\subsection{Khối giám sát nhiệt độ}
+Hiển thị giá trị nhiệt đồ từ 8 cảm biến NTC và biểu đồ nhiệt độ theo thời gian. Biểu đồ được cập nhật liên tục giúp theo dõi xu hướng nhiệt trong quá trình thí nghiệm.
+
+\subsection{Khối điều khiển nhiệt độ}
+Cho phép đặt nhiệt độ mục tiêu, giới hạn an toàn và chọn cảm biến nhiệt làm tham chiếu khiển thiệt, cũng như chọn mức điện áp cấp cho TEC. Gửi lệnh bắt đầu hoặc ngừng điều khiển nhiệt độ xuống hệ thống thí nghiệm.
+
+\subsection{Chế độ thí nghiệm}
+Phần mềm cung cấp hai chế độ vận hành:
+\begin{itemize}
+	\item \textbf{Manual}: người dùng tự thao tác điều khiển.
+	\item \textbf{Auto}: thực thi quy trình thí nghiệm nhiều laser tự động.
+\end{itemize}
+
+\subsection{Khối điều khiển laser - chế độ thủ công}
+Hỗ trợ lựa chọn một trong 36 vị trí laser và điều chỉnh công suất laser thông qua giá trị phần trăm. Điện áp DAC cho phép người dùng có thể cấu hình ứng với laser đang được bật sáng.
+
+\subsection{Khối điều khiển laser - chế độ tự động}
+Khối được ẩn sau khối điều khiển laser - chế độ thủ công. Khi chuyển sang chế độ tự động thì khối này sẽ hiển thị ra. Khi đó, phần mềm cho phép người dùng thiết lập công suất laser, thời gian lấy mẫu nền trước khi bật laser, thời gian bật laser, thời gian lấy mẫu nền sau khi tắt laser, vị trí các cặp laser-photo cần lấy mẫu... Bắt đầu tiến hành lấy mẫu thí nghiệm tự động.
+
+\subsection{Giao tiếp TCP/IP}
+TCP Server tích hợp cho phép nhận dữ liệu nhiệt độ, trạng thái hệ thống và gửi lệnh điều khiển đến bộ xử lý nhúng. Cơ chế đa luồng đảm bảo giao diện hoạt động ổn định ngay cả khi dữ liệu truyền về liên tục.
+
+\subsection{Hệ thống Log}
+Ghi lại toàn bộ sự kiện như thay đổi thông số, trạng thái server và các thao tác điều khiển. Log hỗ trợ theo dõi và phân tích quá trình vận hành thí nghiệm.
+
+
+
+
+
+\chapter{Kết quả}
+\section{Phần cứng}
+\subsubsection{Bo OBC}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_obc_real_top.JPG}
+			\caption{Mặt trên}
+			\label{fig:obc-real-top}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_obc_real_bot.JPG}
+			\caption{Mặt dưới}
+			\label{fig:obc-real-bot}
+		\end{subfigure}
+		\caption{PCB Photo}
+		\label{fig:obc-real}
+	\end{figure}
+	
+\subsubsection{Bo EXP}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_exp_real_top.JPG}
+			\caption{Mặt trên}
+			\label{fig:exp-real-top}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_exp_real_bot.JPG}
+			\caption{Mặt dưới}
+			\label{fig:exp-real-bot}
+		\end{subfigure}
+		\caption{PCB Photo}
+		\label{fig:exp-real}
+	\end{figure}
+
+\subsubsection{Bo Laser}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_laser_real_top.JPG}
+			\caption{Mặt trên}
+			\label{fig:laser-real-top}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_laser_real_bot.JPG}
+			\caption{Mặt dưới}
+			\label{fig:laser-real-bot}
+		\end{subfigure}
+		\caption{PCB Photo}
+		\label{fig:laser-real}
+	\end{figure}
+
+\subsubsection{Bo Photo}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_photo_real_top.JPG}
+			\caption{Mặt trên}
+			\label{fig:photo-real-top}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_pcb_photo_real_bot.JPG}
+			\caption{Mặt dưới}
+			\label{fig:photo-real-bot}
+		\end{subfigure}
+		\caption{PCB Photo}
+		\label{fig:photo-real}
+	\end{figure}
+
+\subsubsection{Cả hệ thống}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[angle=-90, width=0.5\linewidth]{lv_system_0.JPG}
+		\caption{Hệ thống - góc nhìn tổng quan}
+		\label{fig:system-0}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{lv_system_1.JPG}
+		\caption{Hệ thống - góc nhìn trực diện}
+		\label{fig:system-1}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{lv_system_2.JPG}
+		\caption{Hệ thống - khớp kết nối}
+		\label{fig:system-2}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[angle=-90, width=0.5\linewidth]{lv_system_3.JPG}
+		\caption{Hệ thống - góc nhìn đứng}
+		\label{fig:system-3}
+	\end{figure}
+	
+\section{Kết quả thử nghiệm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\linewidth]{lv_test_current_src_scope.JPG}
+		\caption{Thử nghiệm nguồn dòng với sóng sine}
+		\label{fig:cr_src_scope}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_salea_adc.jpg}
+		\caption{Tín hiệu SPI  trên Logic Analizer khi đọc ADC}
+		\label{fig:salea_adc}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_app_run.png}
+		\caption{Điều khiển trên giao diện người dùng}
+		\label{fig:gui_run}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{lv_folder_data.png}
+		\caption{Thư mục chứa dữ liệu thu thập được}
+		\label{fig:folder_data}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[, width=0.8\linewidth]{lv_draw_laser_current.png}
+		\caption{Đồ thị dòng laser khi thí nghiệm}
+		\label{fig:laser-data-chart}
+	\end{figure}
+	
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[, width=0.8\linewidth]{lv_photo_data.jpg}
+%		\caption{Đồ thị dữ liệu ADC trên Photo diode}
+%		\label{fig:photo-data-chart}
+%	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_log_exp.png}
+			\caption{Binary}
+			\label{fig:exp_log_input}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{lv_log_exp_output.png}
+			\caption{Đã giải mã}
+			\label{fig:exp_log_output}
+		\end{subfigure}
+		\caption{EXP log}
+		\label{fig:exp_log}
+	\end{figure}
+	
+\chapter{Kết luận và hướng phát triển}
+\section{Kết luận}
+Sau quá trình thực hiện đề tài, bắt đầu từ lên ý tưởng cho đến thiết kế, cải thiện đề tài, bản thân em đã rút ra được những kinh nghiệm quý báu:
+\begin{itemize}
+	\item Khi tìm hiểu lý thuyết, cần tham khảo nhiều nguồn khác nhau, nên đọc những nguồn chính quy, uy tín và hơn hết là nên kiểm nghiệm nếu có thể.
+	\item Thiết kế phần cứng cần đảm bảo đáp ứng đo đạc trong quá trình phát triển chương trình cho phần cứng.
+	\item Đề tài giúp em hiểu sâu hơn về mạch analog, giảm nhiễu, khuếch đại, đo đạc... 
+	\item Tăng thêm hiểu biết về hệ điều hành Linux, FreeRTOS; thuần thục hơn ngôn ngữ lập trình C/C++, Python.
+	\item Cuối cùng, quá trình hoàn thành luận văn đã trang bị cho bản thân thêm các kiến thức về cách làm việc, quản lý phiên bản code khác nhau. Làm quen việc tích hợp giao diện người dùng vào một hệ thống nhúng hoàn chỉnh.
+\end{itemize}
+\subsection{Ưu điểm của đề tài}
+\begin{itemize}
+	\item Hệ thống cho phép người dùng điều khiển không dây giúp an toàn thí nghiệm và thuận tiện theo dõi.
+	\item Hệ thống tự động hóa việc giám sát và cân chỉnh nhiệt độ.
+	\item Phần cứng nhỏ gọn, linh hoạt4 trong nhiều môi trường nghiên cứu.
+	\item Tính mở rộng của hệ thống đa dạng, dùng được cho nhiều loại thí nghiệm.
+	\item Giao diện người dùng trực quan dễ hiểu, thao tác cụ thể dễ vận hành.
+\end{itemize}
+\subsection{Nhược điểm của đề tài}
+\begin{itemize}
+	\item Hệ thống được lắp ráp đơn giản, chưa tối ưu về mặt cấu trúc.
+	\item Hệ thống chưa đảm bảo không gian tối hoàn toàn trong buồng thí nghiệm
+	\item Tầm khiển nhiệt còn ngắn, còn hạn chế.
+	\item Lỗi vọt dòng lúc vừa bật laser diode.
+\end{itemize}
+\section{Hướng phát triển}
+Hệ thống có thể trở thành một sản phẩm thương mại nếu các nhược điểm được khắc phục và phát triển ưu điểm: \\
+\begin{itemize}
+	\item Nâng cấp cấu trúc, gia công lắp ráp chắc chắn hơn cho hệ thống.
+	\item Hệ thống cần thiết kế buồng tối cho không gian thí nghiệm tốt hơn.
+	\item Lắp đặt bộ tản nhiệt tốt hơn để đạt được hiệu suất điều khiển nhiệt độ tối ưu.
+	\item Khắc phục lỗi vọt dòng của mạch nguồn dòng điều khiển laser diode.
+	\item Sử dụng loại photo diode chuyên biệt dùng cho laser diode, photo diode có độ nhạy cao hơn.
+\end{itemize}
+
+\chapter{Tài liệu tham khảo}
+\begin{itemize}
+	\item Wavelength Electronics “Photodiode Basics”
+	\item Mecsu.vn, “Laser diode là gì? Cấu tạo, nguyên lý hoạt động \& phân loại (2024)”
+	\item Ultimate Electronics Book, “Op-Amp Transimpedance Amplifier”
+	\item How to Design a Voltage Controlled Current Source | V to I converter - Foolish Engineer - Youtube.
+	\item TI Precision Labs - Transimpedance amps: Introduction - Texas Instruments - Youtube
+	\item ST, MPS, TI Documentation.
+\end{itemize}
+\end{document}
