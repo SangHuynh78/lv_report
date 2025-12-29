@@ -1,69 +1,72 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Nguyên lý hoạt động của laser diode}}{12}{figure.caption.5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Nguyên lý hoạt động của photo diode}}{12}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces CM4 (Computer Module 4)}}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Nguyên lý hoạt động của laser diode}}{12}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Nguyên lý hoạt động của photo diode}}{13}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces TEC(Thermoelectric Cooler)}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Nguyên lý hoạt động của TEC}}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces NTC(Negative Temperature Coefficient)}}{14}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ khối tổng quát}}{16}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Sơ đồ khối OBC}}{17}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sơ đồ khối bo EXP}}{19}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Sơ đồ khối bo Laser}}{20}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Sơ đồ khối bo Photo}}{21}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PCB điều khiển trung tâm - OBC}}{23}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Sơ đồ nguyên lý khối nguồn trên OBC}}{23}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Sơ đồ nguyên lý khối Flash và khối Fram trên OBC}}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Sơ đồ nguyên lý mạch cách ly SPI trên OBC}}{24}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Sơ đồ nguyên lý mạch cách ly UART trên OBC}}{25}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Sơ đồ nguyên lý mạch cách ly GPIO trên OBC}}{25}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Sơ đồ nguyên lý mạch RTC trên OBC}}{25}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên OBC}}{26}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Bảng hệ số tính thời gian giám sát}}{26}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces PCB điều khiển thí nghiệm - EXP}}{27}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Sơ đồ nguyên lý mạch eFuse trên EXP}}{27}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Sơ đồ nguyên lý mạch nguồn Buck trên EXP}}{28}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Sơ đồ nguyên lý mạch nguồn LDO trên EXP}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên EXP}}{29}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Yêu cầu thiết kế của IC LT8722}}{30}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên EXP}}{30}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên EXP}}{31}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên EXP}}{31}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces PCB Laser}}{32}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Sơ đồ nguyên lý mạch DAC trên bo Laser}}{32}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Sơ đồ nguyên lý mạch nguồn dòng trên bo Laser}}{33}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Sơ đồ nguyên lý mạch switch trên bo Laser}}{34}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces PCB Photo}}{35}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Sơ đồ nguyên lý mạch điện áp tham chiếu trên bo Photo}}{35}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Sơ đồ nguyên lý mạch nguồn âm trên bo Photo}}{36}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Sơ đồ nguyên lý mạch switch trên bo Photo}}{37}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces Sơ đồ nguyên lý mạch transimpedance và mạch anti-aliasing filter trên bo Photo}}{37}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces Mạch lọc khử răng cưa tham khảo}}{38}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Sơ đồ nguyên lý mạch ADC trên bo Photo}}{38}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ khối tổng quát}}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sơ đồ khối OBC}}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sơ đồ khối bo EXP}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sơ đồ khối bo Laser}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Sơ đồ khối bo Photo}}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces PCB điều khiển trung tâm - OBC}}{25}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Sơ đồ nguyên lý khối nguồn trên OBC}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Sơ đồ nguyên lý khối Flash và khối Fram trên OBC}}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Sơ đồ nguyên lý mạch cách ly SPI trên OBC}}{26}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Sơ đồ nguyên lý mạch cách ly UART trên OBC}}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Sơ đồ nguyên lý mạch cách ly GPIO trên OBC}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Sơ đồ nguyên lý mạch RTC trên OBC}}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Sơ đồ nguyên lý mạch Watchdog trên OBC}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Bảng hệ số tính thời gian giám sát}}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces PCB điều khiển thí nghiệm - EXP}}{29}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Sơ đồ nguyên lý mạch eFuse trên EXP}}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Sơ đồ nguyên lý mạch nguồn Buck trên EXP}}{30}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Sơ đồ nguyên lý mạch nguồn LDO trên EXP}}{31}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Sơ đồ nguyên lý mạch đo NTC trên EXP}}{31}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Yêu cầu thiết kế của IC LT8722}}{32}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Sơ đồ nguyên lý mạch điều khiển TEC trên EXP}}{32}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Sơ đồ nguyên lý mạch điều khiển Heater trên EXP}}{33}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Sơ đồ nguyên lý FRAM trên EXP}}{33}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces PCB Laser}}{34}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Sơ đồ nguyên lý mạch DAC trên bo Laser}}{34}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Sơ đồ nguyên lý mạch nguồn dòng trên bo Laser}}{35}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Sơ đồ nguyên lý mạch switch trên bo Laser}}{36}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces PCB Photo}}{36}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Sơ đồ nguyên lý mạch điện áp tham chiếu trên bo Photo}}{37}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Sơ đồ nguyên lý mạch nguồn âm trên bo Photo}}{37}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Sơ đồ nguyên lý mạch switch trên bo Photo}}{38}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Sơ đồ nguyên lý mạch transimpedance amplifier và mạch anti-aliasing filter trên bo Photo}}{38}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Mạch lọc khử răng cưa tham khảo}}{39}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Sơ đồ nguyên lý mạch ADC trên bo Photo}}{40}{figure.caption.44}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Lưu đồ giải thuật của CM4}}{40}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Lưu đồ giải thuật của MCU trên OBC}}{42}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Console của MCU trên OBC}}{43}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Lưu đồ giải thuật min\_shell\_task}}{43}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Lưu đồ giải thuật tổng quan của bo điều khiển thí nghiệm - EXP}}{44}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Lưu đồ giải thuật experiment\_task}}{46}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Console với chức năng gợi ý}}{46}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Lưu đồ giải thuật temperature\_control\_task}}{47}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Lưu đồ giải thuật min\_shell\_task}}{47}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Sơ đồ bắt tay giữa OBC và EXP}}{48}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Lưu đồ giải thuật của CM4}}{42}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Lưu đồ giải thuật của MCU trên OBC}}{44}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Console của MCU trên OBC}}{45}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Lưu đồ giải thuật min\_shell\_task}}{45}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Lưu đồ giải thuật tổng quan của bo điều khiển thí nghiệm - EXP}}{46}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Lưu đồ giải thuật experiment\_task}}{48}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Console với chức năng gợi ý}}{48}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Lưu đồ giải thuật min\_shell\_task}}{49}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Sơ đồ bắt tay giữa OBC và EXP}}{50}{figure.caption.55}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Giao diện phần mềm giám sát và điều khiển thí nghiệm}}{49}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Giao diện phần mềm giám sát và điều khiển thí nghiệm}}{51}{figure.caption.56}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces PCB Photo}}{51}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces PCB Photo}}{52}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces PCB Photo}}{52}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces PCB Photo}}{53}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Hệ thống - góc nhìn tổng quan}}{53}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Hệ thống - góc nhìn trực diện}}{54}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Hệ thống - khớp kết nối}}{54}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Hệ thống - góc nhìn đứng}}{55}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Thử nghiệm nguồn dòng với sóng sine}}{55}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Tín hiệu SPI trên Logic Analizer khi đọc ADC}}{56}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Điều khiển trên giao diện người dùng}}{56}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Thư mục chứa dữ liệu thu thập được}}{57}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Đồ thị dòng laser khi thí nghiệm}}{57}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces EXP log}}{58}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces PCB Photo}}{53}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces PCB Photo}}{54}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces PCB Photo}}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces PCB Photo}}{55}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Hệ thống - góc nhìn tổng quan}}{55}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Hệ thống - góc nhìn trực diện}}{56}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Hệ thống - khớp kết nối}}{56}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Hệ thống - góc nhìn đứng}}{57}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Thử nghiệm nguồn dòng với sóng sine}}{57}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Điều khiển trên giao diện người dùng}}{58}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Thư mục chứa dữ liệu thu thập được}}{59}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Đồ thị dòng laser khi thí nghiệm}}{59}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Đồ thị dữ liệu ADC trên Photo diode}}{60}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces EXP log}}{60}{figure.caption.70}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

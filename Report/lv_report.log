@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.27)  11 DEC 2025 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.27)  29 DEC 2025 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,15 +1072,6 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
 )
 \openout1 = `lv_report.aux'.
 
@@ -1179,7 +1170,7 @@ your preamble.
 \c@lstlisting=\count387
 \@float@every@image=\toks55
 \c@image=\count388
-<logo.png, id=230, 2055.68pt x 1453.43pt>
+<logo.png, id=246, 2055.68pt x 1453.43pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 141.
@@ -1296,7 +1287,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 ...vÃ  thá»±c hiá»‡n firmware}{39}{chapter.4}
+l.32 ...ƒn trung tÃ¢m - OBC}{25}{subsection.3.5.1}
                                                   % [1
 
 ])
@@ -1382,17 +1373,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 Ch\uhorn \ohorn ng 2.
-
-Overfull \hbox (18.3911pt too wide) in paragraph at lines 283--284
-[]\T5/cmr/m/n/13 Trong h» thèng n y, nhi»t ^^_ë ^^_÷ñc ^^_o b¬ng c£m bi¸n NTC (
-Neg-a-tive Tem-per-a-ture
- []
-
-
-Overfull \hbox (74.08975pt too wide) in paragraph at lines 290--301
-[]  \T5/cmr/m/n/13 Trong ^^_â:   $[]$ 
- []
-
+<lv_cm4_linhkien_top.jpg, id=504, 508.14844pt x 368.87813pt>
+File: lv_cm4_linhkien_top.jpg Graphic file (type jpg)
+<use lv_cm4_linhkien_top.jpg>
+Package pdftex.def Info: lv_cm4_linhkien_top.jpg  used on input line 291.
+(pdftex.def)             Requested size: 218.51521pt x 158.62575pt.
+<lv_cm4_linhkien_bottom.jpg, id=505, 522.45187pt x 374.14781pt>
+File: lv_cm4_linhkien_bottom.jpg Graphic file (type jpg)
+<use lv_cm4_linhkien_bottom.jpg>
+Package pdftex.def Info: lv_cm4_linhkien_bottom.jpg  used on input line 298.
+(pdftex.def)             Requested size: 218.51521pt x 156.49017pt.
+<lv_laser_operating_principle_2.png, id=507, 284.56313pt x 278.54062pt>
+File: lv_laser_operating_principle_2.png Graphic file (type png)
+<use lv_laser_operating_principle_2.png>
+Package pdftex.def Info: lv_laser_operating_principle_2.png  used on input line
+ 314.
+(pdftex.def)             Requested size: 273.14923pt x 267.39595pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1402,18 +1398,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11
 
-]
-<lv_laser_operating_principle.png, id=491, 522.753pt x 296.307pt>
-File: lv_laser_operating_principle.png Graphic file (type png)
-<use lv_laser_operating_principle.png>
-Package pdftex.def Info: lv_laser_operating_principle.png  used on input line 3
-11.
-(pdftex.def)             Requested size: 273.14923pt x 154.82654pt.
-<lv_photo_operating_principle.png, id=492, 561.59813pt x 445.665pt>
+ <./lv_cm4_linhkien_top.jpg> <./lv_cm4_linhkien_bottom.jpg>]
+<lv_photo_operating_principle.png, id=513, 561.59813pt x 445.665pt>
 File: lv_photo_operating_principle.png Graphic file (type png)
 <use lv_photo_operating_principle.png>
 Package pdftex.def Info: lv_photo_operating_principle.png  used on input line 3
-20.
+29.
 (pdftex.def)             Requested size: 273.14923pt x 216.7593pt.
 
 
@@ -1423,7 +1413,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[12 <./lv_laser_operating_principle.png> <./lv_photo_operating_principle.png>]
+[12 <./lv_laser_operating_principle_2.png>]
+<lv_tec_linhkien.jpg, id=520, 2007.5pt x 2007.5pt>
+File: lv_tec_linhkien.jpg Graphic file (type jpg)
+<use lv_tec_linhkien.jpg>
+Package pdftex.def Info: lv_tec_linhkien.jpg  used on input line 344.
+(pdftex.def)             Requested size: 136.57462pt x 136.5572pt.
+<lv_tec.png, id=521, 401.24907pt x 326.72063pt>
+File: lv_tec.png Graphic file (type png)
+<use lv_tec.png>
+Package pdftex.def Info: lv_tec.png  used on input line 351.
+(pdftex.def)             Requested size: 273.14923pt x 222.42632pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1431,8 +1432,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[13]
-Ch\uhorn \ohorn ng 3.
+[13 <./lv_photo_operating_principle.png> <./lv_tec_linhkien.jpg>]
+<lv_ntc_linhkien.png, id=527, 197.23688pt x 240.9pt>
+File: lv_ntc_linhkien.png Graphic file (type png)
+<use lv_ntc_linhkien.png>
+Package pdftex.def Info: lv_ntc_linhkien.png  used on input line 368.
+(pdftex.def)             Requested size: 91.04742pt x 111.2013pt.
+<lv_ntc_linhkien2.png, id=528, 203.25937pt x 177.66376pt>
+File: lv_ntc_linhkien2.png Graphic file (type png)
+<use lv_ntc_linhkien2.png>
+Package pdftex.def Info: lv_ntc_linhkien2.png  used on input line 375.
+(pdftex.def)             Requested size: 113.81102pt x 99.47746pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1440,14 +1451,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[14
-
-]
-<lv_block_overview.png, id=508, 551.4201pt x 392.4261pt>
-File: lv_block_overview.png Graphic file (type png)
-<use lv_block_overview.png>
-Package pdftex.def Info: lv_block_overview.png  used on input line 399.
-(pdftex.def)             Requested size: 455.24411pt x 323.98306pt.
+[14 <./lv_tec.png> <./lv_ntc_linhkien.png> <./lv_ntc_linhkien2.png>]
+Overfull \hbox (74.08975pt too wide) in paragraph at lines 391--402
+[]  \T5/cmr/m/n/13 Trong ^^_â:   $[]$ 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1457,6 +1464,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
 [15]
+Ch\uhorn \ohorn ng 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1464,11 +1472,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[16 <./lv_block_overview.png>]
-<lv_block_obc.png, id=518, 1158.4881pt x 760.2804pt>
+[16
+
+]
+<lv_block_overview.png, id=553, 551.4201pt x 392.4261pt>
+File: lv_block_overview.png Graphic file (type png)
+<use lv_block_overview.png>
+Package pdftex.def Info: lv_block_overview.png  used on input line 477.
+(pdftex.def)             Requested size: 455.24411pt x 323.98306pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[17]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[18 <./lv_block_overview.png>]
+<lv_block_obc.png, id=564, 1158.4881pt x 760.2804pt>
 File: lv_block_obc.png Graphic file (type png)
 <use lv_block_obc.png>
-Package pdftex.def Info: lv_block_obc.png  used on input line 426.
+Package pdftex.def Info: lv_block_obc.png  used on input line 504.
 (pdftex.def)             Requested size: 455.24411pt x 298.75874pt.
 
 
@@ -1478,11 +1510,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[17 <./lv_block_obc.png>]
-<lv_block_exp.png, id=524, 1034.9064pt x 604.8999pt>
+[19 <./lv_block_obc.png>]
+<lv_block_exp.png, id=570, 1034.9064pt x 604.8999pt>
 File: lv_block_exp.png Graphic file (type png)
 <use lv_block_exp.png>
-Package pdftex.def Info: lv_block_exp.png  used on input line 473.
+Package pdftex.def Info: lv_block_exp.png  used on input line 551.
 (pdftex.def)             Requested size: 455.24411pt x 266.09216pt.
 
 
@@ -1492,7 +1524,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[18]
+[20]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1500,12 +1532,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[19 <./lv_block_exp.png>]
-<lv_block_laser.png, id=535, 698.1282pt x 419.8887pt>
+[21 <./lv_block_exp.png>]
+<lv_block_laser.png, id=580, 602.0091pt x 340.3917pt>
 File: lv_block_laser.png Graphic file (type png)
 <use lv_block_laser.png>
-Package pdftex.def Info: lv_block_laser.png  used on input line 529.
-(pdftex.def)             Requested size: 455.24411pt x 273.80219pt.
+Package pdftex.def Info: lv_block_laser.png  used on input line 607.
+(pdftex.def)             Requested size: 455.24411pt x 257.40707pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1514,12 +1546,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[20 <./lv_block_laser.png>]
-<lv_block_photo.png, id=541, 953.964pt x 414.1071pt>
+[22 <./lv_block_laser.png>]
+<lv_block_photo.png, id=586, 651.8754pt x 331.7193pt>
 File: lv_block_photo.png Graphic file (type png)
 <use lv_block_photo.png>
-Package pdftex.def Info: lv_block_photo.png  used on input line 567.
-(pdftex.def)             Requested size: 455.24411pt x 197.61913pt.
+Package pdftex.def Info: lv_block_photo.png  used on input line 645.
+(pdftex.def)             Requested size: 455.24411pt x 231.66537pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1528,7 +1560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[21 <./lv_block_photo.png>]
+[23 <./lv_block_photo.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -1536,21 +1568,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[22]
-<lv_pcb_obc_top.png, id=551, 2137.9875pt x 2137.9875pt>
+[24]
+<lv_pcb_obc_top.png, id=597, 2137.9875pt x 2137.9875pt>
 File: lv_pcb_obc_top.png Graphic file (type png)
 <use lv_pcb_obc_top.png>
-Package pdftex.def Info: lv_pcb_obc_top.png  used on input line 617.
+Package pdftex.def Info: lv_pcb_obc_top.png  used on input line 688.
 (pdftex.def)             Requested size: 218.51521pt x 218.50899pt.
-<lv_pcb_obc_bottom.png, id=552, 2137.9875pt x 2137.9875pt>
+<lv_pcb_obc_bottom.png, id=598, 2137.9875pt x 2137.9875pt>
 File: lv_pcb_obc_bottom.png Graphic file (type png)
 <use lv_pcb_obc_bottom.png>
-Package pdftex.def Info: lv_pcb_obc_bottom.png  used on input line 624.
+Package pdftex.def Info: lv_pcb_obc_bottom.png  used on input line 695.
 (pdftex.def)             Requested size: 218.51521pt x 218.50899pt.
-<lv_sch_obc_pwr.png, id=553, 1079.53313pt x 299.61937pt>
+<lv_sch_obc_pwr.png, id=599, 1079.53313pt x 299.61937pt>
 File: lv_sch_obc_pwr.png Graphic file (type png)
 <use lv_sch_obc_pwr.png>
-Package pdftex.def Info: lv_sch_obc_pwr.png  used on input line 642.
+Package pdftex.def Info: lv_sch_obc_pwr.png  used on input line 713.
 (pdftex.def)             Requested size: 455.24411pt x 126.35132pt.
 
 
@@ -1560,31 +1592,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[23 <./lv_pcb_obc_top.png> <./lv_pcb_obc_bottom.png> <./lv_sch_obc_pwr.png>]
-<lv_sch_obc_fram_rom.png, id=562, 1108.8928pt x 335.75438pt>
+[25 <./lv_pcb_obc_top.png> <./lv_pcb_obc_bottom.png> <./lv_sch_obc_pwr.png>]
+<lv_sch_obc_fram_rom.png, id=607, 1108.8928pt x 335.75438pt>
 File: lv_sch_obc_fram_rom.png Graphic file (type png)
 <use lv_sch_obc_fram_rom.png>
-Package pdftex.def Info: lv_sch_obc_fram_rom.png  used on input line 653.
+Package pdftex.def Info: lv_sch_obc_fram_rom.png  used on input line 724.
 (pdftex.def)             Requested size: 455.24411pt x 137.8395pt.
 
-Overfull \hbox (9.93378pt too wide) in paragraph at lines 660--661
+Overfull \hbox (9.93378pt too wide) in paragraph at lines 731--732
 []\T5/cmr/m/n/13 IC FRAM l  MB85RS2MT câ dung
  []
 
 
-Overfull \hbox (6.47086pt too wide) in paragraph at lines 663--664
+Overfull \hbox (6.47086pt too wide) in paragraph at lines 734--735
 []\T5/cmr/m/n/13 IC Flash ROM l  MX25L8006EM1
  []
 
-<lv_sch_obc_spi_iso.png, id=563, 885.3075pt x 264.23718pt>
+<lv_sch_obc_spi_iso.png, id=608, 885.3075pt x 264.23718pt>
 File: lv_sch_obc_spi_iso.png Graphic file (type png)
 <use lv_sch_obc_spi_iso.png>
-Package pdftex.def Info: lv_sch_obc_spi_iso.png  used on input line 672.
+Package pdftex.def Info: lv_sch_obc_spi_iso.png  used on input line 743.
 (pdftex.def)             Requested size: 455.24411pt x 135.88005pt.
-<lv_sch_obc_uart_iso.png, id=564, 968.86969pt x 221.32687pt>
+<lv_sch_obc_uart_iso.png, id=609, 968.86969pt x 221.32687pt>
 File: lv_sch_obc_uart_iso.png Graphic file (type png)
 <use lv_sch_obc_uart_iso.png>
-Package pdftex.def Info: lv_sch_obc_uart_iso.png  used on input line 681.
+Package pdftex.def Info: lv_sch_obc_uart_iso.png  used on input line 752.
 (pdftex.def)             Requested size: 455.24411pt x 103.99661pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1593,21 +1625,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[24 <./lv_sch_obc_fram_rom.png> <./lv_sch_obc_spi_iso.png>]
-<lv_sch_obc_io_iso.png, id=572, 1174.3875pt x 434.37282pt>
+[26 <./lv_sch_obc_fram_rom.png> <./lv_sch_obc_spi_iso.png>]
+<lv_sch_obc_io_iso.png, id=616, 1174.3875pt x 434.37282pt>
 File: lv_sch_obc_io_iso.png Graphic file (type png)
 <use lv_sch_obc_io_iso.png>
-Package pdftex.def Info: lv_sch_obc_io_iso.png  used on input line 690.
+Package pdftex.def Info: lv_sch_obc_io_iso.png  used on input line 761.
 (pdftex.def)             Requested size: 455.24411pt x 168.37737pt.
-<lv_sch_obc_rtc.png, id=573, 1029.8475pt x 338.76563pt>
+<lv_sch_obc_rtc.png, id=617, 1029.8475pt x 338.76563pt>
 File: lv_sch_obc_rtc.png Graphic file (type png)
 <use lv_sch_obc_rtc.png>
-Package pdftex.def Info: lv_sch_obc_rtc.png  used on input line 701.
+Package pdftex.def Info: lv_sch_obc_rtc.png  used on input line 772.
 (pdftex.def)             Requested size: 455.24411pt x 149.74998pt.
-<lv_sch_obc_wdog.png, id=574, 1123.94907pt x 502.12593pt>
+<lv_sch_obc_wdog.png, id=618, 1123.94907pt x 502.12593pt>
 File: lv_sch_obc_wdog.png Graphic file (type png)
 <use lv_sch_obc_wdog.png>
-Package pdftex.def Info: lv_sch_obc_wdog.png  used on input line 712.
+Package pdftex.def Info: lv_sch_obc_wdog.png  used on input line 783.
 (pdftex.def)             Requested size: 455.24411pt x 203.37521pt.
 
 
@@ -1617,26 +1649,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[25 <./lv_sch_obc_uart_iso.png> <./lv_sch_obc_io_iso.png> <./lv_sch_obc_rtc.png
+[27 <./lv_sch_obc_uart_iso.png> <./lv_sch_obc_io_iso.png> <./lv_sch_obc_rtc.png
 >]
-Overfull \hbox (74.08975pt too wide) in paragraph at lines 723--733
+Overfull \hbox (74.08975pt too wide) in paragraph at lines 794--804
 []  \T5/cmr/m/n/13 Trong ^^_â:   $[]$ 
  []
 
-<lv_wdog_table.png, id=582, 798.73407pt x 163.3603pt>
+<lv_wdog_table.png, id=626, 798.73407pt x 163.3603pt>
 File: lv_wdog_table.png Graphic file (type png)
 <use lv_wdog_table.png>
-Package pdftex.def Info: lv_wdog_table.png  used on input line 736.
+Package pdftex.def Info: lv_wdog_table.png  used on input line 807.
 (pdftex.def)             Requested size: 455.24411pt x 93.10886pt.
-<lv_pcb_exp_top.png, id=583, 2038.61626pt x 2038.61626pt>
+<lv_pcb_exp_top.png, id=627, 2038.61626pt x 2038.61626pt>
 File: lv_pcb_exp_top.png Graphic file (type png)
 <use lv_pcb_exp_top.png>
-Package pdftex.def Info: lv_pcb_exp_top.png  used on input line 749.
+Package pdftex.def Info: lv_pcb_exp_top.png  used on input line 820.
 (pdftex.def)             Requested size: 218.51521pt x 218.49373pt.
-<lv_pcb_exp_bottom.png, id=584, 509.905pt x 509.905pt>
+<lv_pcb_exp_bottom.png, id=628, 509.905pt x 509.905pt>
 File: lv_pcb_exp_bottom.png Graphic file (type png)
 <use lv_pcb_exp_bottom.png>
-Package pdftex.def Info: lv_pcb_exp_bottom.png  used on input line 756.
+Package pdftex.def Info: lv_pcb_exp_bottom.png  used on input line 827.
 (pdftex.def)             Requested size: 218.51521pt x 218.51572pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1645,11 +1677,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[26 <./lv_sch_obc_wdog.png> <./lv_wdog_table.png>]
-<lv_sch_exp_efuse.png, id=593, 1115.66812pt x 482.55281pt>
+[28 <./lv_sch_obc_wdog.png> <./lv_wdog_table.png>]
+<lv_sch_exp_efuse.png, id=637, 1115.66812pt x 482.55281pt>
 File: lv_sch_exp_efuse.png Graphic file (type png)
 <use lv_sch_exp_efuse.png>
-Package pdftex.def Info: lv_sch_exp_efuse.png  used on input line 772.
+Package pdftex.def Info: lv_sch_exp_efuse.png  used on input line 843.
 (pdftex.def)             Requested size: 455.24411pt x 196.89807pt.
 
 
@@ -1659,20 +1691,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[27 <./lv_pcb_exp_top.png> <./lv_pcb_exp_bottom.png> <./lv_sch_exp_efuse.png>]
-Overfull \hbox (74.08975pt too wide) in paragraph at lines 787--799
+[29 <./lv_pcb_exp_top.png> <./lv_pcb_exp_bottom.png> <./lv_sch_exp_efuse.png>]
+Overfull \hbox (74.08975pt too wide) in paragraph at lines 858--870
 []  \T5/cmr/m/n/13 Trong ^^_â:   $[]$ 
  []
 
-<lv_sch_exp_buck.png, id=603, 959.83594pt x 513.41812pt>
+<lv_sch_exp_buck.png, id=647, 959.83594pt x 513.41812pt>
 File: lv_sch_exp_buck.png Graphic file (type png)
 <use lv_sch_exp_buck.png>
-Package pdftex.def Info: lv_sch_exp_buck.png  used on input line 814.
+Package pdftex.def Info: lv_sch_exp_buck.png  used on input line 885.
 (pdftex.def)             Requested size: 455.24411pt x 243.51576pt.
-<lv_sch_exp_ldo.png, id=604, 854.44218pt x 286.06876pt>
+<lv_sch_exp_ldo.png, id=648, 854.44218pt x 286.06876pt>
 File: lv_sch_exp_ldo.png Graphic file (type png)
 <use lv_sch_exp_ldo.png>
-Package pdftex.def Info: lv_sch_exp_ldo.png  used on input line 823.
+Package pdftex.def Info: lv_sch_exp_ldo.png  used on input line 894.
 (pdftex.def)             Requested size: 455.24411pt x 152.41452pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1681,11 +1713,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[28 <./lv_sch_exp_buck.png>]
-<lv_sch_exp_ntc.png, id=612, 616.55344pt x 211.54031pt>
+[30 <./lv_sch_exp_buck.png>]
+<lv_sch_exp_ntc.png, id=657, 616.55344pt x 211.54031pt>
 File: lv_sch_exp_ntc.png Graphic file (type png)
 <use lv_sch_exp_ntc.png>
-Package pdftex.def Info: lv_sch_exp_ntc.png  used on input line 834.
+Package pdftex.def Info: lv_sch_exp_ntc.png  used on input line 905.
 (pdftex.def)             Requested size: 455.24411pt x 156.19844pt.
 
 
@@ -1695,26 +1727,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[29 <./lv_sch_exp_ldo.png> <./lv_sch_exp_ntc.png>]
-<lv_lt8722_ldr_cap.png, id=620, 329.73187pt x 212.29312pt>
+[31 <./lv_sch_exp_ldo.png> <./lv_sch_exp_ntc.png>]
+<lv_lt8722_ldr_cap.png, id=665, 329.73187pt x 212.29312pt>
 File: lv_lt8722_ldr_cap.png Graphic file (type png)
 <use lv_lt8722_ldr_cap.png>
-Package pdftex.def Info: lv_lt8722_ldr_cap.png  used on input line 857.
+Package pdftex.def Info: lv_lt8722_ldr_cap.png  used on input line 928.
 (pdftex.def)             Requested size: 218.51521pt x 140.69049pt.
-<lv_lt8722_bst_cap.png, id=621, 328.97906pt x 81.30376pt>
+<lv_lt8722_bst_cap.png, id=666, 328.97906pt x 81.30376pt>
 File: lv_lt8722_bst_cap.png Graphic file (type png)
 <use lv_lt8722_bst_cap.png>
-Package pdftex.def Info: lv_lt8722_bst_cap.png  used on input line 864.
+Package pdftex.def Info: lv_lt8722_bst_cap.png  used on input line 935.
 (pdftex.def)             Requested size: 218.51521pt x 54.00427pt.
-<lv_sch_exp_tec_drv.png, id=622, 926.71219pt x 493.845pt>
+<lv_sch_exp_tec_drv.png, id=667, 853.38824pt x 452.892pt>
 File: lv_sch_exp_tec_drv.png Graphic file (type png)
 <use lv_sch_exp_tec_drv.png>
-Package pdftex.def Info: lv_sch_exp_tec_drv.png  used on input line 874.
-(pdftex.def)             Requested size: 455.24411pt x 242.60406pt.
-<lv_sch_exp_heater_drv.png, id=623, 676.02562pt x 510.40688pt>
+Package pdftex.def Info: lv_sch_exp_tec_drv.png  used on input line 945.
+(pdftex.def)             Requested size: 455.24411pt x 241.60031pt.
+<lv_sch_exp_heater_drv.png, id=668, 676.02562pt x 510.40688pt>
 File: lv_sch_exp_heater_drv.png Graphic file (type png)
 <use lv_sch_exp_heater_drv.png>
-Package pdftex.def Info: lv_sch_exp_heater_drv.png  used on input line 883.
+Package pdftex.def Info: lv_sch_exp_heater_drv.png  used on input line 954.
 (pdftex.def)             Requested size: 273.14923pt x 206.23077pt.
 
 
@@ -1724,22 +1756,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[30 <./lv_lt8722_ldr_cap.png> <./lv_lt8722_bst_cap.png> <./lv_sch_exp_tec_drv.p
+[32 <./lv_lt8722_ldr_cap.png> <./lv_lt8722_bst_cap.png> <./lv_sch_exp_tec_drv.p
 ng>]
-<lv_sch_exp_fram.png, id=632, 558.58687pt x 254.45062pt>
+<lv_sch_exp_fram.png, id=676, 558.58687pt x 254.45062pt>
 File: lv_sch_exp_fram.png Graphic file (type png)
 <use lv_sch_exp_fram.png>
-Package pdftex.def Info: lv_sch_exp_fram.png  used on input line 895.
+Package pdftex.def Info: lv_sch_exp_fram.png  used on input line 966.
 (pdftex.def)             Requested size: 455.24411pt x 207.38124pt.
-<lv_pcb_laser_top.png, id=633, 2038.61626pt x 2038.61626pt>
+<lv_pcb_laser_top.png, id=677, 2038.61626pt x 2038.61626pt>
 File: lv_pcb_laser_top.png Graphic file (type png)
 <use lv_pcb_laser_top.png>
-Package pdftex.def Info: lv_pcb_laser_top.png  used on input line 910.
+Package pdftex.def Info: lv_pcb_laser_top.png  used on input line 981.
 (pdftex.def)             Requested size: 218.51521pt x 218.49373pt.
-<lv_pcb_laser_bottom.png, id=634, 2038.61626pt x 2038.61626pt>
+<lv_pcb_laser_bottom.png, id=678, 2038.61626pt x 2038.61626pt>
 File: lv_pcb_laser_bottom.png Graphic file (type png)
 <use lv_pcb_laser_bottom.png>
-Package pdftex.def Info: lv_pcb_laser_bottom.png  used on input line 917.
+Package pdftex.def Info: lv_pcb_laser_bottom.png  used on input line 988.
 (pdftex.def)             Requested size: 218.51521pt x 218.49373pt.
 
 
@@ -1749,11 +1781,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[31 <./lv_sch_exp_heater_drv.png> <./lv_sch_exp_fram.png>]
-<lv_dac.png, id=641, 722.7pt x 309.94194pt>
+[33 <./lv_sch_exp_heater_drv.png> <./lv_sch_exp_fram.png>]
+<lv_dac.png, id=685, 722.7pt x 309.94194pt>
 File: lv_dac.png Graphic file (type png)
 <use lv_dac.png>
-Package pdftex.def Info: lv_dac.png  used on input line 937.
+Package pdftex.def Info: lv_dac.png  used on input line 1008.
 (pdftex.def)             Requested size: 455.24411pt x 195.2408pt.
 
 
@@ -1763,14 +1795,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[32 <./lv_pcb_laser_top.png> <./lv_pcb_laser_bottom.png> <./lv_dac.png>]
-<lv_current_src.png, id=649, 722.6759pt x 273.54195pt>
-File: lv_current_src.png Graphic file (type png)
-<use lv_current_src.png>
-Package pdftex.def Info: lv_current_src.png  used on input line 950.
-(pdftex.def)             Requested size: 455.24411pt x 172.31981pt.
+[34 <./lv_pcb_laser_top.png> <./lv_pcb_laser_bottom.png> <./lv_dac.png>]
+<lv_current_src_correl.png, id=693, 722.7pt x 253.81224pt>
+File: lv_current_src_correl.png Graphic file (type png)
+<use lv_current_src_correl.png>
+Package pdftex.def Info: lv_current_src_correl.png  used on input line 1021.
+(pdftex.def)             Requested size: 455.24411pt x 159.88318pt.
 
-Overfull \hbox (60.14775pt too wide) in paragraph at lines 963--973
+Overfull \hbox (60.14775pt too wide) in paragraph at lines 1034--1044
 []  \T5/cmr/m/n/13 Trong ^^_â:   $[]$ 
  []
 
@@ -1781,21 +1813,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[33 <./lv_current_src.png>]
-<lv_sch_laser_switch.png, id=657, 1030.60031pt x 623.32875pt>
+[35 <./lv_current_src_correl.png>]
+<lv_sch_laser_switch.png, id=701, 818.30719pt x 497.60907pt>
 File: lv_sch_laser_switch.png Graphic file (type png)
 <use lv_sch_laser_switch.png>
-Package pdftex.def Info: lv_sch_laser_switch.png  used on input line 998.
-(pdftex.def)             Requested size: 364.19667pt x 220.27031pt.
-<lv_pcb_photo_top.png, id=658, 2038.61626pt x 2038.61626pt>
+Package pdftex.def Info: lv_sch_laser_switch.png  used on input line 1069.
+(pdftex.def)             Requested size: 364.19667pt x 221.4695pt.
+<lv_pcb_photo_top.png, id=702, 2038.61626pt x 2038.61626pt>
 File: lv_pcb_photo_top.png Graphic file (type png)
 <use lv_pcb_photo_top.png>
-Package pdftex.def Info: lv_pcb_photo_top.png  used on input line 1009.
+Package pdftex.def Info: lv_pcb_photo_top.png  used on input line 1080.
 (pdftex.def)             Requested size: 218.51521pt x 218.49373pt.
-<lv_pcb_photo_bottom.png, id=659, 2038.61626pt x 2038.61626pt>
+<lv_pcb_photo_bottom.png, id=703, 2038.61626pt x 2038.61626pt>
 File: lv_pcb_photo_bottom.png Graphic file (type png)
 <use lv_pcb_photo_bottom.png>
-Package pdftex.def Info: lv_pcb_photo_bottom.png  used on input line 1016.
+Package pdftex.def Info: lv_pcb_photo_bottom.png  used on input line 1087.
 (pdftex.def)             Requested size: 218.51521pt x 218.49373pt.
 
 
@@ -1805,43 +1837,49 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[34 <./lv_sch_laser_switch.png>]
-Overfull \hbox (17.53261pt too wide) in paragraph at lines 1030--1031
+[36 <./lv_sch_laser_switch.png> <./lv_pcb_photo_top.png> <./lv_pcb_photo_bottom
+.png>]
+Overfull \hbox (17.53261pt too wide) in paragraph at lines 1101--1102
 \T5/cmr/m/n/13 ch½nh x¡c. M¤ch ^^_i»n ¡p tham chi¸u dòng IC REF1930 t¤o ra ^^_i
 »n VREF$[]$ADC=3.3V.
  []
 
 
-Overfull \hbox (0.7155pt too wide) in paragraph at lines 1030--1031
+Overfull \hbox (0.7155pt too wide) in paragraph at lines 1101--1102
 \T5/cmr/m/n/13 Mët c¦u chia ¡p ^^_º ^^_÷ñc VREF=0.55V cho möc ^^_½ch sû döng ð 
 khèi Tran-simpedace. 
  []
 
-<lv_sch_photo_ref.png, id=665, 897.3525pt x 413.1435pt>
+<lv_sch_photo_ref.png, id=712, 897.3525pt x 413.1435pt>
 File: lv_sch_photo_ref.png Graphic file (type png)
 <use lv_sch_photo_ref.png>
-Package pdftex.def Info: lv_sch_photo_ref.png  used on input line 1034.
+Package pdftex.def Info: lv_sch_photo_ref.png  used on input line 1105.
 (pdftex.def)             Requested size: 318.66948pt x 146.71423pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[35 <./lv_pcb_photo_top.png> <./lv_pcb_photo_bottom.png> <./lv_sch_photo_ref.pn
-g>]
-<lv_sch_photo_negative_pow.png, id=673, 834.7185pt x 286.06876pt>
+<lv_sch_photo_negative_pow.png, id=713, 834.7185pt x 286.06876pt>
 File: lv_sch_photo_negative_pow.png Graphic file (type png)
 <use lv_sch_photo_negative_pow.png>
-Package pdftex.def Info: lv_sch_photo_negative_pow.png  used on input line 1045
+Package pdftex.def Info: lv_sch_photo_negative_pow.png  used on input line 1116
 .
 (pdftex.def)             Requested size: 318.66948pt x 109.2136pt.
-<lv_sch_photo_switch.png, id=674, 743.77875pt x 450.483pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[37 <./lv_sch_photo_ref.png> <./lv_sch_photo_negative_pow.png>]
+<lv_sch_photo_switch.png, id=720, 694.09312pt x 321.45094pt>
 File: lv_sch_photo_switch.png Graphic file (type png)
 <use lv_sch_photo_switch.png>
-Package pdftex.def Info: lv_sch_photo_switch.png  used on input line 1060.
-(pdftex.def)             Requested size: 364.19667pt x 220.58737pt.
+Package pdftex.def Info: lv_sch_photo_switch.png  used on input line 1131.
+(pdftex.def)             Requested size: 364.19667pt x 168.67107pt.
+<lv_transimpedance_antialias_corel.png, id=721, 722.7pt x 235.3593pt>
+File: lv_transimpedance_antialias_corel.png Graphic file (type png)
+<use lv_transimpedance_antialias_corel.png>
+Package pdftex.def Info: lv_transimpedance_antialias_corel.png  used on input l
+ine 1141.
+(pdftex.def)             Requested size: 455.24411pt x 148.25917pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1850,31 +1888,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[36 <./lv_sch_photo_negative_pow.png>]
-<lv_transimpedance_antialias.png, id=681, 722.7pt x 261.30423pt>
-File: lv_transimpedance_antialias.png Graphic file (type png)
-<use lv_transimpedance_antialias.png>
-Package pdftex.def Info: lv_transimpedance_antialias.png  used on input line 10
-70.
-(pdftex.def)             Requested size: 455.24411pt x 164.6026pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[37 <./lv_sch_photo_switch.png> <./lv_transimpedance_antialias.png>]
-<lv_anti_aliasing_filter.png, id=690, 609.77812pt x 280.79906pt>
+[38 <./lv_sch_photo_switch.png> <./lv_transimpedance_antialias_corel.png>]
+<lv_anti_aliasing_filter.png, id=728, 609.77812pt x 280.79906pt>
 File: lv_anti_aliasing_filter.png Graphic file (type png)
 <use lv_anti_aliasing_filter.png>
-Package pdftex.def Info: lv_anti_aliasing_filter.png  used on input line 1100.
+Package pdftex.def Info: lv_anti_aliasing_filter.png  used on input line 1177.
 (pdftex.def)             Requested size: 455.24411pt x 209.6433pt.
-<lv_sch_photo_adc.png, id=691, 841.34325pt x 431.211pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[39 <./lv_anti_aliasing_filter.png>]
+<lv_sch_photo_adc.png, id=737, 841.34325pt x 431.211pt>
 File: lv_sch_photo_adc.png Graphic file (type png)
 <use lv_sch_photo_adc.png>
-Package pdftex.def Info: lv_sch_photo_adc.png  used on input line 1113.
+Package pdftex.def Info: lv_sch_photo_adc.png  used on input line 1190.
 (pdftex.def)             Requested size: 364.19667pt x 186.66068pt.
 
 
@@ -1884,12 +1916,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[38 <./lv_anti_aliasing_filter.png> <./lv_sch_photo_adc.png>]
+[40 <./lv_sch_photo_adc.png>]
 Ch\uhorn \ohorn ng 4.
-<lv_flow_cm4.png, id=699, 564.4287pt x 695.2374pt>
+<lv_flow_cm4.png, id=743, 564.4287pt x 695.2374pt>
 File: lv_flow_cm4.png Graphic file (type png)
 <use lv_flow_cm4.png>
-Package pdftex.def Info: lv_flow_cm4.png  used on input line 1154.
+Package pdftex.def Info: lv_flow_cm4.png  used on input line 1231.
 (pdftex.def)             Requested size: 364.19667pt x 448.61032pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1898,7 +1930,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[39
+[41
 
 ]
 
@@ -1908,16 +1940,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[40 <./lv_flow_cm4.png>]
-Overfull \hbox (12.6374pt too wide) in paragraph at lines 1169--1170
+[42 <./lv_flow_cm4.png>]
+Overfull \hbox (12.6374pt too wide) in paragraph at lines 1246--1247
 \T5/cmr/m/n/13 "auto_-ctrl_-temp_-stop", "laser_-man_-turn_-on", "laser_-man_-t
 urn_-off"... 
  []
 
-<lv_flow_obc.png, id=710, 131.5314pt x 333.8874pt>
+<lv_flow_obc.png, id=755, 131.5314pt x 333.8874pt>
 File: lv_flow_obc.png Graphic file (type png)
 <use lv_flow_obc.png>
-Package pdftex.def Info: lv_flow_obc.png  used on input line 1190.
+Package pdftex.def Info: lv_flow_obc.png  used on input line 1267.
 (pdftex.def)             Requested size: 136.57462pt x 346.72523pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1926,8 +1958,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[41]
-Overfull \hbox (3.31178pt too wide) in paragraph at lines 1214--1214
+[43]
+Overfull \hbox (3.31178pt too wide) in paragraph at lines 1291--1291
 []|\T5/cmr/m/n/10 UART_-De-bug_-DMA_-Rx_-Task| 
  []
 
@@ -1938,16 +1970,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[42 <./lv_flow_obc.png>]
-<lv_cli_obc.png, id=722, 209.583pt x 169.8345pt>
+[44 <./lv_flow_obc.png>]
+<lv_cli_obc.png, id=766, 209.583pt x 169.8345pt>
 File: lv_cli_obc.png Graphic file (type png)
 <use lv_cli_obc.png>
-Package pdftex.def Info: lv_cli_obc.png  used on input line 1235.
+Package pdftex.def Info: lv_cli_obc.png  used on input line 1312.
 (pdftex.def)             Requested size: 227.62206pt x 184.4551pt.
-<lv_flow_obc_mintask.png, id=723, 622.2447pt x 138.7584pt>
+<lv_flow_obc_mintask.png, id=767, 622.2447pt x 138.7584pt>
 File: lv_flow_obc_mintask.png Graphic file (type png)
 <use lv_flow_obc_mintask.png>
-Package pdftex.def Info: lv_flow_obc_mintask.png  used on input line 1246.
+Package pdftex.def Info: lv_flow_obc_mintask.png  used on input line 1323.
 (pdftex.def)             Requested size: 455.24411pt x 101.52145pt.
 
 
@@ -1957,11 +1989,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[43 <./lv_cli_obc.png> <./lv_flow_obc_mintask.png>]
-<lv_flow_exp.png, id=731, 333.1647pt x 275.3487pt>
+[45 <./lv_cli_obc.png> <./lv_flow_obc_mintask.png>]
+<lv_flow_exp.png, id=775, 333.1647pt x 275.3487pt>
 File: lv_flow_exp.png Graphic file (type png)
 <use lv_flow_exp.png>
-Package pdftex.def Info: lv_flow_exp.png  used on input line 1281.
+Package pdftex.def Info: lv_flow_exp.png  used on input line 1358.
 (pdftex.def)             Requested size: 295.90588pt x 244.55957pt.
 
 
@@ -1971,7 +2003,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[44 <./lv_flow_exp.png>]
+[46 <./lv_flow_exp.png>]
 (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
@@ -1985,22 +2017,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[45]
-<lv_flow_exp_exptask.png, id=771, 439.4016pt x 44.0847pt>
+[47]
+<lv_flow_exp_exptask.png, id=815, 439.4016pt x 44.0847pt>
 File: lv_flow_exp_exptask.png Graphic file (type png)
 <use lv_flow_exp_exptask.png>
-Package pdftex.def Info: lv_flow_exp_exptask.png  used on input line 1352.
+Package pdftex.def Info: lv_flow_exp_exptask.png  used on input line 1429.
 (pdftex.def)             Requested size: 295.90588pt x 29.68927pt.
-<lv_cli_exp.png, id=772, 266.1945pt x 214.401pt>
+<lv_cli_exp.png, id=816, 266.1945pt x 214.401pt>
 File: lv_cli_exp.png Graphic file (type png)
 <use lv_cli_exp.png>
-Package pdftex.def Info: lv_cli_exp.png  used on input line 1367.
+Package pdftex.def Info: lv_cli_exp.png  used on input line 1444.
 (pdftex.def)             Requested size: 250.38564pt x 201.67108pt.
-<lv_flow_exp_temptask.png, id=773, 324.4923pt x 396.7623pt>
-File: lv_flow_exp_temptask.png Graphic file (type png)
-<use lv_flow_exp_temptask.png>
-Package pdftex.def Info: lv_flow_exp_temptask.png  used on input line 1377.
-(pdftex.def)             Requested size: 295.90588pt x 361.82918pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2009,25 +2036,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[46 <./lv_flow_exp_exptask.png> <./lv_cli_exp.png>]
-<lv_flow_exp_mintask.png, id=780, 622.2447pt x 138.0357pt>
+[48 <./lv_flow_exp_exptask.png> <./lv_cli_exp.png>]
+<lv_flow_exp_mintask.png, id=824, 622.2447pt x 138.0357pt>
 File: lv_flow_exp_mintask.png Graphic file (type png)
 <use lv_flow_exp_mintask.png>
-Package pdftex.def Info: lv_flow_exp_mintask.png  used on input line 1392.
+Package pdftex.def Info: lv_flow_exp_mintask.png  used on input line 1467.
 (pdftex.def)             Requested size: 455.24411pt x 100.99269pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[47 <./lv_flow_exp_temptask.png> <./lv_flow_exp_mintask.png>]
-<lv_flow_handshake_obc_exp.png, id=788, 694.5147pt x 630.9171pt>
+<lv_flow_handshake_obc_exp.png, id=826, 694.5147pt x 630.9171pt>
 File: lv_flow_handshake_obc_exp.png Graphic file (type png)
 <use lv_flow_handshake_obc_exp.png>
-Package pdftex.def Info: lv_flow_handshake_obc_exp.png  used on input line 1416
+Package pdftex.def Info: lv_flow_handshake_obc_exp.png  used on input line 1491
 .
 (pdftex.def)             Requested size: 455.24411pt x 413.55698pt.
 
@@ -2038,52 +2056,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[48 <./lv_flow_handshake_obc_exp.png>]
+[49 <./lv_flow_exp_mintask.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[50 <./lv_flow_handshake_obc_exp.png>]
 Ch\uhorn \ohorn ng 5.
-<lv_app.png, id=795, 1155.1155pt x 615.4995pt>
+<lv_app.png, id=837, 1444.64719pt x 812.28468pt>
 File: lv_app.png Graphic file (type png)
 <use lv_app.png>
-Package pdftex.def Info: lv_app.png  used on input line 1433.
-(pdftex.def)             Requested size: 455.24411pt x 242.5702pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[49
-
- <./lv_app.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[50]
-Ch\uhorn \ohorn ng 6.
-<lv_pcb_obc_real_top.JPG, id=806, 2636.85126pt x 2667.9675pt>
-File: lv_pcb_obc_real_top.JPG Graphic file (type jpg)
-<use lv_pcb_obc_real_top.JPG>
-Package pdftex.def Info: lv_pcb_obc_real_top.JPG  used on input line 1479.
-(pdftex.def)             Requested size: 218.51521pt x 221.0545pt.
-<lv_pcb_obc_real_bot.JPG, id=807, 2638.85875pt x 2672.98625pt>
-File: lv_pcb_obc_real_bot.JPG Graphic file (type jpg)
-<use lv_pcb_obc_real_bot.JPG>
-Package pdftex.def Info: lv_pcb_obc_real_bot.JPG  used on input line 1486.
-(pdftex.def)             Requested size: 218.51521pt x 221.30719pt.
-<lv_pcb_exp_real_top.JPG, id=808, 2655.9225pt x 2684.0275pt>
-File: lv_pcb_exp_real_top.JPG Graphic file (type jpg)
-<use lv_pcb_exp_real_top.JPG>
-Package pdftex.def Info: lv_pcb_exp_real_top.JPG  used on input line 1500.
-(pdftex.def)             Requested size: 218.51521pt x 220.78792pt.
-<lv_pcb_exp_real_bot.JPG, id=809, 2870.725pt x 2900.8375pt>
-File: lv_pcb_exp_real_bot.JPG Graphic file (type jpg)
-<use lv_pcb_exp_real_bot.JPG>
-Package pdftex.def Info: lv_pcb_exp_real_bot.JPG  used on input line 1507.
-(pdftex.def)             Requested size: 218.51521pt x 220.78464pt.
+Package pdftex.def Info: lv_app.png  used on input line 1508.
+(pdftex.def)             Requested size: 455.24411pt x 255.97018pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.42429pt, for example:
@@ -2093,26 +2080,65 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [51
 
+ <./lv_app.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[52]
+Ch\uhorn \ohorn ng 6.
+<lv_pcb_obc_real_top.JPG, id=848, 2636.85126pt x 2667.9675pt>
+File: lv_pcb_obc_real_top.JPG Graphic file (type jpg)
+<use lv_pcb_obc_real_top.JPG>
+Package pdftex.def Info: lv_pcb_obc_real_top.JPG  used on input line 1554.
+(pdftex.def)             Requested size: 218.51521pt x 221.0545pt.
+<lv_pcb_obc_real_bot.JPG, id=849, 2638.85875pt x 2672.98625pt>
+File: lv_pcb_obc_real_bot.JPG Graphic file (type jpg)
+<use lv_pcb_obc_real_bot.JPG>
+Package pdftex.def Info: lv_pcb_obc_real_bot.JPG  used on input line 1561.
+(pdftex.def)             Requested size: 218.51521pt x 221.30719pt.
+<lv_pcb_exp_real_top.JPG, id=850, 2655.9225pt x 2684.0275pt>
+File: lv_pcb_exp_real_top.JPG Graphic file (type jpg)
+<use lv_pcb_exp_real_top.JPG>
+Package pdftex.def Info: lv_pcb_exp_real_top.JPG  used on input line 1575.
+(pdftex.def)             Requested size: 218.51521pt x 220.78792pt.
+<lv_pcb_exp_real_bot.JPG, id=851, 2870.725pt x 2900.8375pt>
+File: lv_pcb_exp_real_bot.JPG Graphic file (type jpg)
+<use lv_pcb_exp_real_bot.JPG>
+Package pdftex.def Info: lv_pcb_exp_real_bot.JPG  used on input line 1582.
+(pdftex.def)             Requested size: 218.51521pt x 220.78464pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[53
+
  <./lv_pcb_obc_real_top.JPG> <./lv_pcb_obc_real_bot.JPG>]
-<lv_pcb_laser_real_top.JPG, id=814, 2815.51875pt x 2845.63126pt>
+<lv_pcb_laser_real_top.JPG, id=856, 2815.51875pt x 2845.63126pt>
 File: lv_pcb_laser_real_top.JPG Graphic file (type jpg)
 <use lv_pcb_laser_real_top.JPG>
-Package pdftex.def Info: lv_pcb_laser_real_top.JPG  used on input line 1521.
+Package pdftex.def Info: lv_pcb_laser_real_top.JPG  used on input line 1596.
 (pdftex.def)             Requested size: 218.51521pt x 220.83809pt.
-<lv_pcb_laser_real_bot.JPG, id=815, 2926.935pt x 2878.755pt>
+<lv_pcb_laser_real_bot.JPG, id=857, 2926.935pt x 2878.755pt>
 File: lv_pcb_laser_real_bot.JPG Graphic file (type jpg)
 <use lv_pcb_laser_real_bot.JPG>
-Package pdftex.def Info: lv_pcb_laser_real_bot.JPG  used on input line 1528.
+Package pdftex.def Info: lv_pcb_laser_real_bot.JPG  used on input line 1603.
 (pdftex.def)             Requested size: 218.51521pt x 214.88701pt.
-<lv_pcb_photo_real_top.JPG, id=816, 2823.54875pt x 2846.635pt>
+<lv_pcb_photo_real_top.JPG, id=858, 2823.54875pt x 2846.635pt>
 File: lv_pcb_photo_real_top.JPG Graphic file (type jpg)
 <use lv_pcb_photo_real_top.JPG>
-Package pdftex.def Info: lv_pcb_photo_real_top.JPG  used on input line 1542.
+Package pdftex.def Info: lv_pcb_photo_real_top.JPG  used on input line 1617.
 (pdftex.def)             Requested size: 218.51521pt x 220.26445pt.
-<lv_pcb_photo_real_bot.JPG, id=817, 2974.11125pt x 3027.31pt>
+<lv_pcb_photo_real_bot.JPG, id=859, 2974.11125pt x 3027.31pt>
 File: lv_pcb_photo_real_bot.JPG Graphic file (type jpg)
 <use lv_pcb_photo_real_bot.JPG>
-Package pdftex.def Info: lv_pcb_photo_real_bot.JPG  used on input line 1549.
+Package pdftex.def Info: lv_pcb_photo_real_bot.JPG  used on input line 1624.
 (pdftex.def)             Requested size: 218.51521pt x 222.41916pt.
 
 
@@ -2122,17 +2148,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[52 <./lv_pcb_exp_real_top.JPG> <./lv_pcb_exp_real_bot.JPG> <./lv_pcb_laser_rea
+[54 <./lv_pcb_exp_real_top.JPG> <./lv_pcb_exp_real_bot.JPG> <./lv_pcb_laser_rea
 l_top.JPG> <./lv_pcb_laser_real_bot.JPG>]
-<lv_system_0.JPG, id=822, 4047.12pt x 3035.34pt>
+<lv_system_0.JPG, id=865, 4047.12pt x 3035.34pt>
 File: lv_system_0.JPG Graphic file (type jpg)
 <use lv_system_0.JPG>
-Package pdftex.def Info: lv_system_0.JPG  used on input line 1561.
+Package pdftex.def Info: lv_system_0.JPG  used on input line 1636.
 (pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
-<lv_system_1.JPG, id=823, 2732.2075pt x 3643.6125pt>
+<lv_system_1.JPG, id=866, 2732.2075pt x 3643.6125pt>
 File: lv_system_1.JPG Graphic file (type jpg)
 <use lv_system_1.JPG>
-Package pdftex.def Info: lv_system_1.JPG  used on input line 1568.
+Package pdftex.def Info: lv_system_1.JPG  used on input line 1643.
 (pdftex.def)             Requested size: 227.62206pt x 303.5039pt.
 
 
@@ -2142,18 +2168,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[53 <./lv_pcb_photo_real_top.JPG> <./lv_pcb_photo_real_bot.JPG> <./lv_system_0.
+[55 <./lv_pcb_photo_real_top.JPG> <./lv_pcb_photo_real_bot.JPG> <./lv_system_0.
 JPG>]
-<lv_system_2.JPG, id=828, 2803.47375pt x 3767.07375pt>
+<lv_system_2.JPG, id=871, 2803.47375pt x 3767.07375pt>
 File: lv_system_2.JPG Graphic file (type jpg)
 <use lv_system_2.JPG>
-Package pdftex.def Info: lv_system_2.JPG  used on input line 1575.
+Package pdftex.def Info: lv_system_2.JPG  used on input line 1650.
 (pdftex.def)             Requested size: 227.62206pt x 305.85556pt.
-<lv_system_3.JPG, id=829, 4047.12pt x 3035.34pt>
-File: lv_system_3.JPG Graphic file (type jpg)
-<use lv_system_3.JPG>
-Package pdftex.def Info: lv_system_3.JPG  used on input line 1582.
-(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+<lv_system_SH.JPG, id=872, 2973.1075pt x 2511.3825pt>
+File: lv_system_SH.JPG Graphic file (type jpg)
+<use lv_system_SH.JPG>
+Package pdftex.def Info: lv_system_SH.JPG  used on input line 1657.
+(pdftex.def)             Requested size: 227.62206pt x 192.25426pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2162,18 +2188,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[54 <./lv_system_1.JPG> <./lv_system_2.JPG>]
-<lv_test_current_src_scope.JPG, id=835, 1503.6175pt x 1104.125pt>
+[56 <./lv_system_1.JPG> <./lv_system_2.JPG>]
+<lv_test_current_src_scope.JPG, id=877, 1503.6175pt x 1104.125pt>
 File: lv_test_current_src_scope.JPG Graphic file (type jpg)
 <use lv_test_current_src_scope.JPG>
-Package pdftex.def Info: lv_test_current_src_scope.JPG  used on input line 1590
+Package pdftex.def Info: lv_test_current_src_scope.JPG  used on input line 1665
 .
 (pdftex.def)             Requested size: 295.90588pt x 217.2831pt.
-<lv_salea_adc.jpg, id=836, 1445.4pt x 768.62157pt>
-File: lv_salea_adc.jpg Graphic file (type jpg)
-<use lv_salea_adc.jpg>
-Package pdftex.def Info: lv_salea_adc.jpg  used on input line 1597.
-(pdftex.def)             Requested size: 364.19667pt x 193.66785pt.
+<lv_app_run_nhiet_pid_add_2_sensor.png, id=878, 1444.64719pt x 812.28468pt>
+File: lv_app_run_nhiet_pid_add_2_sensor.png Graphic file (type png)
+<use lv_app_run_nhiet_pid_add_2_sensor.png>
+Package pdftex.def Info: lv_app_run_nhiet_pid_add_2_sensor.png  used on input l
+ine 1679.
+(pdftex.def)             Requested size: 1444.64368pt x 812.2827pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2182,16 +2209,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[55 <./lv_system_3.JPG> <./lv_test_current_src_scope.JPG>]
-<lv_app_run.png, id=841, 1157.5245pt x 673.3155pt>
-File: lv_app_run.png Graphic file (type png)
-<use lv_app_run.png>
-Package pdftex.def Info: lv_app_run.png  used on input line 1604.
-(pdftex.def)             Requested size: 364.19667pt x 211.84892pt.
-<lv_folder_data.png, id=842, 446.8695pt x 384.2355pt>
+[57 <./lv_system_SH.JPG> <./lv_test_current_src_scope.JPG>]
+<lv_folder_data.png, id=883, 446.8695pt x 384.2355pt>
 File: lv_folder_data.png Graphic file (type png)
 <use lv_folder_data.png>
-Package pdftex.def Info: lv_folder_data.png  used on input line 1611.
+Package pdftex.def Info: lv_folder_data.png  used on input line 1686.
 (pdftex.def)             Requested size: 364.19667pt x 313.16382pt.
 
 
@@ -2201,21 +2223,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[56 <./lv_salea_adc.jpg> <./lv_app_run.png>]
-<lv_draw_laser_current.png, id=848, 949.74825pt x 509.5035pt>
+[58 <./lv_app_run_nhiet_pid_add_2_sensor.png>]
+<lv_draw_laser_current.png, id=889, 949.74825pt x 509.5035pt>
 File: lv_draw_laser_current.png Graphic file (type png)
 <use lv_draw_laser_current.png>
-Package pdftex.def Info: lv_draw_laser_current.png  used on input line 1618.
+Package pdftex.def Info: lv_draw_laser_current.png  used on input line 1693.
 (pdftex.def)             Requested size: 364.19667pt x 195.37811pt.
-<lv_log_exp.png, id=849, 323.40825pt x 232.4685pt>
+<lv_draw_photo_adc.png, id=890, 647.41875pt x 426.84468pt>
+File: lv_draw_photo_adc.png Graphic file (type png)
+<use lv_draw_photo_adc.png>
+Package pdftex.def Info: lv_draw_photo_adc.png  used on input line 1700.
+(pdftex.def)             Requested size: 364.19667pt x 240.11908pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.42429pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.42429pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
+
+[59 <./lv_folder_data.png> <./lv_draw_laser_current.png>]
+<lv_log_exp.png, id=897, 323.40825pt x 232.4685pt>
 File: lv_log_exp.png Graphic file (type png)
 <use lv_log_exp.png>
-Package pdftex.def Info: lv_log_exp.png  used on input line 1634.
+Package pdftex.def Info: lv_log_exp.png  used on input line 1709.
 (pdftex.def)             Requested size: 218.51521pt x 157.06908pt.
-<lv_log_exp_output.png, id=850, 422.7795pt x 342.078pt>
+<lv_log_exp_output.png, id=898, 422.7795pt x 342.078pt>
 File: lv_log_exp_output.png Graphic file (type png)
 <use lv_log_exp_output.png>
-Package pdftex.def Info: lv_log_exp_output.png  used on input line 1641.
+Package pdftex.def Info: lv_log_exp_output.png  used on input line 1716.
 (pdftex.def)             Requested size: 218.51521pt x 176.80632pt.
 
 
@@ -2225,18 +2261,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[57 <./lv_folder_data.png> <./lv_draw_laser_current.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.42429pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.42429pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
-
-[58 <./lv_log_exp.png> <./lv_log_exp_output.png>]
+[60 <./lv_draw_photo_adc.png> <./lv_log_exp.png> <./lv_log_exp_output.png>]
 Ch\uhorn \ohorn ng 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1675--1676
+Underfull \hbox (badness 10000) in paragraph at lines 1750--1751
 
  []
 
@@ -2247,7 +2275,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[59
+[61
 
 ]
 
@@ -2257,7 +2285,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.42429pt}.
 
-[60]
+[62]
 Ch\uhorn \ohorn ng 8.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2266,7 +2294,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.95145pt}.
 
-[61
+[63
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -2284,13 +2312,13 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lv_report.out' has not changed.
-(rerunfilecheck)             Checksum: 57DBFD2F8CAC1D94B93A093246F72903;11260.
+(rerunfilecheck)             Checksum: 1121B6E5D1A610D74A8C5756AC6B10A1;11670.
  ) 
 Here is how much of TeX's memory you used:
- 37855 strings out of 467871
- 845252 string characters out of 5428439
- 1602124 words of memory out of 5000000
- 65910 multiletter control sequences out of 15000+600000
+ 37917 strings out of 467871
+ 846903 string characters out of 5428439
+ 1603117 words of memory out of 5000000
+ 65963 multiletter control sequences out of 15000+600000
  660467 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,118p,1146b,1402s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2323,9 +2351,9 @@ b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
 fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmsy9.pfb>
-Output written on lv_report.pdf (62 pages, 128457490 bytes).
+Output written on lv_report.pdf (64 pages, 108834259 bytes).
 PDF statistics:
- 2025 PDF objects out of 2073 (max. 8388607)
- 225 named destinations out of 1000 (max. 500000)
- 821 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2063 PDF objects out of 2073 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
+ 878 words of extra memory for PDF output out of 10000 (max. 10000000)
 

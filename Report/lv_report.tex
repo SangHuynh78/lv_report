@@ -233,7 +233,7 @@
 	\begin{itemize}
 		\item Phạm vi kĩ thuật:
 			\begin{itemize}
-				\item Tập trung vào việc điều khiển nhiệt độ trong chamber và đo quang học bằng laser – photo diode.
+				\item Tập trung vào việc điều khiển nhiệt độ trong chamber và đo quang học bằng laser diode – photo diode.
 				\item Đọc về áp suất trong chamber, không điều khiển áp suất, độ ẩm...
 			\end{itemize}
 		\item Phạm vi ứng dụng:
@@ -277,12 +277,113 @@
 	\end{itemize}
 	
 \chapter{Cơ sở lý thuyết}
-\section{Nguyên lý điều khiển nhiệt độ trong buồng thí nghiệm}
-Nhiệt độ là một tham số quan trọng ảnh hưởng trực tiếp đến tốc độ, hiệu suất và độ ổn định của các phản ứng sinh học – hóa học trong buồng thí nghiệm. Việc duy trì nhiệt độ ổn định giúp các mẫu vật thực hiện phản ứng trong điều kiện chính xác và có tính lặp lại, từ đó nâng cao độ tin cậy của kết quả thí nghiệm.
+\section{Linh kiện chính trên hệ thống}
+\subsection{CM4 (Computer Module 4)}
 
-Trong hệ thống này, nhiệt độ được đo bằng cảm biến NTC (Negative Temperature Coefficient). Đây là loại cảm biến có đặc tính điện trở giảm khi nhiệt độ tăng. NTC được mắc trong mạch phân áp để tạo ra tín hiệu điện áp tỷ lệ với nhiệt độ. Vi điều khiển đọc giá trị điện áp này thông qua bộ ADC và tính toán ra giá trị nhiệt độ của buồng thí nghiệm.
+CM4 (Compute Module 4) là máy tính nhúng dạng module do Raspberry Pi phát triển. Module tích hợp vi xử lý Broadcom BCM2711 với kiến trúc ARM Cortex-A72 (64-bit), gồm 4 nhân, xung nhịp tối đa 1.5 GHz, đáp ứng tốt các ứng dụng tính toán nhúng hiệu năng cao.
 
-\textbf{Phương trình NTC}
+CM4 được trang bị RAM 2 GB và bộ nhớ eMMC 32 GB, cho phép cài đặt hệ điều hành Linux và lưu trữ chương trình, dữ liệu cũng như các file hệ thống. Module hỗ trợ đa dạng các giao thức giao tiếp phổ biến như Ethernet, WiFi, UART, SPI, I2C, giúp dễ dàng kết nối với các ngoại vi và phần cứng mở rộng.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_cm4_linhkien_top.jpg}
+		\caption{Mặt trên}
+		\label{fig:cm4-top}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_cm4_linhkien_bottom.jpg}
+		\caption{Mặt dưới}
+		\label{fig:cm4-bottom}
+	\end{subfigure}
+	\caption{CM4 (Computer Module 4)}
+	\label{fig:cm4}
+\end{figure}
+
+Hình \ref{fig:cm4} minh họa cấu trúc mặt trên và mặt dưới của module CM4, thể hiện các linh kiện chính và hệ thống chân kết nối phục vụ tích hợp vào mạch.
+
+\subsection{Laser diode}
+
+Laser diode là một linh kiện bán dẫn đóng vai trò nguồn phát ánh sáng trong các hệ thống quang học. Linh kiện này có khả năng phát ra ánh sáng laser với các đặc tính nổi bật như đơn sắc, độ định hướng cao và mật độ năng lượng lớn. Nguyên lý hoạt động của laser diode dựa trên quá trình tái hợp của các hạt mang điện trong tiếp giáp P–N. Khi được phân cực thuận, các electron và hole được tiêm vào vùng tiếp giáp, kết hợp với nhau và giải phóng năng lượng dưới dạng photon, tạo ra bức xạ ánh sáng.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lv_laser_operating_principle_2.png}
+	\caption{Nguyên lý hoạt động của laser diode}
+	\label{fig:lv_laser_operating_principle_2}
+\end{figure}
+
+Đặc điểm quan trọng của laser diode là cường độ phát xạ ánh sáng phụ thuộc trực tiếp vào dòng điện cấp, cho phép điều chỉnh và kiểm soát mức công suất phát một cách linh hoạt. Nhờ khả năng phát xạ ổn định, hội tụ tốt và bước sóng xác định, laser diode thường được sử dụng trong các hệ thống đo lường quang học và thí nghiệm sinh hóa yêu cầu độ chính xác cao.
+
+Trong hệ thống này, laser diode được sử dụng làm nguồn sáng chiếu xuyên qua mẫu vật sinh hóa, tạo điều kiện để quan sát và phân tích sự suy giảm hoặc biến đổi của cường độ ánh sáng khi đi qua mẫu.
+
+\subsection{Photo diode}
+
+Photo diode là một linh kiện bán dẫn được thiết kế để chuyển đổi năng lượng ánh sáng thành tín hiệu điện, hoạt động dựa trên hiệu ứng quang điện. Cấu trúc cơ bản của photo diode là một tiếp giáp P–N, trong đó vùng nghèo đóng vai trò quan trọng trong quá trình thu nhận ánh sáng.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lv_photo_operating_principle.png}
+	\caption{Nguyên lý hoạt động của photo diode}
+	\label{fig:lv_photo_operating_principle}
+\end{figure}
+
+Khi ánh sáng chiếu vào photo diode, các photon có năng lượng đủ lớn sẽ bị hấp thụ trong vật liệu bán dẫn và tạo ra các cặp electron–hole. Nếu quá trình hấp thụ xảy ra trong hoặc gần vùng nghèo của tiếp giáp P–N, điện trường nội tại trong vùng này sẽ nhanh chóng tách các hạt mang điện về hai phía điện cực, hình thành nên dòng quang điện. Dòng quang điện sinh ra có giá trị tỉ lệ với cường độ ánh sáng chiếu vào photo diode.
+
+Nhờ đặc tính đáp ứng nhanh và quan hệ tuyến tính giữa dòng quang điện và cường độ ánh sáng, photo diode được sử dụng rộng rãi trong các hệ thống đo lường quang học. Trong hệ thống thí nghiệm, photo diode đóng vai trò thu nhận cường độ ánh sáng sau khi xuyên qua mẫu vật, cung cấp thông tin đầu vào cho quá trình phân tích và đánh giá kết quả thí nghiệm.
+
+\subsection{TEC (Thermoelectric Cooler)}
+
+TEC (Thermoelectric Cooler), hay còn gọi là sò nóng lạnh, là một linh kiện bán dẫn hoạt động dựa trên hiệu ứng Peltier. Hiệu ứng này xảy ra khi một dòng điện một chiều chạy qua mối nối của hai vật liệu bán dẫn khác loại, làm xuất hiện hiện tượng hấp thụ nhiệt tại một phía và tỏa nhiệt tại phía còn lại. Do đó, khi cấp dòng điện cho TEC, giữa hai mặt của linh kiện sẽ hình thành một sự chênh lệch nhiệt độ, với một mặt trở thành mặt lạnh và mặt kia trở thành mặt nóng.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{lv_tec_linhkien.jpg}
+	\caption{TEC(Thermoelectric Cooler)}
+	\label{fig:lv_tec_linhkien}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lv_tec.png}
+	\caption{Nguyên lý hoạt động của TEC}
+	\label{fig:lv_tec}
+\end{figure}
+
+Đặc điểm quan trọng của TEC là khả năng đảo chiều quá trình truyền nhiệt. Khi đảo chiều dòng điện chạy qua, vai trò của hai mặt sẽ hoán đổi, mặt nóng trở thành mặt lạnh và ngược lại. Nhờ đó, TEC có thể được sử dụng linh hoạt cho cả hai chức năng làm mát và gia nhiệt.
+
+Trong hệ thống thí nghiệm, TEC được sử dụng để điều khiển và ổn định nhiệt độ của buồng thí nghiệm theo giá trị đặt trước, nhằm tạo môi trường nhiệt phù hợp cho quá trình nghiên cứu mẫu vật sinh hóa. Để TEC hoạt động hiệu quả và đảm bảo độ bền, mặt nóng của TEC cần được tản nhiệt tốt nhằm hạn chế hiện tượng quá nhiệt và suy giảm hiệu suất.
+
+\subsection{NTC (Negative Temperature Coefficient)}
+
+NTC (Negative Temperature Coefficient) là một loại điện trở nhiệt có đặc tính điện trở giảm khi nhiệt độ tăng. Hiện tượng này xuất phát từ bản chất bán dẫn của vật liệu cấu thành NTC, trong đó khi nhiệt độ tăng, mật độ hạt mang điện tự do tăng lên, làm giảm điện trở của linh kiện.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.2\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_ntc_linhkien.png}
+		\caption{}
+		\label{fig:ntc_1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.25\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{lv_ntc_linhkien2.png}
+		\caption{}
+		\label{fig:ntc_2}
+	\end{subfigure}
+	\caption{NTC(Negative Temperature Coefficient)}
+	\label{fig:ntc}
+\end{figure}
+
+Mối quan hệ giữa điện trở và nhiệt độ của NTC là phi tuyến, với sự thay đổi điện trở mạnh theo nhiệt độ trong dải làm việc. Do đặc tính phi tuyến này, không thể mô tả chính xác mối quan hệ điện trở–nhiệt độ bằng các biểu thức tuyến tính đơn giản. Thay vào đó, các nhà sản xuất thường cung cấp các mô hình thực nghiệm để xấp xỉ đặc tuyến của NTC.
+
+Một trong những mô hình phổ biến nhất là mô hình hằng số Beta (B), trong đó mối quan hệ giữa điện trở và nhiệt độ của NTC được biểu diễn bởi công thức:
+
 \begin{equation} \label{3}
 	R_{T} = R_{0} \cdot e^{\beta \left( \frac{1}{T} - \frac{1}{T_{0}} \right)}
 \end{equation}
@@ -299,30 +400,7 @@ Trong hệ thống này, nhiệt độ được đo bằng cảm biến NTC (Neg
 	\end{itemize}
 \end{minipage}
 
-Dựa trên nhiệt độ đo được, hệ thống thực hiện điều khiển bằng phương pháp ON/OFF. Đây là phương pháp điều khiển đơn giản, trong đó phần tử gia nhiệt hoặc làm lạnh sẽ được bật khi nhiệt độ vượt ra khỏi phạm vi cho phép và tắt khi đã trở về giá trị mong muốn. Để tránh việc bật/tắt liên tục, hệ thống có thể áp dụng một khoảng sai lệch nhỏ (hysteresis) quanh ngưỡng đặt. Phương pháp này tuy tạo ra một mức dao động nhỏ quanh nhiệt độ đặt, nhưng vẫn đáp ứng tốt cho các ứng dụng không đòi hỏi độ chính xác vi sai cao.
-
-Việc điều chỉnh nhiệt độ được thực hiện bằng hai cơ cấu chấp hành: tấm điện trở nhiệt (heater) để tăng nhiệt và bộ TEC (Thermoelectric Cooler) để làm lạnh. Heater tạo ra nhiệt lượng thông qua sự tỏa nhiệt của điện trở, trong khi TEC hoạt động dựa trên hiệu ứng Peltier, cho phép dịch chuyển nhiệt khi có dòng điện chạy qua. Sự kết hợp giữa cảm biến NTC, điều khiển ON/OFF và hai phần tử chấp hành giúp hệ thống duy trì nhiệt độ trong buồng thí nghiệm trong phạm vi mong muốn.
-
-\section{Nguyên lý hoạt động của laser diode và photo diode}
-Laser diode là nguồn sáng bán dẫn có khả năng phát ra ánh sáng đơn sắc với độ định hướng và mật độ năng lượng cao. Khi các hạt mang thiểu số được tiêm vào tiếp giáp P-N làm các electron và hole kết hợp lại, giải phóng photon, chúng sẽ phát ra ánh sáng nhìn thấy, ánh sáng cực tím hoặc ánh sáng cận hồng ngoại. Đặc tính nổi bật của laser diode là cường độ phát xạ có thể được điều chỉnh thông qua dòng điện cấp, cho phép kiểm soát ổn định mức công suất chiếu vào mẫu vật. Nhờ khả năng hội tụ và ổn định bước sóng tốt, laser diode thường được sử dụng trong các hệ thống quang học yêu cầu độ chính xác cao.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{lv_laser_operating_principle.png}
-	\caption{Nguyên lý hoạt động của laser diode}
-	\label{fig:enter-label}
-\end{figure}
-
-Trong khi đó, photo diode là cảm biến ánh sáng hoạt động dựa trên hiệu ứng quang điện. Khi ánh sáng chiếu vào vùng tiếp giáp P-N của photo diode với một photon đủ năng lượng, nó sẽ tạo ra một cặp electron-hole trong vùng bán dẫn. Nếu sự hấp tụ photon xảy ra ngay tại vùng nghèo điện tích của tiếp giáp P-N, thì vặp electron-hole này sẽ nhanh chóng bị điện trường bên trong của vùng nghèo tách ra. Kết quả là một dòng quang điện được tạo ra. Đặc tính tuyến tính theo cường độ sáng giúp photo diode trở thành cảm biến lý tưởng để đo và biến đổi tín hiệu quang học thành tín hiệu điện.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{lv_photo_operating_principle.png}
-	\caption{Nguyên lý hoạt động của photo diode}
-	\label{fig:enter-label}
-\end{figure}
-
-Trong hệ thống thí nghiệm của đề tài, laser diode được sử dụng để chiếu chùm sáng xuyên qua mẫu vật. Phía đối diện, photo diode thu nhận lượng ánh sáng truyền qua hoặc bị giảm đi do hiện tượng hấp thụ và tán xạ của mẫu. Thông qua việc phân tích tín hiệu quang thu được, hệ thống có thể đánh giá các đặc tính quang học của mẫu vật, phục vụ cho các phép đo và xử lý tiếp theo.
+Nhờ mô hình này, giá trị nhiệt độ có thể được xác định từ điện trở của NTC với độ chính xác phù hợp cho các ứng dụng đo và giám sát nhiệt độ trong hệ thống thí nghiệm.
 
 \section{Nguyên lý hấp thụ và tán xạ ánh sáng}
 Khi một chùm ánh sáng đi qua mẫu vật sinh hóa, hai hiện tượng quang học cơ bản có thể xảy ra: hấp thụ ánh sáng và tán xạ ánh sáng. Đây là các cơ chế quan trọng giúp đánh giá tính chất quang học và đặc trưng sinh hóa của mẫu.
@@ -425,18 +503,18 @@ Hệ thống được cấp nguồn từ nguồn DC hoặc pin, với hai mức 
 	\centering
 	\includegraphics[width=1\linewidth]{lv_block_obc.png}
 	\caption{Sơ đồ khối OBC}
-	\label{fig:enter-label}
+	\label{fig:lv_block_obc}
 \end{figure}
 Bo OBC tích hợp một số khối chức năng chính như sau:
 \begin{itemize}
 	\setlength{\parindent}{1cm}
-	\item Compute Module 4 (CM4)
+	\item CM4 (Compute Module 4)
 	
 	Raspberry Pi Compute Module 4 được kết nối trực tiếp trên bo OBC thông qua hai hàng header, CM4 đảm nhiệm vai trò giao tiếp mạng, tương tác với giao diện người dụng trên máy tính điều khiển, lưu trữ dữ liệu, chạy chương trình giám sát và thực hiện các tác vụ nhận được từ người sử dụng.
 	
 	\item Khối vi xử lý (MCU - STM32H7)
 	
-	MCU - STM32H7 đóng vai trò lõi điều khiển của hệ thống. Vi điều khiển giao tiếp với Raspberry Pi Compute Module 4 (CM4) qua hai đường tín hiệu cách ly là UART và SPI, MCU chịu trách nhiệm nhận lệnh từ CM4 và điều khiển các bo ngoại vi.
+	MCU - STM32H7 đóng vai trò lõi điều khiển của hệ thống. Vi điều khiển giao tiếp với CM4 (Raspberry Pi Compute Module 4) qua hai đường tín hiệu cách ly là UART và SPI, MCU chịu trách nhiệm nhận lệnh từ CM4 và điều khiển các bo ngoại vi.
 	
 	\item Khối Watchdog
 	
@@ -483,7 +561,7 @@ Các khối chức năng chính của bo EXP:
 	
 	Nhằm mục đích bảo vệ quá dòng, quá áp. Khối này được thiết kế để ngắt nguồn điện cấp vào cho cả bo khi có sự cố xảy ra giúp hạn chế hư hại đáng tiếc.
 	
-	\item Khối BUCK và khối LDO
+	\item Khối STEP-DOWN CONVERTER
 	
 	Hạ mức điện áp cấp vào đến ngưỡng phù hợp với chức năng của những khối ngoại vi trên bo.
 	
@@ -534,7 +612,7 @@ Bo Laser là mạch điện thụ động, có chức năng chính là điều k
 Các khối chức năng chính của bo Laser:
 \begin{itemize}
 	\setlength{\parindent}{1cm}
-	\item Khối BUCK và khối LDO
+	\item Khối STEP-DOWN CONVERTER
 	
 	Hạ áp 12V xuống 5V, từ điện áp 5V, LDO tạo ra điện áp sạch 3.3V để nuôi khối điều khiển analog. Nguồn 3.3V đảm bảo sai số thấp cho DAC và mạch nguồn dòng.
 	
@@ -569,22 +647,16 @@ Bo Photo cũng là một mạch thụ động, chức năng chính thu nhận t�
 	\label{fig:enter-label}
 \end{figure}
 
-
-
-
-
 \newpage
 Các khối chức năng chính của bo Photo:
 \begin{itemize}
 	\setlength{\parindent}{1cm}
-	\item Khối BUCK và khối LDO
+	\item Khối STEP-DOWN CONVERTER
 	
 	Hạ áp 12V xuống 5V, từ điện áp 5V, LDO tạo ra điện áp sạch 3.3V để nuôi khối điều khiển analog. Nguồn 3.3V tiếp tục cấp vào khối VREF.
 	\item Khối VREF
 	
 	Khối này đơn giản là tạo ra một điện áp tham chiếu chuẩn, ổn định.
-	
-	
 	
 	\item Khối Photo
 	
@@ -594,13 +666,12 @@ Các khối chức năng chính của bo Photo:
 	
 	Là mạch cho phép bật/tắt đường tín hiệu điện từ Photo đến mạch khuếch đại... Switch cũng được điều khiển từ bo EXP thông qua giao tiếp SPI, để chọn vị trí đọc photo diode.
 	
-	\item Khối Transimpedance Amplifier (TIA)
+	\item Khối Transimpedance Amplifier \& Anti-Aliasing Filter
 	
+	Do dòng tín hiệu sinh ra từ photo diode thường có biên độ rất nhỏ (ở mức µA hoặc nA), khối xử lý tín hiệu này thực hiện chức năng chuyển đổi dòng quang điện thành điện áp thông qua mạch khuếch đại chuyển đổi dòng–áp (Transimpedance Amplifier), đồng thời khuếch đại tín hiệu lên mức phù hợp để đo lường.
+	
+	Sau khi được khuếch đại, tín hiệu tiếp tục được đưa qua bộ lọc chống lấy mẫu sai (Anti-aliasing Filter) nhằm loại bỏ các thành phần tần số cao vượt quá tần số Nyquist. Nhờ đó, tín hiệu đưa vào ADC được đảm bảo sạch và hạn chế hiện tượng méo phổ trong quá trình lấy mẫu.
 	Do dòng tín hiệu từ photo diode thường rất nhỏ (µA hoặc nA), khối TIA chuyển đổi dòng này thành điện áp và khuếch đại lên mức có thể đo được.
-	
-	\item Khối Anti-aliasing Filter (AAF)
-	
-	Sau TIA, tín hiệu đi qua bộ lọc chống lấy mẫu sai (Anti-aliasing Filter). Chức năng của khối này là để loại bỏ các thành phần tần số cao vượt quá tần số Nyquist, đảm bảo ADC nhận tín hiệu sạch không gây méo phổ.
 	
 	\item Khối ADC
 	
@@ -832,7 +903,7 @@ Những khối chức năng chính trên EXP được thiết kế chi tiết nh
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{lv_sch_exp_ntc.png}
-		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\caption{Sơ đồ nguyên lý mạch đo NTC trên EXP}
 		\label{fig:sche-ntc-exp}
 	\end{figure}
 	
@@ -872,7 +943,7 @@ Những khối chức năng chính trên EXP được thiết kế chi tiết nh
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{lv_sch_exp_tec_drv.png}
-		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\caption{Sơ đồ nguyên lý mạch điều khiển TEC trên EXP}
 		\label{fig:sche-tec-exp}
 	\end{figure}
 	
@@ -881,7 +952,7 @@ Những khối chức năng chính trên EXP được thiết kế chi tiết nh
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\linewidth]{lv_sch_exp_heater_drv.png}
-		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\caption{Sơ đồ nguyên lý mạch điều khiển Heater trên EXP}
 		\label{fig:sche-heater-exp}
 	\end{figure}
 	
@@ -893,7 +964,7 @@ Những khối chức năng chính trên EXP được thiết kế chi tiết nh
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{lv_sch_exp_fram.png}
-		\caption{Sơ đồ nguyên lý mạch Watchdog trên EXP}
+		\caption{Sơ đồ nguyên lý FRAM trên EXP}
 		\label{fig:sche-fram-exp}
 	\end{figure}
 	
@@ -947,7 +1018,7 @@ Trên bo Laser có những khối chức năng chính sau đây:
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{lv_current_src.png}
+		\includegraphics[width=1\linewidth]{lv_current_src_correl.png}
 		\caption{Sơ đồ nguyên lý mạch nguồn dòng trên bo Laser}
 		\label{fig:sche-current-src-laser}
 	\end{figure}
@@ -1063,16 +1134,22 @@ Trên bo Photo có những khối chức năng chính sau đây:
 	\end{figure}
 	
 		
-\textbf{Khối transimpedance và anti-aliasing}
+\textbf{Khối Transimpedance Amplifier \& Anti-Aliasing Filter}
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{lv_transimpedance_antialias.png}
-		\caption{Sơ đồ nguyên lý mạch transimpedance và mạch anti-aliasing filter trên bo Photo}
+		\includegraphics[width=1\linewidth]{lv_transimpedance_antialias_corel.png}
+		\caption{Sơ đồ nguyên lý mạch transimpedance amplifier và mạch anti-aliasing filter trên bo Photo}
 		\label{fig:sche-transimpedance-antialias-photo}
 	\end{figure}
-		
-	Mạch transimpedance (TIA) có công dụng biến dòng quang từ photo diode từ chân V- của op-amp U3A thành điện áp có tỉ lệ:
+	
+	Mạch transimpedance amplifier là mạch khuếch đại và chuyển đổi dòng điện thành điện áp.
+	Nguyên lý hoạt động: 
+	Khi chưa có ánh sáng, photo diode không sinh dòng quang. Nhờ hồi tiếp âm qua điện trở R1, 
+	op-amp giữ điện áp tại chân (-) xấp xỉ bằng điện áp chân (+) là Vref, đồng thời phân cực ngược cho photo diode.
+	
+	Khi có ánh sáng chiếu vào, photo diode sinh dòng quang Ipd chảy từ cathode sang anode. Do trở kháng đầu vào của op-amp rất lớn, toàn bộ dòng quang buộc phải đi qua điện trở hồi tiếp Rf.
+	Khi đó, điện áp ngõ ra của mạch được xác định theo công thức:
 	
 	\begin{equation}
 		V_{\text{out}} \approx V_{ref(PD)} - I_{photo} \cdot R1
@@ -1085,7 +1162,7 @@ Trên bo Photo có những khối chức năng chính sau đây:
 		f_{\text{TIA}} \approx \frac{1}{2\Pi \cdot R1 \cdot C1} = \frac{1}{2\Pi \cdot 330000 \cdot 470 \cdot 10^{-12}} = 1.03kHz
 	\end{equation}
 	
-	Anti-aliasing có nhiệm vụ lọc các thành phần tần số trên để tránh aliasing khi ADC mẫu. Điện áp ngõ ra của mạch transimpedance đi qua hai mạch lọc thông thấp RC đơn giản rồi đến một mạch khuếch đại đệm sử dụng op-amp U3C. Sau đó tín hiệu đi qua mạch lọc khử răng cưa (anti-aliasing filter) trước khi đi vào khối ADC.
+	Điện áp ngõ ra của mạch Transimpedance Amplifier đi qua hai mạch lọc thông thấp RC đơn giản rồi đến một mạch khuếch đại đệm sử dụng op-amp U3C. Sau đó tín hiệu đi qua mạch lọc chống chồng chập tần số (Anti-Aliasing Filter) trước khi đi vào khối ADC.
 	
 	Mạch lọc thông thấp RC có tần số cắt khoảng:
 	
@@ -1093,7 +1170,7 @@ Trên bo Photo có những khối chức năng chính sau đây:
 		f_{c} \approx \frac{1}{2\Pi \cdot R6 \cdot C19} = \frac{1}{2\Pi \cdot 10000 \cdot 10 \cdot 10^{-9}} \approx 1.6kHz
 	\end{equation}
 	
-	Mạch anti-aliasing filter được thiết kế là bộ lọc chủ động bậc cao. Tần số cắt -3dB bằng chính xác tần số Nyquisst, bằng một nửa tần số lấy mẫu mong muốn. Trên bo Photo, khối ADC sẽ có tần số lấy mẫu $f_{s}=500kHz$ do đó, $f_{Nyquist}=250kHz$.
+	Mạch Anti-Aliasing Filter là mạch lọc thông thấp tích cực bậc 2 sử dụng RC và opamp, có nhiệm vụ lọc bỏ tín hiệu có tần số cao, tránh gây ra hiện tượng chồng chập tần số khi lấy mẫu. Tần số cắt -3dB bằng chính xác tần số Nyquisst, bằng một nửa tần số lấy mẫu mong muốn. Trên bo Photo, khối ADC sẽ có tần số lấy mẫu $f_{s}=500kHz$ do đó, $f_{Nyquist}=250kHz$.
 	
 	\begin{figure}[H]
 		\centering
@@ -1371,13 +1448,11 @@ Cấu trúc hoạt động chính của firmware được tổ chức thành cá
 	
 	\item temperature\_control\_task
 	
-	Task chịu trách nhiệm giám sát và điều khiển nhiệt độ của buồng thí nghiệm, sử dụng hai cảm biến NTC (primary và secondary) làm tham chiếu để phối hợp cùng TEC và Heater. Nếu nhiệt độ trên hai cảm biến NTC tham chiếu có độ chênh lệch quá lớn, thông báo hệ thống có lỗi. Hai hoạt động làm lạnh và gia nhiệt được thực thi khi nhiệt độ trên cảm biến chính chênh lệnh một khoảng $\delta$T lập trình được trong firmware.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.65\linewidth]{lv_flow_exp_temptask.png}
-		\caption{Lưu đồ giải thuật temperature\_control\_task}
-		\label{fig:flow-exp-temptask}
-	\end{figure}
+	Task chịu trách nhiệm giám sát và điều khiển nhiệt độ của buồng thí nghiệm bằng thuật toán PID (Proportional–Integral–Derivative). Nhiệt độ đo được từ cảm biến NTC chính (primary) được sử dụng làm giá trị phản hồi (feedback) để so sánh với nhiệt độ đặt (setpoint), từ đó tính toán sai lệch nhiệt độ và sinh tín hiệu điều khiển tương ứng.
+	
+	Cảm biến NTC phụ (secondary) được sử dụng làm kênh giám sát độc lập nhằm kiểm tra tính hợp lệ của phép đo. Nếu độ chênh lệch nhiệt độ giữa hai cảm biến vượt quá ngưỡng cho phép, hệ thống sẽ phát hiện trạng thái bất thường và đưa ra cảnh báo lỗi.
+	
+	Thuật toán PID tạo ra tín hiệu điều khiển liên tục, cho phép điều chỉnh mức làm lạnh hoặc gia nhiệt thông qua TEC và Heater nhằm đưa nhiệt độ buồng thí nghiệm tiến dần và duy trì ổn định tại giá trị đặt trước. Nhờ cơ chế điều khiển phản hồi này, hệ thống đạt được độ chính xác và độ ổn định nhiệt cao hơn so với phương pháp điều khiển theo ngưỡng.
 	
 	\item tec\_over\_control\_task
 	
@@ -1579,7 +1654,7 @@ Ghi lại toàn bộ sự kiện như thay đổi thông số, trạng thái ser
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[angle=-90, width=0.5\linewidth]{lv_system_3.JPG}
+		\includegraphics[width=0.5\linewidth]{lv_system_SH.JPG}
 		\caption{Hệ thống - góc nhìn đứng}
 		\label{fig:system-3}
 	\end{figure}
@@ -1592,16 +1667,16 @@ Ghi lại toàn bộ sự kiện như thay đổi thông số, trạng thái ser
 		\label{fig:cr_src_scope}
 	\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\linewidth]{lv_salea_adc.jpg}
-		\caption{Tín hiệu SPI  trên Logic Analizer khi đọc ADC}
-		\label{fig:salea_adc}
-	\end{figure}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[width=0.8\linewidth]{lv_salea_adc.jpg}
+%		\caption{Tín hiệu SPI  trên Logic Analizer khi đọc ADC}
+%		\label{fig:salea_adc}
+%	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\linewidth]{lv_app_run.png}
+		\includegraphics[angle=90, width=0.8\linewidth]{lv_app_run_nhiet_pid_add_2_sensor.png}
 		\caption{Điều khiển trên giao diện người dùng}
 		\label{fig:gui_run}
 	\end{figure}
@@ -1620,12 +1695,12 @@ Ghi lại toàn bộ sự kiện như thay đổi thông số, trạng thái ser
 		\label{fig:laser-data-chart}
 	\end{figure}
 	
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[, width=0.8\linewidth]{lv_photo_data.jpg}
-%		\caption{Đồ thị dữ liệu ADC trên Photo diode}
-%		\label{fig:photo-data-chart}
-%	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[, width=0.8\linewidth]{lv_draw_photo_adc.png}
+		\caption{Đồ thị dữ liệu ADC trên Photo diode}
+		\label{fig:photo-data-chart}
+	\end{figure}
 
 	\begin{figure}[H]
 		\centering

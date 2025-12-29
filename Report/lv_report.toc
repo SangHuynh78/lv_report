@@ -12,55 +12,59 @@
 \contentsline {subsection}{\numberline {1.3.1}Phạm vi nghiên cứu}{9}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Nhiệm vụ}{9}{subsection.1.3.2}%
 \contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Nguyên lý điều khiển nhiệt độ trong buồng thí nghiệm}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Nguyên lý hoạt động của laser diode và photo diode}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Nguyên lý hấp thụ và tán xạ ánh sáng}{13}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Thiết kế và thực hiện phần cứng}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Yêu cầu thiết kế}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Phân tích yêu cầu thiết kế}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Sơ đồ khối tổng quát}{16}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Sơ đồ khối chi tiết}{17}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Bo điều khiển trung tâm - OBC}{17}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bo điều khiển thí nghiệm - EXP}{18}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Bo Laser}{20}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Bo Photo}{21}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Sơ đồ nguyên lý}{23}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Bo điều khiển trung tâm - OBC}{23}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Bo điều khiển thí nghiệm - EXP}{27}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Bo Laser}{32}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Bo Photo}{35}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện firmware}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Yêu cầu chung cho firmware}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Lưu đồ giải thuật}{40}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Bo điều khiển trung tâm - OBC}{40}{subsection.4.2.1}%
-\contentsline {subsubsection}{Lưu đồ giải thuật cho CM4 trên OBC}{40}{subsection.4.2.1}%
-\contentsline {subsubsection}{Lưu đồ giải thuật cho MCU trên OBC}{41}{figure.caption.41}%
-\contentsline {subsubsection}{Chi tiết firmware}{43}{table.caption.43}%
-\contentsline {subsection}{\numberline {4.2.2}Bo điều khiển thí nghiệm – EXP}{44}{subsection.4.2.2}%
-\contentsline {subsubsection}{Lưu đồ giải thuật tổng quan của EXP}{44}{subsection.4.2.2}%
-\contentsline {subsubsection}{Chi tiết firmware}{46}{table.caption.47}%
-\contentsline {subsection}{\numberline {4.2.3}Bắt tay giữa OBC và EXP khi truyền SPI}{48}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Thiết kế phần mềm - Giao diện người dùng (GUI)}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Giới thiệu}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Tổng quan giao diện và chức năng phần mềm}{49}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Khối giám sát nhiệt độ}{49}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Khối điều khiển nhiệt độ}{50}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Chế độ thí nghiệm}{50}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Khối điều khiển laser - chế độ thủ công}{50}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Khối điều khiển laser - chế độ tự động}{50}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Giao tiếp TCP/IP}{50}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Hệ thống Log}{50}{subsection.5.2.7}%
-\contentsline {chapter}{\numberline {6}Kết quả}{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Phần cứng}{51}{section.6.1}%
-\contentsline {subsubsection}{Bo OBC}{51}{section.6.1}%
-\contentsline {subsubsection}{Bo EXP}{52}{figure.caption.54}%
-\contentsline {subsubsection}{Bo Laser}{52}{figure.caption.55}%
-\contentsline {subsubsection}{Bo Photo}{53}{figure.caption.56}%
-\contentsline {subsubsection}{Cả hệ thống}{53}{figure.caption.57}%
-\contentsline {section}{\numberline {6.2}Kết quả thử nghiệm}{55}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{59}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Kết luận}{59}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Ưu điểm của đề tài}{59}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Nhược điểm của đề tài}{59}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Hướng phát triển}{60}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Tài liệu tham khảo}{61}{chapter.8}%
+\contentsline {section}{\numberline {2.1}Linh kiện chính trên hệ thống}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}CM4 (Computer Module 4)}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Laser diode}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Photo diode}{12}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}TEC (Thermoelectric Cooler)}{13}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}NTC (Negative Temperature Coefficient)}{14}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Nguyên lý hấp thụ và tán xạ ánh sáng}{15}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Thiết kế và thực hiện phần cứng}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Yêu cầu thiết kế}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Phân tích yêu cầu thiết kế}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Sơ đồ khối tổng quát}{18}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Sơ đồ khối chi tiết}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Bo điều khiển trung tâm - OBC}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Bo điều khiển thí nghiệm - EXP}{20}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Bo Laser}{22}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Bo Photo}{23}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Sơ đồ nguyên lý}{25}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Bo điều khiển trung tâm - OBC}{25}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Bo điều khiển thí nghiệm - EXP}{29}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Bo Laser}{34}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Bo Photo}{36}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện firmware}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Yêu cầu chung cho firmware}{41}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Lưu đồ giải thuật}{42}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Bo điều khiển trung tâm - OBC}{42}{subsection.4.2.1}%
+\contentsline {subsubsection}{Lưu đồ giải thuật cho CM4 trên OBC}{42}{subsection.4.2.1}%
+\contentsline {subsubsection}{Lưu đồ giải thuật cho MCU trên OBC}{43}{figure.caption.45}%
+\contentsline {subsubsection}{Chi tiết firmware}{45}{table.caption.47}%
+\contentsline {subsection}{\numberline {4.2.2}Bo điều khiển thí nghiệm – EXP}{46}{subsection.4.2.2}%
+\contentsline {subsubsection}{Lưu đồ giải thuật tổng quan của EXP}{46}{subsection.4.2.2}%
+\contentsline {subsubsection}{Chi tiết firmware}{48}{table.caption.51}%
+\contentsline {subsection}{\numberline {4.2.3}Bắt tay giữa OBC và EXP khi truyền SPI}{49}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Thiết kế phần mềm - Giao diện người dùng (GUI)}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Giới thiệu}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Tổng quan giao diện và chức năng phần mềm}{51}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Khối giám sát nhiệt độ}{51}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Khối điều khiển nhiệt độ}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Chế độ thí nghiệm}{52}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Khối điều khiển laser - chế độ thủ công}{52}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Khối điều khiển laser - chế độ tự động}{52}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Giao tiếp TCP/IP}{52}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Hệ thống Log}{52}{subsection.5.2.7}%
+\contentsline {chapter}{\numberline {6}Kết quả}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Phần cứng}{53}{section.6.1}%
+\contentsline {subsubsection}{Bo OBC}{53}{section.6.1}%
+\contentsline {subsubsection}{Bo EXP}{54}{figure.caption.57}%
+\contentsline {subsubsection}{Bo Laser}{54}{figure.caption.58}%
+\contentsline {subsubsection}{Bo Photo}{55}{figure.caption.59}%
+\contentsline {subsubsection}{Cả hệ thống}{55}{figure.caption.60}%
+\contentsline {section}{\numberline {6.2}Kết quả thử nghiệm}{57}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Kết luận}{61}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Ưu điểm của đề tài}{61}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Nhược điểm của đề tài}{61}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Hướng phát triển}{62}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Tài liệu tham khảo}{63}{chapter.8}%
